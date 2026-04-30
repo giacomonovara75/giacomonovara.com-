@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patologia Scrotale Benigna — Prof. Giacomo Novara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --amber: #8a5a00; --amber-light: #fdf4e3; --amber-mid: #c47c18;
+    --navy: #1a1408; --cream: #fdfbf7; --warm-gray: #66605a;
+    --border: #e0d5c0; --red: #b53228; --green: #1a7a50; --blue: #1e4d7a;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Serif 4', Georgia, serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); font-weight: 300; background: var(--cream); color: var(--navy); line-height: 1.78; font-size: 17px; }
+  header { background: var(--navy); }
+  .header-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; display: flex; align-items: flex-start; gap: 1.4rem; }
+  .header-icon { font-size: 3rem; line-height: 1; flex-shrink: 0; margin-top: 0.3rem; }
+  .site-name { font-size: 0.77rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.45rem; }
+  header h1 { font-family: var(--font-display); font-size: clamp(1.7rem,4vw,2.5rem); font-weight: 700; color: #fff; line-height: 1.18; }
+  .header-sub { font-size: 0.92rem; color: rgba(255,255,255,0.6); margin-top: 0.35rem; font-style: italic; }
+  nav.breadcrumb { background: var(--amber); padding: 0.6rem 1.5rem; font-size: 0.82rem; }
+  nav.breadcrumb .inner { max-width: 900px; margin: 0 auto; display: flex; gap: 0.5rem; align-items: center; }
+  nav.breadcrumb a { color: rgba(255,255,255,0.85); text-decoration: none; }
+  nav.breadcrumb span { color: rgba(255,255,255,0.5); }
+  nav.breadcrumb .current { color: #fff; font-weight: 600; }
+  .page-wrap { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .intro-box { background: var(--amber-light); border-left: 4px solid var(--amber-mid); border-radius: 0 10px 10px 0; padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; font-size: 1.02rem; }
+  .chapter-divider { margin: 2.5rem 0 2rem; display: flex; align-items: center; gap: 1rem; }
+  .chapter-divider .ch-label { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--amber); white-space: nowrap; }
+  .chapter-divider .ch-line { flex: 1; height: 2px; background: linear-gradient(to right, var(--amber-mid), transparent); }
+  section { margin-bottom: 2.5rem; }
+  section h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--amber); margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+  section h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--navy); margin: 1.2rem 0 0.5rem; }
+  p { margin-bottom: 0.9rem; }
+  .cause-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 0.8rem; margin: 1rem 0; }
+  .cause-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; }
+  .cause-card .c-icon { font-size: 1.5rem; margin-bottom: 0.3rem; }
+  .cause-card strong { display: block; font-size: 0.95rem; margin-bottom: 0.25rem; color: var(--navy); }
+  .cause-card p { font-size: 0.85rem; color: var(--warm-gray); margin: 0; }
+  .cause-card.urgent { border-top: 3px solid var(--red); }
+  .cause-card.safe { border-top: 3px solid var(--green); }
+  .timing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+  .timing-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; text-align: center; }
+  .timing-card .t-num { font-size: 1.5rem; font-weight: 700; font-family: var(--font-display); margin-bottom: 0.2rem; }
+  .timing-card .t-label { font-size: 0.8rem; color: var(--warm-gray); line-height: 1.3; }
+  .timing-card.green .t-num { color: var(--green); }
+  .timing-card.yellow .t-num { color: var(--amber-mid); }
+  .timing-card.red .t-num { color: var(--red); }
+  .doppler-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 0.9rem; margin: 1rem 0; }
+  .doppler-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; }
+  .doppler-card .d-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.4rem; }
+  .doppler-card.no-flow .d-label { color: var(--red); }
+  .doppler-card.high-flow .d-label { color: var(--blue); }
+  .doppler-card.focal .d-label { color: var(--green); }
+  .doppler-card strong { display: block; font-size: 0.97rem; margin-bottom: 0.3rem; }
+  .doppler-card p { font-size: 0.85rem; color: var(--warm-gray); margin: 0; }
+  .treat-step { display: flex; align-items: flex-start; gap: 0.9rem; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1.1rem; margin-bottom: 0.6rem; }
+  .treat-step .step-num { background: var(--amber); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 600; flex-shrink: 0; margin-top: 0.1rem; }
+  .treat-step.urgent .step-num { background: var(--red); }
+  .treat-step .step-content strong { display: block; font-size: 0.96rem; margin-bottom: 0.2rem; }
+  .treat-step .step-content p { font-size: 0.88rem; color: var(--warm-gray); margin: 0; }
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 0.9rem; margin: 1.2rem 0; }
+  .stat-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; text-align: center; }
+  .stat-card .num { font-size: 1.9rem; font-weight: 600; color: var(--amber); font-family: var(--font-display); }
+  .stat-card .label { font-size: 0.8rem; color: var(--warm-gray); margin-top: 0.2rem; line-height: 1.3; }
+  .highlight-quote { background: var(--navy); color: #fff; border-radius: 10px; padding: 1.4rem 1.6rem; margin: 1.4rem 0; position: relative; }
+  .highlight-quote::before { content: '"'; font-family: var(--font-display); font-size: 4rem; line-height: 1; color: var(--amber-mid); position: absolute; top: 0.2rem; left: 1rem; opacity: 0.5; }
+  .highlight-quote p { padding-left: 1.5rem; font-style: italic; font-size: 1.05rem; }
+  .alert-box { background: #fff3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 1rem 1.3rem; margin: 1rem 0; font-size: 0.93rem; }
+  .alert-box.danger { background: #fde8e4; border-color: var(--red); }
+  .alert-box.info { background: var(--amber-light); border-color: var(--amber-mid); }
+  .alert-box strong { color: #7a5000; }
+  .alert-box.danger strong { color: #8a2010; }
+  .alert-box.info strong { color: var(--amber); }
+  .detorsion-box { background: #fff; border: 2px solid var(--amber-mid); border-radius: 10px; padding: 1.2rem 1.4rem; margin: 1rem 0; }
+  .detorsion-box h3 { color: var(--amber); font-size: 1rem; margin-bottom: 0.6rem; }
+  .detorsion-box p { font-size: 0.88rem; color: #3a3530; margin-bottom: 0.4rem; }
+  .indications-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+  .ind-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; }
+  .ind-card .i-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; margin-bottom: 0.4rem; }
+  .ind-card.treat .i-label { color: var(--green); }
+  .ind-card.watch .i-label { color: var(--amber); }
+  .ind-card.no .i-label { color: var(--red); }
+  .ind-card p { font-size: 0.86rem; color: var(--warm-gray); margin: 0; }
+  .faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 0.6rem; background: #fff; }
+  .faq-q { width: 100%; background: none; border: none; padding: 1rem 1.2rem; text-align: left; font-family: var(--font-body); font-size: 0.97rem; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .faq-q:hover { background: var(--amber-light); }
+  .faq-q .arrow { font-size: 1.2rem; color: var(--amber); transition: transform 0.22s; flex-shrink: 0; }
+  .faq-q.open .arrow { transform: rotate(90deg); }
+  .faq-a { display: none; padding: 0 1.2rem 1.1rem; font-size: 0.94rem; color: #3a3530; line-height: 1.72; }
+  .faq-a.open { display: block; }
+  .topic-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0; }
+  .topic-link { display: inline-block; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 1rem; font-size: 0.88rem; color: var(--amber); text-decoration: none; transition: background 0.15s, border-color 0.15s; }
+  .topic-link:hover { background: var(--amber-light); border-color: var(--amber-mid); }
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem 1.5rem; font-size: 0.82rem; line-height: 1.8; }
+  footer a { color: rgba(255,255,255,0.8); }
+  @media(max-width:600px) { .indications-grid { grid-template-columns: 1fr; } .stat-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-icon">🟠</div>
+    <div>
+      <p class="site-name">Prof. Giacomo Novara — Urologia, Università di Padova</p>
+      <h1>Patologia Scrotale Benigna</h1>
+      <p class="header-sub">Varicocele · Scroto acuto · Torsione del funicolo spermatico · Orchipididimite</p>
+    </div>
+  </div>
+  <nav class="breadcrumb">
+    <div class="inner">
+      <a href="index.html">Home</a><span>›</span>
+      <a href="index.html#funzionale">Urologia Funzionale</a><span>›</span>
+      <span class="current">Patologia Scrotale Benigna</span>
+    </div>
+  </nav>
+</header>
+
+<div class="page-wrap">
+
+  <div class="intro-box">
+    La patologia scrotale benigna comprende due ambiti clinicamente molto diversi: il <strong>varicocele</strong> — principale causa curabile di infertilità maschile — e lo <strong>scroto acuto</strong>, che include la torsione del funicolo spermatico, una vera urgenza urologica in cui il tempo disponibile per salvare la gonade si misura in ore.
+  </div>
+
+  <!-- ======================== PARTE 1: VARICOCELE ======================== -->
+  <div class="chapter-divider">
+    <span class="ch-label">Parte I — Varicocele</span>
+    <div class="ch-line"></div>
+  </div>
+
+  <section>
+    <h2>🔬 Definizione e fisiopatologia</h2>
+    <p>Il varicocele è l'<strong>abnorme dilatazione e tortuosità delle vene del plesso pampiniforme</strong>, secondaria all'inversione del flusso nelle vene spermatiche interne (più frequentemente) o esterne. È l'equivalente scrotale delle varici degli arti inferiori.</p>
+
+    <h3>Perché è prevalentemente sinistro</h3>
+    <p>La vena spermatica sinistra drena nella vena renale sinistra formando un angolo retto: questo crea una colonna idrostatica più alta e una maggior resistenza al deflusso. La vena spermatica destra drena invece nella vena cava inferiore con angolo acuto. Questa asimmetria anatomica spiega la netta prevalenza sinistra del varicocele. Nei varicoceli sinistri voluminosi, comunicazioni trasversali (<em>cross-communications</em>) tra i due sistemi venosi possono alimentare un varicocele controlaterale: la correzione del reflusso sinistro riduce spesso anche il grado del varicocele destro.</p>
+
+    <h3>Classificazione flebografica (tipi 1–5)</h3>
+    <p>La classificazione descrive le varianti anatomiche del drenaggio venoso gonadico sinistro. Il cosiddetto "tipo 1" (vena gonadica singola ad angolo retto nella renale) è presente solo nel 40% dei soggetti — la maggior parte presenta varianti con vene multiple, collaterali capsulari o duplicità della vena renale. Questa variabilità è rilevante per la pianificazione del trattamento.</p>
+  </section>
+
+  <section>
+    <h2>📋 Chi trattare — e chi no</h2>
+    <div class="highlight-quote"><p>Il varicocele di per sé non è una malattia che va sempre trattata. Esistono pazienti con vene enormemente dilatate e spermiogramma normale: non li tratto. E pazienti con varicocele piccolo e spermiogramma disastroso: li tratto. Il criterio decisionale è lo spermiogramma, non la dilatazione.</p></div>
+    <div class="indications-grid">
+      <div class="ind-card treat">
+        <div class="i-label">✅ Si tratta</div>
+        <p>Paziente con varicocele <strong>E</strong> dispermia documentata allo spermiogramma <strong>E</strong> interesse alla fertilità. Il trattamento mira a migliorare i parametri seminali (conta, motilità, morfologia) e la probabilità di gravidanza.</p>
+      </div>
+      <div class="ind-card watch">
+        <div class="i-label">👁 Si monitora</div>
+        <p>Varicocele con spermiogramma normale → sorveglianza. Varicocele nei minorenni (&lt;14 anni) → non disponibile lo spermiogramma; ci si orienta sul grado di dilatazione e sul volume testicolare.</p>
+      </div>
+      <div class="ind-card no">
+        <div class="i-label">🚫 Non si tratta</div>
+        <p>Paziente non interessato alla fertilità → non ha senso diagnosticare né trattare una patologia le cui sole implicazioni sono per la fertilità. Compagna &gt;40 anni e/o spermiogramma "desertico" → indirizzare direttamente alla procreazione medicalmente assistita.</p>
+      </div>
+      <div class="ind-card no">
+        <div class="i-label">⚠️ Dolore: attenzione</div>
+        <p>Il dolore da varicocele è raramente indicazione autonoma al trattamento. Il dolore spesso persiste dopo la correzione. Si tratta solo se c'è anche dispermia: se migliora anche il dolore, meglio; se resta, il paziente era già stato avvisato.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔍 Diagnosi</h2>
+    <div class="treat-step"><div class="step-num">1</div><div class="step-content"><strong>Esame obiettivo in ortostatismo</strong><p>Palpazione del funicolo spermatico durante manovra di Valsalva: nei gradi avanzati (G3–G4) le vene sono visibili alla semplice ispezione. Nei gradi minori si percepisce la classica sensazione a "sacchetto di vermi".</p></div></div>
+    <div class="treat-step"><div class="step-num">2</div><div class="step-content"><strong>Ecocolordoppler scrotale</strong><p>Non basta rilevare vene dilatate: l'esame deve documentare il <strong>reflusso</strong> all'interno di queste vene durante il Valsalva. Diametro venoso &gt;3 mm con reflusso confermano la diagnosi. Permette anche la valutazione del volume testicolare (ipotrofia = danno già instaurato).</p></div></div>
+    <div class="treat-step"><div class="step-num">3</div><div class="step-content"><strong>Spermiogramma (solo nei maggiorenni)</strong><p>Esame fondamentale e criterio decisionale principale. Valuta conta, motilità progressiva e morfologia degli spermatozoi secondo i criteri WHO. Nei minorenni non è richiedibile per motivi legali.</p></div></div>
+  </section>
+
+  <section>
+    <h2>⚕️ Trattamento</h2>
+    <p>L'obiettivo è correggere il reflusso nelle vene gonadiche per migliorare la funzione seminale. Esistono approcci anterogradi (dal basso, per via scrotale) e retrogradi (dall'alto, per via endovascolare).</p>
+    <div class="cause-grid">
+      <div class="cause-card">
+        <div class="c-icon">🩺</div>
+        <strong>Sclerotizzazione anterograda (approccio scrotale)</strong>
+        <p>In anestesia locale, incisione di ~1,5 cm sullo scroto, isolamento del funicolo, canulazione di una vena del plesso pampiniforme, flebografia per confermare l'anatomia, poi iniezione di aria (1 mL) + atossisclerolo (3–4 mL) con funicolo clampato a valle. Procedura ambulatoriale, durata ~10 minuti. Permette di trattare qualsiasi variante anatomica. Tasso di fallimento ~10%.</p>
+      </div>
+      <div class="cause-card">
+        <div class="c-icon">🔬</div>
+        <strong>Sclerotizzazione retrograda (radiologia interventistica)</strong>
+        <p>Accesso femorale o brachiale, cateterismo della vena renale sinistra, incannulamento della vena gonadica, sclerotizzazione dall'alto. Efficacia sovrapponibile all'approccio anterogrado, ma più difficoltosa nelle varianti anatomiche con vene gonadiche multiple tributarie separate della renale.</p>
+      </div>
+    </div>
+    <p style="font-size:0.87rem;color:var(--warm-gray)">Le linee guida considerano le due tecniche equivalenti. L'approccio anterogrado per via scrotale può avere un vantaggio pratico nelle varianti anatomiche complesse, consentendo di raggiungere tutte le vene del plesso indipendentemente dal numero e dalla confluenza nella vena renale.</p>
+  </section>
+
+  <section>
+    <h2>📊 Risultati del trattamento</h2>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="num">~37%</div><div class="label">Pazienti che ottengono una gravidanza spontanea dopo correzione</div></div>
+      <div class="stat-card"><div class="num">×2</div><div class="label">Raddoppio della pregnancy rate con PMA dopo correzione del varicocele</div></div>
+      <div class="stat-card"><div class="num">6 mesi</div><div class="label">Tempo minimo per valutare il miglioramento dello spermiogramma</div></div>
+      <div class="stat-card"><div class="num">~10%</div><div class="label">Tasso di fallimento della sclerotizzazione (varicocele residuo)</div></div>
+    </div>
+    <p>Il trattamento migliora conta, motilità e morfologia degli spermatozoi. Circa il 37% dei pazienti ottiene una gravidanza spontanea; negli altri, la correzione del varicocele <strong>raddoppia il tasso di successo delle tecniche di procreazione medicalmente assistita</strong> rispetto ai pazienti non trattati. La correzione è pertanto utile anche come preparazione alla PMA, con l'eccezione dei casi con compagna molto anziana o spermiogramma completamente azoospermico.</p>
+  </section>
+
+  <!-- ======================== PARTE 2: SCROTO ACUTO ======================== -->
+  <div class="chapter-divider">
+    <span class="ch-label">Parte II — Scroto Acuto</span>
+    <div class="ch-line"></div>
+  </div>
+
+  <section>
+    <h2>🚨 Cause dello scroto acuto</h2>
+    <p>Lo scroto acuto è l'equivalente scrotale dell'addome acuto: dolore acuto scrotale con eventuale aumento di volume e arrossamento. Le tre cause principali rappresentano oltre il 90% dei casi:</p>
+    <div class="cause-grid">
+      <div class="cause-card urgent">
+        <div class="c-icon">⏱️</div>
+        <strong>Torsione del funicolo spermatico</strong>
+        <p>Emergenza urologica. Ischemia testicolare progressiva. Il tempo è il fattore critico: oltre 24 ore la gonade è perduta. Richiede trattamento immediato.</p>
+      </div>
+      <div class="cause-card safe">
+        <div class="c-icon">🦠</div>
+        <strong>Orchipididimite</strong>
+        <p>Processo infettivo-infiammatorio acuto del testicolo e dell'epididimo. Frequentemente associata a febbre e sintomi urinari. Trattamento medico (antibiotici).</p>
+      </div>
+      <div class="cause-card safe">
+        <div class="c-icon">🔵</div>
+        <strong>Torsione dell'idatide di Morgagni</strong>
+        <p>Torsione di un residuo embrionale del dotto di Wolf privo di funzione. Clinicamente benigna. Trattamento conservativo (antidolorifici).</p>
+      </div>
+    </div>
+    <div class="alert-box danger">
+      <strong>🚫 L'errore da non fare:</strong> in caso di scroto acuto, non prescrivere antibiotico + antidolorifico e rivedere il paziente "tra qualche giorno". Se la diagnosi di torsione del funicolo viene ritardata, il testicolo va in necrosi. Chi non è in grado di escludere la torsione deve inviare il paziente urgentemente in un centro in grado di farlo.
+    </div>
+  </section>
+
+  <section>
+    <h2>⏱️ Torsione del funicolo spermatico — urgenza urologica</h2>
+
+    <h3>Fisiopatologia</h3>
+    <p>La contrazione involontaria del muscolo cremastere provoca la rotazione del testicolo sul proprio asse (da 180° fino a 720°). Questo determina prima l'ostruzione del deflusso venoso, poi la compromissione dell'afflusso arterioso → <strong>ischemia testicolare progressiva e irreversibile</strong>. Il danno è proporzionale all'entità della torsione e al tempo trascorso.</p>
+    <p>Si distingue una <strong>torsione intravaginale</strong> (il più comune nei giovani adulti: il testicolo ruota all'interno della tunica vaginale) da una <strong>torsione extravaginale</strong> (tipica del neonato). La predisposizione è l'ipermobilità testicolare per assenza di adeguata fissazione del polo inferiore alla borsa scrotale.</p>
+
+    <h3>Finestra temporale per salvare il testicolo</h3>
+    <div class="timing-grid">
+      <div class="timing-card green"><div class="t-num">≈100%</div><div class="t-label">Entro 6 ore — orchidopessia quasi sempre possibile</div></div>
+      <div class="timing-card yellow"><div class="t-num">50%</div><div class="t-label">Tra 6 e 12 ore — probabilità dimezzata di salvare la gonade</div></div>
+      <div class="timing-card red"><div class="t-num">≈0%</div><div class="t-label">Dopo 24 ore — necrosi testicolare quasi certa</div></div>
+    </div>
+
+    <h3>Presentazione clinica e diagnosi differenziale</h3>
+    <div class="cause-grid">
+      <div class="cause-card urgent">
+        <strong>Torsione del funicolo</strong>
+        <p>Dolore violento ad insorgenza improvvisa (spesso notturna). <strong>No febbre, no disturbi minzionali.</strong> Testicolo ipermobile, risalito rispetto al controlaterale. Rapporti anatomici epididimo-testicolo alterati se la torsione non è multiplo di 360°. Anamnesi di episodi simili autolimitantisi in passato (subtorsioni).</p>
+      </div>
+      <div class="cause-card safe">
+        <strong>Orchipididimite</strong>
+        <p>Dolore meno improvviso. <strong>Febbre presente. Sintomi urinari (disuria, pollachiuria).</strong> Epididimo indurito e dolente. Scroto caldo e arrossato. Ecocolordoppler: iperafflusso vascolare.</p>
+      </div>
+      <div class="cause-card safe">
+        <strong>Torsione idatide di Morgagni</strong>
+        <p>Dolore al polo superiore del testicolo, meno intenso. Testicolo normale alla palpazione. Talvolta visibile il cosiddetto "blue dot" (raramente). Ecocolordoppler: flusso intraparenchimale normale, assenza di flusso nell'idatide.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔬 Ecocolordoppler scrotale — strumento chiave</h2>
+    <p>L'ecocolordoppler è l'esame decisivo. Si valuta <strong>sempre prima il testicolo controlaterale sano</strong> per tarare i parametri del Doppler, poi si studia il lato affetto. Il flusso intraparenchimale normale è 1–2 mm/s.</p>
+    <div class="doppler-grid">
+      <div class="doppler-card no-flow">
+        <div class="d-label">Torsione del funicolo</div>
+        <strong>Assenza di flusso</strong>
+        <p>Nessun segnale vascolare intratesticular al Doppler. È il dato più dirimente. Se assente rispetto al controlaterale → torsione fino a prova contraria.</p>
+      </div>
+      <div class="doppler-card high-flow">
+        <div class="d-label">Orchipididimite</div>
+        <strong>Iperafflusso vascolare</strong>
+        <p>Marcato aumento del segnale Doppler a livello dell'epididimo e del testicolo per effetto della flogosi acuta. Frequente idrocele reattivo associato.</p>
+      </div>
+      <div class="doppler-card focal">
+        <div class="d-label">Torsione idatide di Morgagni</div>
+        <strong>Flusso parenchimale conservato, idatide areflusso</strong>
+        <p>Flusso intraparenchimale regolare. L'idatide al polo superiore appare iperecogena e priva di segnale vascolare. Nessuna urgenza chirurgica.</p>
+      </div>
+    </div>
+    <div class="alert-box info">
+      <strong>📌 Principio di sicurezza:</strong> nei casi dubbi, l'esplorazione chirurgica è sempre preferibile alla attesa. "Far prendere un po' d'aria a un testicolo sano non è un problema. Non esplorare un testicolo torto significa condannarlo alla necrosi." Se il Doppler non è dirimente, si esplora.
+    </div>
+  </section>
+
+  <section>
+    <h2>🔧 Trattamento della torsione del funicolo spermatico</h2>
+
+    <div class="detorsion-box">
+      <h3>🖐️ Detorsione manuale — primo tentativo</h3>
+      <p><strong>Meccanismo:</strong> i testicoli si torcono ruotando in senso <em>latero-mediale</em> (dalla coscia verso la linea mediana). La detorsione si esegue nel senso opposto: <em>medio-laterale</em> (dalla linea mediana verso la coscia).</p>
+      <p><strong>Pratica:</strong> testicolo destro → detorsione in senso orario (visto dal paziente); testicolo sinistro → detorsione in senso antiorario.</p>
+      <p><strong>Verifica:</strong> la riduzione del dolore è immediata. Conferma con ecocolordoppler: il flusso deve riprendere, spesso con iperemia reattiva.</p>
+      <p><strong>Limite:</strong> efficace soprattutto se il paziente arriva entro poche ore. Dopo la detorsione va pianificata l'orchidopessia in elezione (adulto) o in giornata (bambino).</p>
+    </div>
+
+    <div class="treat-step urgent"><div class="step-num">1</div><div class="step-content"><strong>Detorsione manuale</strong><p>Tentativo immediato. Se riuscita (riduzione del dolore + ripresa del flusso al Doppler) → si pianifica l'orchidopessia bilaterale in elezione o in giornata.</p></div></div>
+    <div class="treat-step urgent"><div class="step-num">2</div><div class="step-content"><strong>Esplorazione chirurgica urgente (se detorsione non riuscita o diagnosi incerta)</strong><p>Accesso scrotale mediano di 3–4 cm. Apertura della tunica vaginale, valutazione della vitalità del testicolo. Se vitale → detorsione + orchidopessia bilaterale (fissazione del polo inferiore di entrambi i testicoli alla borsa scrotale). Se necrotico → orchidectomia (il testicolo necrotico deve essere rimosso per evitare la formazione di autoanticorpi anti-spermatozoici che danneggerebbero la gonade controlaterale).</p></div></div>
+    <div class="treat-step"><div class="step-num">3</div><div class="step-content"><strong>Orchidopessia bilaterale</strong><p>La fissazione va eseguita su entrambi i lati: l'ipermobilità che ha causato la torsione è spesso bilaterale. Prevenire la torsione controlaterale è fondamentale quanto salvare il testicolo affetto.</p></div></div>
+  </section>
+
+  <section>
+    <h2>🦠 Orchipididimite — trattamento</h2>
+    <p>Processo infettivo-infiammatorio del testicolo e dell'epididimo. Nella maggior parte dei casi l'agente eziologico è un patogeno del tratto urinario o a trasmissione sessuale.</p>
+    <div class="alert-box">
+      <strong>⚠️ I fluorochinoloni non si usano più in modo empirico.</strong> La resistenza a ciprofloxacina e levofloxacina nella nostra area geografica supera il 20–25%: un paziente su quattro non riceve una terapia efficace. Alternativa raccomandata:<br><br>
+      <strong>Fase acuta (5 giorni):</strong> ceftriaxone 1 g i.m. (cefalosporina di III generazione).<br>
+      <strong>Fase orale (10 giorni):</strong> cefalosporina orale.<br>
+      Copertura totale di circa 2 settimane.
+    </div>
+    <p>Le forme lievi-moderate possono essere gestite ambulatorialmente con sola terapia orale. Le forme aggressive (febbre elevata, segni sistemici, scroto flemmone) richiedono ospedalizzazione e terapia parenterale.</p>
+  </section>
+
+  <section>
+    <h2>🔵 Torsione dell'idatide di Morgagni — trattamento</h2>
+    <p>L'idatide di Morgagni è un residuo embriologico del dotto di Wolf privo di qualsiasi funzione. La sua torsione e necrosi non ha alcuna rilevanza clinica sul piano funzionale o riproduttivo.</p>
+    <p><strong>Trattamento:</strong> conservativo. Antidolorifici e, se indicato, antiinfiammatori. Non è necessaria alcuna esplorazione chirurgica se la diagnosi ecocolordoppler è certa. L'idatide riassorbirà spontaneamente nel corso di alcune settimane.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>❓ Domande frequenti dei pazienti</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Ho il varicocele — devo operarmi? <span class="arrow">▸</span></button>
+      <div class="faq-a">Non necessariamente. Il varicocele non va trattato solo perché presente. Il criterio principale per decidere se trattarlo è lo spermiogramma: se i parametri seminali sono normali, il varicocele si controlla nel tempo senza intervento. Se invece lo spermiogramma mostra una riduzione del numero, della motilità o della morfologia degli spermatozoi, e lei è interessato ad avere figli, allora il trattamento è indicato. L'intervento è mini-invasivo (un piccolo taglio sullo scroto in anestesia locale, durata ~10 minuti) e ambulatoriale. I risultati si valutano dopo circa 6 mesi.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Ho un dolore acuto al testicolo — cosa devo fare? <span class="arrow">▸</span></button>
+      <div class="faq-a">Un dolore acuto e intenso al testicolo, comparso improvvisamente, è un'emergenza urologica fino a prova contraria. La causa più pericolosa è la torsione del funicolo spermatico: il testicolo si ruota su se stesso, interrompendo la circolazione sanguigna. Se non trattata entro 6 ore, la gonade può andare incontro a necrosi irreversibile. Non aspetti a vedere se passa da solo e non si accontenti di un antibiotico senza escludere la torsione: si rechi immediatamente al pronto soccorso per una valutazione urgente con ecografia scrotale.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Il varicocele causa dolore? <span class="arrow">▸</span></button>
+      <div class="faq-a">Il varicocele può causare un senso di peso o fastidio scrotale, soprattutto dopo prolungata stazione eretta o attività fisica intensa. Raramente causa un dolore vero e proprio acuto. Il problema è che anche dopo la correzione del varicocele, il dolore spesso persiste — perché il fastidio può avere anche altre cause. Per questo il dolore da solo non è di solito un'indicazione sufficiente al trattamento. Se c'è anche uno spermiogramma alterato, si interviene per migliorare la fertilità e si spiega al paziente che il dolore potrebbe migliorare, ma non è garantito.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Quante possibilità ho di avere un figlio dopo il trattamento del varicocele? <span class="arrow">▸</span></button>
+      <div class="faq-a">Circa il 37% dei pazienti trattati per varicocele ottiene una gravidanza spontanea entro i 12–18 mesi successivi al trattamento. È un risultato significativo, anche se non garantito. La probabilità dipende da molti fattori: l'entità del danno seminale di partenza, l'età della compagna (il fattore più importante), e la presenza di eventuali componenti di infertilità femminile. Nei pazienti che non ottengono una gravidanza spontanea, il miglioramento dei parametri seminali dopo la correzione del varicocele raddoppia le probabilità di successo delle tecniche di fecondazione assistita.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Ho avuto un episodio di dolore scrotale che è passato da solo — è successo qualcosa di grave? <span class="arrow">▸</span></button>
+      <div class="faq-a">Un episodio di dolore scrotale intenso e improvviso che si risolve spontaneamente potrebbe essere una "subtorsione": la torsione del testicolo che si è risolta da sola, magari perché il paziente si è toccato e ha involontariamente detorto il funicolo. Questo è un segnale importante da non ignorare: chi ha avuto un episodio del genere è a rischio di una torsione vera e propria in futuro. È importante farsi valutare da un urologo per pianificare un'orchidopessia preventiva (fissazione del testicolo alla borsa scrotale), che impedisce la ricorrenza.</div>
+    </div>
+  </section>
+
+  <!-- ARGOMENTI CORRELATI -->
+  <section>
+    <h2>🔗 Argomenti correlati</h2>
+    <div class="topic-links">
+      <a href="neoplasia-testicolare.html" class="topic-link">🟢 Tumore del Testicolo</a>
+      <a href="disfunzione-erettile.html" class="topic-link">❤️ Disfunzione Erettile</a>
+      <a href="luts-ipertrofia-prostatica.html" class="topic-link">🔵 LUTS da Ipertrofia Prostatica</a>
+      <a href="index.html" class="topic-link">🏠 Torna alla Home</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Prof. Giacomo Novara — Professore Associato di Urologia, Università degli Studi di Padova</p>
+  <p style="margin-top:0.4rem"><a href="index.html">Home</a> · <a href="mailto:giacomo.novara@unipd.it">giacomo.novara@unipd.it</a> · <a href="index.html#contatti">Contatti</a></p>
+  <p style="margin-top:0.8rem;font-size:0.72rem;opacity:0.6">Le informazioni contenute in questa pagina hanno scopo puramente divulgativo e non sostituiscono il parere del medico specialista.</p>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vescica Iperattiva (OAB) — Prof. Giacomo Novara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #1a7a72; --teal-light: #e6f5f3; --teal-mid: #2a9d8f;
+    --navy: #0f2030; --cream: #f8faf9; --warm-gray: #5f6560;
+    --border: #cedad5; --amber: #c47c18; --red-warn: #b53228;
+    --blue: #1e4d7a;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Serif 4', Georgia, serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); font-weight: 300; background: var(--cream); color: var(--navy); line-height: 1.78; font-size: 17px; }
+  header { background: var(--navy); }
+  .header-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; display: flex; align-items: flex-start; gap: 1.4rem; }
+  .header-icon { font-size: 3rem; line-height: 1; flex-shrink: 0; margin-top: 0.3rem; }
+  .site-name { font-size: 0.77rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.45rem; }
+  header h1 { font-family: var(--font-display); font-size: clamp(1.7rem,4vw,2.5rem); font-weight: 700; color: #fff; line-height: 1.18; }
+  .header-sub { font-size: 0.92rem; color: rgba(255,255,255,0.6); margin-top: 0.35rem; font-style: italic; }
+  nav.breadcrumb { background: var(--teal); padding: 0.6rem 1.5rem; font-size: 0.82rem; }
+  nav.breadcrumb .inner { max-width: 900px; margin: 0 auto; display: flex; gap: 0.5rem; align-items: center; }
+  nav.breadcrumb a { color: rgba(255,255,255,0.85); text-decoration: none; }
+  nav.breadcrumb span { color: rgba(255,255,255,0.5); }
+  nav.breadcrumb .current { color: #fff; font-weight: 600; }
+  .page-wrap { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .intro-box { background: var(--teal-light); border-left: 4px solid var(--teal-mid); border-radius: 0 10px 10px 0; padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; font-size: 1.02rem; }
+  section { margin-bottom: 2.8rem; }
+  section h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--teal); margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+  section h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--navy); margin: 1.2rem 0 0.5rem; }
+  p { margin-bottom: 0.9rem; }
+  .def-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0; }
+  .def-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; }
+  .def-card .d-label { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.4rem; }
+  .def-card.patol .d-label { color: var(--red-warn); }
+  .def-card.fisiol .d-label { color: var(--teal); }
+  .def-card p { font-size: 0.88rem; color: #3a3530; margin: 0; }
+  .oab-types { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+  .oab-type { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; text-align: center; }
+  .oab-type .type-icon { font-size: 2rem; margin-bottom: 0.4rem; }
+  .oab-type strong { display: block; font-size: 1rem; margin-bottom: 0.3rem; }
+  .oab-type p { font-size: 0.86rem; color: var(--warm-gray); margin: 0; }
+  .oab-type.wet { border-color: var(--red-warn); background: #fde8e4; }
+  .oab-type.dry { border-color: var(--teal-mid); background: var(--teal-light); }
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 0.9rem; margin: 1.2rem 0; }
+  .stat-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; text-align: center; }
+  .stat-card .num { font-size: 1.9rem; font-weight: 600; color: var(--teal); font-family: var(--font-display); }
+  .stat-card .label { font-size: 0.8rem; color: var(--warm-gray); margin-top: 0.2rem; line-height: 1.3; }
+  .treat-step { display: flex; align-items: flex-start; gap: 0.9rem; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1.1rem; margin-bottom: 0.6rem; }
+  .treat-step .step-num { background: var(--teal); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 600; flex-shrink: 0; margin-top: 0.1rem; }
+  .treat-step .step-content strong { display: block; font-size: 0.96rem; margin-bottom: 0.2rem; }
+  .treat-step .step-content p { font-size: 0.88rem; color: var(--warm-gray); margin: 0; }
+  .drug-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 0.8rem; margin: 1rem 0; }
+  .drug-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; }
+  .drug-card .d-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+  .drug-card strong { display: block; font-size: 0.95rem; margin-bottom: 0.3rem; color: var(--navy); }
+  .drug-card ul { padding-left: 1.1rem; font-size: 0.86rem; color: #3a3530; }
+  .drug-card ul li { margin-bottom: 0.25rem; }
+  .drug-card.first { border-color: var(--teal-mid); }
+  .drug-card.second { border-color: var(--amber); background: #fdf5ec; }
+  .drug-card.third-line { border-color: var(--red-warn); background: #fde8e4; }
+  .efficacy-box { background: var(--navy); color: #fff; border-radius: 10px; padding: 1.4rem 1.6rem; margin: 1rem 0; }
+  .efficacy-box h3 { font-family: var(--font-display); color: #5dcfc6; margin-bottom: 0.6rem; font-size: 1.05rem; }
+  .efficacy-box p, .efficacy-box li { font-size: 0.88rem; color: rgba(255,255,255,0.85); }
+  .efficacy-box ul { padding-left: 1.1rem; margin-top: 0.4rem; }
+  .efficacy-box li { margin-bottom: 0.3rem; }
+  .alert-box { background: #fff3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 1rem 1.3rem; margin: 1rem 0; font-size: 0.93rem; }
+  .alert-box.info { background: var(--teal-light); border-color: var(--teal-mid); }
+  .alert-box strong { color: #7a5000; }
+  .alert-box.info strong { color: var(--teal); }
+  .highlight-quote { background: var(--navy); color: #fff; border-radius: 10px; padding: 1.4rem 1.6rem; margin: 1.4rem 0; position: relative; }
+  .highlight-quote::before { content: '"'; font-family: var(--font-display); font-size: 4rem; line-height: 1; color: var(--teal-mid); position: absolute; top: 0.2rem; left: 1rem; opacity: 0.5; }
+  .highlight-quote p { padding-left: 1.5rem; font-style: italic; font-size: 1.05rem; }
+  .line-grid { display: flex; flex-direction: column; gap: 0.8rem; margin: 1rem 0; }
+  .line-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; }
+  .line-card .l-badge { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; border-radius: 20px; padding: 0.15rem 0.7rem; margin-bottom: 0.5rem; }
+  .line-card.l1 .l-badge { background: var(--teal-light); color: var(--teal); }
+  .line-card.l2 .l-badge { background: #fff3cd; color: #7a5000; }
+  .line-card.l3 .l-badge { background: #fde8e4; color: var(--red-warn); }
+  .line-card strong { display: block; font-size: 0.97rem; margin-bottom: 0.3rem; }
+  .line-card p { font-size: 0.88rem; color: #3a3530; margin: 0; }
+  .faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 0.6rem; background: #fff; }
+  .faq-q { width: 100%; background: none; border: none; padding: 1rem 1.2rem; text-align: left; font-family: var(--font-body); font-size: 0.97rem; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .faq-q:hover { background: var(--teal-light); }
+  .faq-q .arrow { font-size: 1.2rem; color: var(--teal); transition: transform 0.22s; flex-shrink: 0; }
+  .faq-q.open .arrow { transform: rotate(90deg); }
+  .faq-a { display: none; padding: 0 1.2rem 1.1rem; font-size: 0.94rem; color: #3a3530; line-height: 1.72; }
+  .faq-a.open { display: block; }
+  .topic-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0; }
+  .topic-link { display: inline-block; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 1rem; font-size: 0.88rem; color: var(--teal); text-decoration: none; transition: background 0.15s, border-color 0.15s; }
+  .topic-link:hover { background: var(--teal-light); border-color: var(--teal-mid); }
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem 1.5rem; font-size: 0.82rem; line-height: 1.8; }
+  footer a { color: rgba(255,255,255,0.8); }
+  @media(max-width:600px) { .def-grid, .oab-types { grid-template-columns: 1fr; } .stat-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-icon">🔷</div>
+    <div>
+      <p class="site-name">Prof. Giacomo Novara — Urologia, Università di Padova</p>
+      <h1>Sindrome della Vescica Iperattiva</h1>
+      <p class="header-sub">OAB (<em>OverActive Bladder</em>) — Sindrome frequenza-urgenza</p>
+    </div>
+  </div>
+  <nav class="breadcrumb">
+    <div class="inner">
+      <a href="index.html">Home</a><span>›</span>
+      <a href="index.html#funzionale">Urologia Funzionale</a><span>›</span>
+      <span class="current">Vescica Iperattiva (OAB)</span>
+    </div>
+  </nav>
+</header>
+
+<div class="page-wrap">
+
+  <div class="intro-box">
+    La sindrome della vescica iperattiva (<strong>OAB</strong>) è una condizione idiopatica caratterizzata dall'<em>urgency</em> come sintomo cardine, spesso associata a pollachiuria, nicturia e — nelle forme più severe — incontinenza urinaria da urgenza. Colpisce <strong>uomini e donne in egual misura</strong>, a qualsiasi età, ed è distinta dall'ipertrofia prostatica anche se può coesistere con essa.
+  </div>
+
+  <!-- DEFINIZIONE E FISIOPATOLOGIA -->
+  <section>
+    <h2>🧠 Definizione e fisiopatologia</h2>
+
+    <h3>Urgency vs urge — una distinzione fondamentale</h3>
+    <div class="def-grid">
+      <div class="def-card fisiol">
+        <div class="d-label">Urge — fisiologico</div>
+        <p>Desiderio di urinare che insorge fisiologicamente quando la vescica si riempie e si distende oltre una certa soglia. È governato, differibile, proporzionale al volume.</p>
+      </div>
+      <div class="def-card patol">
+        <div class="d-label">Urgency — patologico · Sintomo cardine OAB</div>
+        <p>Desiderio <strong>impellente</strong> di urinare, difficile o impossibile da differire, che insorge anche con vescica poco piena. È l'equivalente sintomatologico delle contrazioni involontarie del detrusore durante la fase di riempimento.</p>
+      </div>
+    </div>
+
+    <h3>Meccanismo fisiopatologico</h3>
+    <p>In condizioni normali il detrusore si contrae solo durante la minzione volontaria. Nella OAB il detrusore genera <strong>contrazioni involontarie durante la fase di riempimento</strong>. Questo riduce la <strong>capacità funzionale</strong> della vescica (la soglia a cui insorge l'urgenza: 150–250 mL invece dei normali 300–400 mL) pur mantenendo intatta la capacità anatomica (400–500 mL). La vescica non è strutturalmente più piccola — è funzionalmente meno capiente.</p>
+
+    <h3>OAB umida e OAB secca</h3>
+    <div class="oab-types">
+      <div class="oab-type wet">
+        <div class="type-icon">💧</div>
+        <strong>OAB umida (wet OAB)</strong>
+        <p>Urgency + <strong>incontinenza urinaria da urgenza</strong>. Più frequente nelle donne per l'uretra più corta e la minore resistenza uretrale.</p>
+      </div>
+      <div class="oab-type dry">
+        <div class="type-icon">🌵</div>
+        <strong>OAB secca (dry OAB)</strong>
+        <p>Urgency + pollachiuria/nicturia <strong>senza perdite</strong>. Più comune nel maschio non ancora trattato per via della maggiore resistenza uretrale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EPIDEMIOLOGIA -->
+  <section>
+    <h2>📊 Epidemiologia</h2>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="num">≈1:1</div><div class="label">Rapporto maschi/femmine — uguale in entrambi i sessi</div></div>
+      <div class="stat-card"><div class="num">Qualsiasi</div><div class="label">Età — può colpire anche i bambini</div></div>
+      <div class="stat-card"><div class="num">↑ età</div><div class="label">Incidenza crescente con l'età</div></div>
+      <div class="stat-card"><div class="num">Idiopatica</div><div class="label">Causa sconosciuta nella forma primitiva</div></div>
+    </div>
+    <p>L'uguale distribuzione tra i sessi è un elemento chiave che <strong>esclude il coinvolgimento della prostata</strong> nella patogenesi della OAB. Altre cause di LUTS simili all'OAB devono sempre essere escluse: neoplasia vescicale (soprattutto CIS), calcolosi ureterale distale, infezioni urinarie, stenosi uretrale, cause neurologiche.</p>
+  </section>
+
+  <!-- DIAGNOSI -->
+  <section>
+    <h2>🔍 Diagnosi</h2>
+    <p>La diagnosi di OAB è <strong>clinica</strong>: si basa sulla sintomatologia riferita dal paziente, senza necessità di esame urodinamico nella valutazione iniziale. Gli studi su anticolinergici e beta-3 agonisti sono stati condotti su diagnosi clinica, non urodinamica.</p>
+
+    <div class="treat-step"><div class="step-num">1</div><div class="step-content"><strong>Anamnesi e questionari sintomatologici</strong><p>Valutazione dell'urgency, frequenza diurna/notturna, episodi di incontinenza. IPSS per i sintomi complessivi del basso apparato urinario.</p></div></div>
+    <div class="treat-step"><div class="step-num">2</div><div class="step-content"><strong>Esame urine</strong><p>Per escludere infezione urinaria, glicosuria (diabete), microematuria (neoplasia vescicale), cristalluria (calcolosi).</p></div></div>
+    <div class="treat-step"><div class="step-num">3</div><div class="step-content"><strong>Diario minzionale (carta frequenza-volume)</strong><p>Il paziente registra per <strong>3 giorni</strong> (non necessariamente consecutivi) l'ora e la quantità di ogni minzione. Fondamentale per distinguere OAB vera (capacità funzionale ridotta) da iperdiuresi di qualsiasi causa (capacità funzionale normale). Chiedere solo orario e volume: più si chiede, meno si ottiene.</p></div></div>
+    <div class="treat-step"><div class="step-num">4</div><div class="step-content"><strong>Ecografia con residuo post-minzionale</strong><p>Esclude patologie associate. Il residuo post-minzionale nella OAB è generalmente basso; se elevato, rivalutare la diagnosi.</p></div></div>
+    <div class="treat-step"><div class="step-num">5</div><div class="step-content"><strong>Studio urodinamico (casi selezionati)</strong><p>Non obbligatorio in prima battuta. Indicato prima di trattamenti di seconda linea o in caso di dubbio diagnostico. Evidenzia le contrazioni involontarie del detrusore durante il riempimento (iperattività detrusoriale).</p></div></div>
+
+    <div class="alert-box info">
+      <strong>📓 Come interpretare il diario minzionale:</strong> se la capacità funzionale è normale (volumi minzionali regolari, >250 mL), i disturbi dipendono probabilmente dall'introito idrico eccessivo, da diuretici, dal diabete, da cause non urologiche. Se la capacità funzionale è ridotta (volumi minzionali piccoli e frequenti), è una OAB vera.
+    </div>
+  </section>
+
+  <!-- TRATTAMENTO - MISURE COMPORTAMENTALI -->
+  <section>
+    <h2>🧘 Prima linea: misure comportamentali</h2>
+    <p>Economiche, prive di effetti collaterali, spesso sottovalutate. Vanno proposte a tutti i pazienti prima di qualsiasi farmaco.</p>
+    <div class="drug-grid">
+      <div class="drug-card"><strong>💧 Restrizione idrica</strong><p style="font-size:0.87rem;color:#3a3530;margin:0.3rem 0 0">Obiettivo: diuresi ≤1500 mL/die. Ricordare che frutta e verdura contengono il 60–70% di acqua. Evitare il mito dell'"acqua fa bene sempre".</p></div>
+      <div class="drug-card"><strong>🕔 Razionalizzazione oraria</strong><p style="font-size:0.87rem;color:#3a3530;margin:0.3rem 0 0">Nicturia → spostare idratazione al mattino/primo pomeriggio. Tisane e minestre la sera aggravano la nicturia: "la tisana la beva alle 5 come gli inglesi".</p></div>
+      <div class="drug-card"><strong>☕ Caffeina e alcol</strong><p style="font-size:0.87rem;color:#3a3530;margin:0.3rem 0 0">Tè, caffè, Coca-Cola e birra hanno effetto diuretico aggiuntivo. Ridurne il consumo nelle ore serali.</p></div>
+      <div class="drug-card"><strong>💊 Revisione della terapia</strong><p style="font-size:0.87rem;color:#3a3530;margin:0.3rem 0 0">Diuretici assunti la sera → spostare al mattino o al primo pomeriggio. Discutere con il cardiologo se possibile sostituire con altra classe antipertensiva.</p></div>
+    </div>
+  </section>
+
+  <!-- TERAPIA FARMACOLOGICA DI PRIMA LINEA -->
+  <section>
+    <h2>💊 Prima linea farmacologica</h2>
+    <div class="highlight-quote"><p>Gli anticolinergici e i beta-3 agonisti sono entrambi moderatamente efficaci: riducono gli episodi di urgenza e incontinenza di circa 0,5 al giorno rispetto al placebo. Non sono farmaci miracolosi — ma sono reali e clinicamente apprezzabili dai pazienti che rispondono.</p></div>
+
+    <div class="drug-grid">
+      <div class="drug-card first">
+        <div class="d-icon">🚫</div>
+        <strong>Anticolinergici (inibitori M3)</strong>
+        <ul>
+          <li>Ossibutinina ER, tolterodina ER, solifenacina 5–10 mg, darifenacina, fesoterodina</li>
+          <li>Blocco competitivo del recettore muscarinico M3 del detrusore → inibizione delle contrazioni involontarie</li>
+          <li>Preferire formulazioni <strong>extended release</strong>: livelli plasmatici più costanti, migliore tollerabilità</li>
+          <li>⚠️ Effetti collaterali principali: <strong>xerostomia</strong> (bocca secca) e <strong>stipsi</strong> — entrambi in conflitto con la restrizione idrica consigliata contemporaneamente</li>
+          <li>Formulazione transdermica (cerotto ossibutinina): meno xerostomia/stipsi, ma arrossamenti locali; cambiare sede ogni 3 giorni</li>
+          <li>In Italia fascia C → a carico del paziente. La tolterodina genericata è la più economica.</li>
+        </ul>
+      </div>
+      <div class="drug-card first">
+        <div class="d-icon">⚡</div>
+        <strong>Beta-3 agonisti</strong>
+        <ul>
+          <li>Mirabegron (disponibile), vibegron (recente introduzione in Italia)</li>
+          <li>Meccanismo opposto agli anticolinergici: agonismo β<sub>3</sub>-adrenergico → rilassamento del detrusore in fase di riempimento</li>
+          <li>Efficacia simile agli anticolinergici negli studi registrazionali</li>
+          <li>Profilo di effetti collaterali più favorevole: <strong>no xerostomia, no stipsi</strong></li>
+          <li>⚠️ Nella pratica clinica i <em>responder</em> sembrano meno numerosi rispetto a quanto atteso dagli studi (possibile sovrastima dell'efficacia nelle sperimentazioni registrazionali)</li>
+          <li>⚠️ Cautela in ipertensione non controllata</li>
+          <li>Fascia C → a carico del paziente</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Terapia di combinazione anticolinergici + beta-3 agonisti</h3>
+    <p>Lo studio <strong>SYNERGY</strong> ha dimostrato che la terapia di combinazione (solifenacina + mirabegron a dosi piene) è statisticamente superiore alla monoterapia. Tuttavia il beneficio clinico aggiunto è <strong>molto modesto</strong>: circa 0,2 episodi di incontinenza in meno per 24 ore rispetto al solo anticolinergico. In pratica: ogni 5 giorni di terapia combinata, un episodio di incontinenza in meno rispetto alla monoterapia.</p>
+    <div class="alert-box">
+      <strong>⚠️ Costo della combinazione:</strong> entrambi i farmaci sono in fascia C. Il costo complessivo può superare i 100 €/mese. Per un beneficio clinico così modesto, è una scelta da condividere attentamente con il paziente.
+    </div>
+  </section>
+
+  <!-- SECONDA E TERZA LINEA -->
+  <section>
+    <h2>⚕️ Seconda e terza linea — quando i farmaci non bastano</h2>
+    <p>Se la terapia comportamentale e farmacologica non è sufficiente, si rivaluta con studio urodinamico per confermare la diagnosi di iperattività detrusoriale e si procede ai trattamenti di seconda o terza linea.</p>
+
+    <div class="line-grid">
+      <div class="line-card l2">
+        <div class="l-badge">Seconda linea · Gold standard</div>
+        <strong>💉 Tossina botulinica intravescicale (100 UI)</strong>
+        <p>Iniezioni endoscopiche della tossina nella parete vescicale (15–20 punture, evitando il trigono), in blanda sedazione. La tossina blocca la proteina SNAP-25, inibendo il rilascio di acetilcolina alle giunzioni colinergiche del detrusore.<br><br>
+        <strong>Efficacia:</strong> nettamente superiore agli anticolinergici — tre volte più efficace del placebo nella riduzione dell'incontinenza. Miglioramento significativo della qualità di vita.<br><br>
+        <strong>Durata:</strong> circa 6–9 mesi di efficacia. Poi i sintomi riprendono progressivamente. Può essere ripetuta indefinitamente: pazienti con 10–15 iniezioni nel corso degli anni con risposta mantenuta.<br><br>
+        <strong>Effetto collaterale principale:</strong> ritenzione urinaria nel <strong>7–10%</strong> dei casi (comunicare al paziente ~10% per abbondare). Il paziente deve essere disponibile all'autocateterismo intermittente se necessario. Chi non accetta questo rischio non è candidato al trattamento. La ritenzione è reversibile con il calo dell'efficacia del farmaco (dopo qualche mese).<br><br>
+        <strong>Costo:</strong> coperto dal SSN — vantaggio importante rispetto ai farmaci orali.</p>
+      </div>
+
+      <div class="line-card l2">
+        <div class="l-badge">Seconda linea · Alternativa</div>
+        <strong>🔌 Neuromodulazione sacrale (impianto S3)</strong>
+        <p>Posizionamento percutaneo di un elettrodo nel forame sacrale S3, collegato a un neurostimolatore sottocutaneo (simile a un pacemaker cardiaco). Meccanismo d'azione non completamente noto ma dimostrato efficace.<br><br>
+        <strong>Procedura in due fasi:</strong> prima impianto dell'elettrodo con neurostimolatore esterno per test di 2–4 settimane; se risposta positiva, impianto del generatore definitivo nella loggia glutea o addominale.<br><br>
+        <strong>Vantaggi rispetto al botulino:</strong> nessun rischio di ritenzione, nessuna necessità di autocateterismo — ideale per chi non accetta quel rischio.<br><br>
+        <strong>Svantaggi:</strong> costo molto elevato (unico produttore: Medtronic). La batteria si esaurisce periodicamente e va sostituita. Dall'analisi costo-efficacia, svantaggiosa rispetto al botulino.<br><br>
+        <strong>Non responder al botulino:</strong> la neuromodulazione è l'alternativa principale, anche se alcuni pazienti non rispondono neppure a questa.</p>
+      </div>
+
+      <div class="line-card l3">
+        <div class="l-badge">Terza linea · Rarissima</div>
+        <strong>🔧 Cistoplastica di ampliamento o cistectomia con derivazione urinaria</strong>
+        <p>Riservata ai casi refrattari a tutte le terapie precedenti. Si amplia la vescica con un'ansa ileale (cistoplastica) oppure — più frequentemente nei pazienti con dolore pelvico cronico associato — si esegue cistectomia con derivazione urinaria (come nel carcinoma vescicale).<br><br>
+        Entrambe sono <strong>chirurgie maggiori</strong> con rischi legati all'utilizzo dell'intestino (complicanze metaboliche, infettive). Dopo cistoplastica molti pazienti richiedono autocateterismo. Incidenza: 1–2 casi/anno anche in centri di volume elevato.</p>
+      </div>
+    </div>
+
+    <div class="efficacy-box">
+      <h3>Confronto tra trattamenti di seconda linea</h3>
+      <p>Tossina botulinica e neuromodulazione sacrale hanno efficacia comparabile nei trial randomizzati. La scelta dipende da:</p>
+      <ul>
+        <li><strong>Botulino →</strong> prima scelta per costo-efficacia, copertura SSN, procedura semplice e ripetibile</li>
+        <li><strong>Neuromodulazione →</strong> paziente che non accetta il rischio di autocateterismo, oppure non-responder al botulino</li>
+        <li>In entrambi i casi, confermare la diagnosi con studio urodinamico prima del trattamento</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RIASSUNTO PERCORSO TERAPEUTICO -->
+  <section>
+    <h2>📍 Percorso terapeutico riassunto</h2>
+    <div class="treat-step"><div class="step-num">1</div><div class="step-content"><strong>Misure comportamentali</strong><p>Restrizione idrica, razionalizzazione dell'orario di idratazione, revisione dei farmaci concomitanti. Rivalutazione con diario minzionale.</p></div></div>
+    <div class="treat-step"><div class="step-num">2</div><div class="step-content"><strong>Anticolinergici o beta-3 agonisti (o entrambi)</strong><p>Se insoddisfacente: ottimizzazione del dosaggio, cambio di formulazione (extended release, cerotto), o combinazione. Follow-up a 3 mesi.</p></div></div>
+    <div class="treat-step"><div class="step-num">3</div><div class="step-content"><strong>Studio urodinamico</strong><p>Per confermare l'iperattività detrusoriale prima di procedere ai trattamenti invasivi.</p></div></div>
+    <div class="treat-step"><div class="step-num">4</div><div class="step-content"><strong>Tossina botulinica intravescicale (100 UI)</strong><p>Prima scelta di seconda linea. Efficace, coperta dal SSN, ripetibile. Informare il paziente del rischio di autocateterismo (~10%).</p></div></div>
+    <div class="treat-step"><div class="step-num">5</div><div class="step-content"><strong>Neuromodulazione sacrale S3</strong><p>Alternativa al botulino o dopo fallimento. Costosa, senza rischio di ritenzione.</p></div></div>
+    <div class="treat-step"><div class="step-num">6</div><div class="step-content"><strong>Chirurgia maggiore (rarissima)</strong><p>Cistoplastica di ampliamento o cistectomia con derivazione. Solo in casi refrattari a tutto il precedente.</p></div></div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>❓ Domande frequenti dei pazienti</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Ho urgenza di urinare tutto il giorno — è colpa della prostata? <span class="arrow">▸</span></button>
+      <div class="faq-a">Non necessariamente. L'urgenza minzionale (il desiderio impellente di urinare difficile da differire) è il sintomo cardine della vescica iperattiva, una condizione che colpisce uomini e donne in egual misura e non dipende dalla prostata. È causata da contrazioni involontarie del muscolo vescicale (detrusore) durante il riempimento. Può coesistere con l'ipertrofia prostatica, ma può essere presente anche in sua assenza, anche nelle donne e nei giovani. Un diario minzionale e una valutazione urologica permettono di distinguere le cause.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">I farmaci per la vescica iperattiva funzionano? Quanto ci vogliono? <span class="arrow">▸</span></button>
+      <div class="faq-a">Funzionano, ma con efficacia moderata: riducono gli episodi di urgenza e di perdita di urina di circa mezzo episodio al giorno rispetto a chi non prende niente. Non sono farmaci miracolosi, ma molti pazienti li apprezzano. L'effetto si valuta dopo circa 4–8 settimane. Il problema principale è la tollerabilità: gli anticolinergici causano spesso bocca secca e stitichezza, che sono fastidiosi soprattutto se contemporaneamente si deve bere poco. I beta-3 agonisti (mirabegron, vibegron) hanno meno effetti collaterali ma sembrano avere meno responder nella pratica reale.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Ho sentito parlare del botulino per la vescica — è sicuro? Fa male? <span class="arrow">▸</span></button>
+      <div class="faq-a">La tossina botulinica intravescicale è un trattamento sicuro, rapido ed efficace per la vescica iperattiva. Si esegue in cistoscopia con una blanda sedazione: vengono fatte 15–20 piccole punture nella parete della vescica, la procedura dura pochi minuti. L'efficacia è nettamente superiore ai farmaci orali e dura circa 6–9 mesi, poi si può ripetere. L'unico rischio rilevante è la difficoltà a svuotare la vescica dopo il trattamento (circa 7–10% dei casi), che richiede l'autocateterismo intermittente temporaneo. Prima del trattamento viene spiegato questo rischio: chi non lo accetta non è candidato. Il farmaco è coperto dal Sistema Sanitario Nazionale.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Se bevo poco cosa cambia? Non è meglio bere tanto per "lavare i reni"? <span class="arrow">▸</span></button>
+      <div class="faq-a">Il concetto di "bere tanto per lavare i reni" è un mito molto diffuso. Chi non ha calcolosi renali, infezioni urinarie ricorrenti o trattamenti chemioterapici in corso non ha bisogno di bere grandi quantità di acqua. Una diuresi di circa 1500 mL al giorno è sufficiente per il fabbisogno fisiologico. Bere di più non porta benefici aggiuntivi, ma amplifica i disturbi minzionali: più si beve, più la vescica si riempie spesso, più ci si alza la notte, più si sente l'urgenza. Ridurre l'introito idrico è una delle misure più semplici ed efficaci per migliorare la qualità della vita in questi pazienti.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Perdo urina quando sento lo stimolo — cosa posso fare concretamente? <span class="arrow">▸</span></button>
+      <div class="faq-a">L'incontinenza da urgenza (perdita di urina preceduta da urgency irrefrenabile) è uno dei sintomi più invalidanti della vescica iperattiva. I passi pratici da seguire: 1) misure comportamentali (restrizione idrica, evitare caffè/tè/alcol nelle ore serali); 2) terapia farmacologica con anticolinergici o beta-3 agonisti; 3) se i farmaci non bastano o non sono tollerati, la tossina botulinica intravescicale è molto efficace, coperta dal SSN e ripetibile. Il percorso terapeutico è graduale: con la giusta terapia la grande maggioranza dei pazienti migliora significativamente.</div>
+    </div>
+  </section>
+
+  <!-- ARGOMENTI CORRELATI -->
+  <section>
+    <h2>🔗 Argomenti correlati</h2>
+    <div class="topic-links">
+      <a href="luts-ipertrofia-prostatica.html" class="topic-link">🔵 LUTS da Ipertrofia Prostatica</a>
+      <a href="neoplasia-vescicale.html" class="topic-link">🔵 Tumore della Vescica</a>
+      <a href="carcinoma-prostatico.html" class="topic-link">🟣 Tumore della Prostata</a>
+      <a href="index.html" class="topic-link">🏠 Torna alla Home</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Prof. Giacomo Novara — Professore Associato di Urologia, Università degli Studi di Padova</p>
+  <p style="margin-top:0.4rem"><a href="index.html">Home</a> · <a href="mailto:giacomo.novara@unipd.it">giacomo.novara@unipd.it</a> · <a href="index.html#contatti">Contatti</a></p>
+  <p style="margin-top:0.8rem;font-size:0.72rem;opacity:0.6">Le informazioni contenute in questa pagina hanno scopo puramente divulgativo e non sostituiscono il parere del medico specialista.</p>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+</script>
+</body>
+</html>

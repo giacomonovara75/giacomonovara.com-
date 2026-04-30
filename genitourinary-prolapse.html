@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Female Stress Urinary Incontinence and Genitourinary Prolapse — Prof. Giacomo Novara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --violet: #6b3fa0; --violet-light: #f0eaf8; --violet-mid: #8a5cbf;
+    --navy: #1a1230; --cream: #faf9fc; --warm-gray: #636070;
+    --border: #dcd6ea; --amber: #c47c18; --red-warn: #b53228; --green: #1a7a50;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Serif 4', Georgia, serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); font-weight: 300; background: var(--cream); color: var(--navy); line-height: 1.78; font-size: 17px; }
+  header { background: var(--navy); }
+  .header-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; display: flex; align-items: flex-start; gap: 1.4rem; }
+  .header-icon { font-size: 3rem; line-height: 1; flex-shrink: 0; margin-top: 0.3rem; }
+  .site-name { font-size: 0.77rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.45rem; }
+  header h1 { font-family: var(--font-display); font-size: clamp(1.6rem,4vw,2.4rem); font-weight: 700; color: #fff; line-height: 1.18; }
+  .header-sub { font-size: 0.92rem; color: rgba(255,255,255,0.6); margin-top: 0.35rem; font-style: italic; }
+  nav.breadcrumb { background: var(--violet); padding: 0.6rem 1.5rem; font-size: 0.82rem; }
+  nav.breadcrumb .inner { max-width: 900px; margin: 0 auto; display: flex; gap: 0.5rem; align-items: center; }
+  nav.breadcrumb a { color: rgba(255,255,255,0.85); text-decoration: none; }
+  nav.breadcrumb span { color: rgba(255,255,255,0.5); }
+  nav.breadcrumb .current { color: #fff; font-weight: 600; }
+  .page-wrap { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .intro-box { background: var(--violet-light); border-left: 4px solid var(--violet-mid); border-radius: 0 10px 10px 0; padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; font-size: 1.02rem; }
+  section { margin-bottom: 2.8rem; }
+  section h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--violet); margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+  section h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--navy); margin: 1.2rem 0 0.5rem; }
+  p { margin-bottom: 0.9rem; }
+  .type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 0.9rem; margin: 1.2rem 0; }
+  .type-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; }
+  .type-card .t-icon { font-size: 1.6rem; margin-bottom: 0.3rem; }
+  .type-card strong { display: block; font-size: 0.95rem; margin-bottom: 0.3rem; color: var(--navy); }
+  .type-card p { font-size: 0.85rem; color: var(--warm-gray); margin: 0; }
+  .type-card.stress { border-top: 3px solid var(--violet); }
+  .type-card.urgency { border-top: 3px solid var(--amber); }
+  .type-card.mixed { border-top: 3px solid var(--red-warn); }
+  .mech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0; }
+  .mech-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; }
+  .mech-card .m-label { font-size: 0.75rem; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 600; color: var(--violet); margin-bottom: 0.4rem; }
+  .mech-card strong { display: block; font-size: 0.97rem; margin-bottom: 0.3rem; }
+  .mech-card p { font-size: 0.87rem; color: #3a3530; margin: 0; }
+  .risk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px,1fr)); gap: 0.8rem; margin: 1rem 0; }
+  .risk-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1rem; text-align: center; font-size: 0.85rem; }
+  .risk-card .r-icon { font-size: 1.5rem; display: block; margin-bottom: 0.3rem; }
+  .risk-card strong { display: block; font-size: 0.88rem; margin-bottom: 0.15rem; }
+  .prolapse-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 0.9rem; margin: 1.2rem 0; }
+  .prolapse-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; }
+  .prolapse-card .p-badge { display: inline-block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; border-radius: 20px; padding: 0.15rem 0.6rem; margin-bottom: 0.4rem; }
+  .prolapse-card.ant .p-badge { background: var(--violet-light); color: var(--violet); }
+  .prolapse-card.api .p-badge { background: #fff3cd; color: #7a5000; }
+  .prolapse-card.post .p-badge { background: #e8f5ee; color: var(--green); }
+  .prolapse-card strong { display: block; font-size: 0.95rem; margin-bottom: 0.25rem; }
+  .prolapse-card p { font-size: 0.85rem; color: var(--warm-gray); margin: 0; }
+  .treat-step { display: flex; align-items: flex-start; gap: 0.9rem; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1.1rem; margin-bottom: 0.6rem; }
+  .treat-step .step-num { background: var(--violet); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 600; flex-shrink: 0; margin-top: 0.1rem; }
+  .treat-step .step-content strong { display: block; font-size: 0.96rem; margin-bottom: 0.2rem; }
+  .treat-step .step-content p { font-size: 0.88rem; color: var(--warm-gray); margin: 0; }
+  .surg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 0.8rem; margin: 1rem 0; }
+  .surg-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; }
+  .surg-card .s-badge { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--violet); margin-bottom: 0.3rem; display: block; }
+  .surg-card strong { display: block; font-size: 0.95rem; margin-bottom: 0.3rem; }
+  .surg-card p { font-size: 0.85rem; color: var(--warm-gray); margin: 0; }
+  .surg-card.preferred { border-color: var(--violet-mid); background: var(--violet-light); }
+  .surg-card.preferred .s-badge { color: var(--violet); }
+  .surg-card.caution { border-color: var(--red-warn); background: #fde8e4; }
+  .surg-card.caution .s-badge { color: var(--red-warn); }
+  .mesh-box { background: var(--navy); color: #fff; border-radius: 10px; padding: 1.4rem 1.6rem; margin: 1.2rem 0; }
+  .mesh-box h3 { font-family: var(--font-display); color: #c4a8f0; margin-bottom: 0.6rem; font-size: 1.05rem; }
+  .mesh-box p, .mesh-box li { font-size: 0.88rem; color: rgba(255,255,255,0.88); }
+  .mesh-box ul { padding-left: 1.1rem; margin-top: 0.4rem; }
+  .mesh-box li { margin-bottom: 0.3rem; }
+  .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 0.9rem; margin: 1.2rem 0; }
+  .stat-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; text-align: center; }
+  .stat-card .num { font-size: 1.9rem; font-weight: 600; color: var(--violet); font-family: var(--font-display); }
+  .stat-card .label { font-size: 0.8rem; color: var(--warm-gray); margin-top: 0.2rem; line-height: 1.3; }
+  .alert-box { background: #fff3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 1rem 1.3rem; margin: 1rem 0; font-size: 0.93rem; }
+  .alert-box.danger { background: #fde8e4; border-color: var(--red-warn); }
+  .alert-box.info { background: var(--violet-light); border-color: var(--violet-mid); }
+  .alert-box strong { color: #7a5000; }
+  .alert-box.danger strong { color: #8a2010; }
+  .alert-box.info strong { color: var(--violet); }
+  .highlight-quote { background: var(--navy); color: #fff; border-radius: 10px; padding: 1.4rem 1.6rem; margin: 1.4rem 0; position: relative; }
+  .highlight-quote::before { content: '"'; font-family: var(--font-display); font-size: 4rem; line-height: 1; color: var(--violet-mid); position: absolute; top: 0.2rem; left: 1rem; opacity: 0.5; }
+  .highlight-quote p { padding-left: 1.5rem; font-style: italic; font-size: 1.05rem; }
+  .scenario-grid { display: flex; flex-direction: column; gap: 0.7rem; margin: 1rem 0; }
+  .scenario { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.3rem; border-left: 4px solid var(--violet-mid); }
+  .scenario .s-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; color: var(--violet); margin-bottom: 0.3rem; }
+  .scenario strong { display: block; font-size: 0.97rem; margin-bottom: 0.3rem; }
+  .scenario p { font-size: 0.87rem; color: #3a3530; margin: 0; }
+  .faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 0.6rem; background: #fff; }
+  .faq-q { width: 100%; background: none; border: none; padding: 1rem 1.2rem; text-align: left; font-family: var(--font-body); font-size: 0.97rem; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .faq-q:hover { background: var(--violet-light); }
+  .faq-q .arrow { font-size: 1.2rem; color: var(--violet); transition: transform 0.22s; flex-shrink: 0; }
+  .faq-q.open .arrow { transform: rotate(90deg); }
+  .faq-a { display: none; padding: 0 1.2rem 1.1rem; font-size: 0.94rem; color: #3a3530; line-height: 1.72; }
+  .faq-a.open { display: block; }
+  .topic-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0; }
+  .topic-link { display: inline-block; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 1rem; font-size: 0.88rem; color: var(--violet); text-decoration: none; transition: background 0.15s, border-color 0.15s; }
+  .topic-link:hover { background: var(--violet-light); border-color: var(--violet-mid); }
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem 1.5rem; font-size: 0.82rem; line-height: 1.8; }
+  footer a { color: rgba(255,255,255,0.8); }
+  @media(max-width:600px) { .mech-grid { grid-template-columns: 1fr; } .stat-row { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-icon">🟣</div>
+    <div>
+      <p class="site-name">Prof. Giacomo Novara — Urology, University of Padua</p>
+      <h1>Female Stress Urinary Incontinence and Genitourinary Prolapse</h1>
+      <p class="header-sub">Urogynecology — Benign disorders of the female pelvic floor</p>
+    </div>
+  </div>
+  <nav class="breadcrumb">
+    <div class="inner">
+      <a href="index.html">Home</a><span>›</span>
+      <a href="index.html#functional">Functional Urology</a><span>›</span>
+      <span class="current">Prolapse &amp; Female Incontinence</span>
+    </div>
+  </nav>
+</header>
+
+<div class="page-wrap">
+
+  <div class="intro-box">
+    Urogynecology addresses <strong>benign disorders of the female genitourinary tract</strong>: stress urinary incontinence and genitourinary prolapse. These two conditions are often two sides of the same coin — both expressions of <strong>failure of the pelvic floor support mechanisms</strong>, not of the organs themselves. Common, frequently under-diagnosed, and highly amenable to treatment.
+  </div>
+
+  <!-- DEFINITIONS -->
+  <section>
+    <h2>📋 Definitions — Urinary Incontinence</h2>
+    <p>Urinary incontinence is defined as <strong>any involuntary leakage of urine</strong> through the urethra. Three main types are distinguished, each with distinct pathophysiology and management:</p>
+    <div class="type-grid">
+      <div class="type-card stress">
+        <div class="t-icon">🏃</div>
+        <strong>Stress urinary incontinence (SUI)</strong>
+        <p>Urine leakage during physical exertion, coughing, sneezing, or any increase in intra-abdominal pressure. <em>Not preceded by urgency.</em> This is the form addressed on this page.</p>
+      </div>
+      <div class="type-card urgency">
+        <div class="t-icon">⚡</div>
+        <strong>Urgency urinary incontinence</strong>
+        <p>Leakage preceded by an irrepressible urge to void. It is the clinical expression of detrusor overactivity. Treatment: antimuscarinics, beta-3 agonists, botulinum toxin.</p>
+      </div>
+      <div class="type-card mixed">
+        <div class="t-icon">🔀</div>
+        <strong>Mixed urinary incontinence</strong>
+        <p>Coexistence of both forms. The most challenging to treat: no single drug or procedure addresses both components simultaneously.</p>
+      </div>
+    </div>
+    <div class="alert-box info">
+      <strong>📌 Symptom, sign, urodynamic finding:</strong> incontinence is a symptom (what the patient reports), a sign (what is observed on the stress test), and a urodynamic finding. The most important dimension is the <em>symptom</em>: if the patient reports it, it is real — even if it cannot be reproduced in the outpatient setting.
+    </div>
+  </section>
+
+  <!-- EPIDEMIOLOGY -->
+  <section>
+    <h2>📊 Epidemiology</h2>
+    <div class="stat-row">
+      <div class="stat-card"><div class="num">6–12%</div><div class="label">Women with stress incontinence over a lifetime</div></div>
+      <div class="stat-card"><div class="num">10–50%</div><div class="label">Women with genitourinary prolapse on physical examination</div></div>
+      <div class="stat-card"><div class="num">30–40%</div><div class="label">Prolapse recurrence risk without mesh (anterior colporrhaphy)</div></div>
+      <div class="stat-card"><div class="num">12%</div><div class="label">Erosion risk with transvaginal polypropylene mesh</div></div>
+    </div>
+    <p>Estimates vary widely across studies depending on the clinical setting. Many women do not seek treatment, erroneously assuming incontinence is a normal consequence of ageing. <em>It is not.</em> The prevalence of prolapse is declining in high-income regions, in parallel with falling birth rates.</p>
+  </section>
+
+  <!-- PATHOPHYSIOLOGY -->
+  <section>
+    <h2>🔬 Pathophysiology — Why stress urinary incontinence develops</h2>
+    <p>Urinary continence in women depends on the <strong>striated urethral sphincter</strong> and on the urethral support mechanisms. Damage to one or both elements results in incontinence.</p>
+    <div class="mech-grid">
+      <div class="mech-card">
+        <div class="m-label">Mechanism 1</div>
+        <strong>Intrinsic sphincter deficiency (ISD)</strong>
+        <p>Direct damage to the striated urethral sphincter or its innervation, caused by: pelvic surgery (hysterectomy, rectal resection), radiotherapy, trauma. Continence is compromised because the closure mechanism is damaged irrespective of urethral position.</p>
+      </div>
+      <div class="mech-card">
+        <div class="m-label">Mechanism 2 · Most common</div>
+        <strong>Urethral hypermobility</strong>
+        <p>Weakening of the pelvic floor musculature that supports the posterior urethral wall. During increases in intra-abdominal pressure, the posterior wall separates from the anterior wall, opening the urethral lumen. The sphincter may be intact, but support is lacking.</p>
+      </div>
+    </div>
+    <p>Many patients have both mechanisms simultaneously. The unifying concept: <strong>neither the bladder nor the urethra is diseased — it is the pelvic floor that no longer adequately supports the structures</strong>.</p>
+  </section>
+
+  <!-- PROLAPSE -->
+  <section>
+    <h2>📐 Genitourinary prolapse — Classification</h2>
+    <p>Prolapse arises for the same reason as incontinence: <strong>failure of the musculo-ligamentous pelvic floor support mechanisms</strong>. The prolapsing organs are anatomically healthy. Prolapse is frequently multicompartmental.</p>
+    <div class="prolapse-grid">
+      <div class="prolapse-card ant">
+        <div class="p-badge">Anterior · our domain</div>
+        <strong>Cystocele / Anterior vaginal wall prolapse</strong>
+        <p>Descent of the bladder bulging into the anterior vaginal wall. Synonyms: anterior vaginal wall prolapse, anterior colpocele, cystocele.</p>
+      </div>
+      <div class="prolapse-card api">
+        <div class="p-badge">Apical · our domain</div>
+        <strong>Uterine prolapse / Vaginal vault prolapse</strong>
+        <p>If the uterus is present: uterine descent (uterine prolapse). If the uterus is absent (post-hysterectomy): vaginal vault prolapse (vault prolapse, colprocele).</p>
+      </div>
+      <div class="prolapse-card post">
+        <div class="p-badge">Posterior · proctologists' domain</div>
+        <strong>Rectocele / Posterior vaginal wall prolapse</strong>
+        <p>Descent of the anterior rectal wall bulging into the posterior vaginal wall. Managed by proctologists, not urologists.</p>
+      </div>
+    </div>
+
+    <h3>Baden-Walker Grading (practical system)</h3>
+    <p>The most widely used system in clinical practice for its speed (30 seconds). The reference plane is the vaginal introitus (hymenal plane).</p>
+    <div class="type-grid">
+      <div class="type-card"><strong>Grade 0</strong><p>No prolapse — normal organ position.</p></div>
+      <div class="type-card"><strong>Grade 1</strong><p>Halfway between normal position and the hymenal plane.</p></div>
+      <div class="type-card"><strong>Grade 2</strong><p>Prolapse reaches the hymenal plane.</p></div>
+      <div class="type-card"><strong>Grade 3</strong><p>Beyond the hymenal plane but not at maximum descent.</p></div>
+      <div class="type-card"><strong>Grade 4</strong><p>Maximum possible descent — complete prolapse.</p></div>
+    </div>
+  </section>
+
+  <!-- RISK FACTORS -->
+  <section>
+    <h2>⚠️ Risk Factors</h2>
+    <div class="risk-grid">
+      <div class="risk-card"><span class="r-icon">🤰</span><strong>Vaginal deliveries</strong><span>The primary risk factor. Risk is proportional to parity, neonatal birth weight, and duration of labour. Caesarean section → nearly eliminates the risk of prolapse.</span></div>
+      <div class="risk-card"><span class="r-icon">👴</span><strong>Ageing</strong><span>Progressive decline in pelvic floor muscle tone and trophism. Prolapse is rare in women in their thirties.</span></div>
+      <div class="risk-card"><span class="r-icon">⚖️</span><strong>Obesity</strong><span>Excess body weight increases chronic loading on the pelvic musculature. Weight loss is part of treatment.</span></div>
+      <div class="risk-card"><span class="r-icon">🚽</span><strong>Chronic constipation</strong><span>Repeated straining over time damages the pelvic floor.</span></div>
+      <div class="risk-card"><span class="r-icon">🫁</span><strong>Chronic cough</strong><span>Chronic and repetitive increases in intra-abdominal pressure. Smoking cessation is part of treatment.</span></div>
+      <div class="risk-card"><span class="r-icon">🔪</span><strong>Hysterectomy</strong><span>Uterine removal can disrupt the pelvic floor support ligaments, increasing the risk of vaginal vault prolapse.</span></div>
+    </div>
+  </section>
+
+  <!-- DIAGNOSIS -->
+  <section>
+    <h2>🔍 Diagnostic Work-up</h2>
+    <div class="treat-step"><div class="step-num">1</div><div class="step-content"><strong>Targeted history</strong><p>Number of pregnancies and deliveries (mode, neonatal weight, lacerations), menstrual and menopausal history, chronic constipation, chronic cough, obesity, prior pelvic surgery and radiotherapy.</p></div></div>
+    <div class="treat-step"><div class="step-num">2</div><div class="step-content"><strong>Symptom quantification — IPSS and ICIQ-SF</strong><p>The IPSS is validated in women as well. The ICIQ-SF quantifies frequency, severity, and quality-of-life impact of incontinence, and identifies the circumstance of leakage (stress vs urgency vs both).</p></div></div>
+    <div class="treat-step"><div class="step-num">3</div><div class="step-content"><strong>Assessment of vaginal bulging and bowel symptoms</strong><p>The sensation of a "ball in the vagina" or of protrusion is the cardinal symptom of prolapse. It worsens throughout the day and with physical activity, and improves in the morning and at rest.</p></div></div>
+    <div class="treat-step"><div class="step-num">4</div><div class="step-content"><strong>Physical examination — stress test</strong><p>Bladder filled to 300 mL, patient standing: the patient is asked to bear down and perform jumping jacks. Observed urine leakage documents stress incontinence. The <em>Q-tip test</em> (cotton swab in the urethra) measures urethral hypermobility: displacement &gt;30° during Valsalva indicates impaired muscular support.</p></div></div>
+    <div class="treat-step"><div class="step-num">5</div><div class="step-content"><strong>Vaginal examination + prolapse grading</strong><p>Assessment of each compartment (anterior, apical, posterior) using the Baden-Walker system. Rectal examination to evaluate sphincter tone and rectocele.</p></div></div>
+    <div class="treat-step"><div class="step-num">6</div><div class="step-content"><strong>Urodynamic study</strong><p>Not mandatory but recommended prior to any surgical procedure. Documents urodynamic stress incontinence and the presence of concomitant detrusor overactivity. Particularly useful in prolapse patients because the prolapse may act as a urethral "plug," masking occult incontinence: the study is repeated with the prolapse reduced by a pessary.</p></div></div>
+    <div class="treat-step"><div class="step-num">7</div><div class="step-content"><strong>Upper and lower urinary tract ultrasound</strong><p>Not mandated by guidelines as obligatory, but routinely performed: renal and bladder morphology, post-void residual volume.</p></div></div>
+  </section>
+
+  <!-- TREATMENT SUI -->
+  <section>
+    <h2>💊 Treatment of Stress Urinary Incontinence</h2>
+
+    <h3>First line: behavioural measures and rehabilitation</h3>
+    <div class="type-grid">
+      <div class="type-card"><strong>💧 Fluid restriction</strong><p>Less fluid intake means less leakage. Target: diuresis ~1,500 mL/day.</p></div>
+      <div class="type-card"><strong>⚖️ Weight loss</strong><p>In obese patients, weight reduction decreases pelvic floor loading and can improve continence.</p></div>
+      <div class="type-card"><strong>🏋️ Pelvic floor rehabilitation</strong><p>Kegel exercises with a pelvic floor physiotherapist. Often not curative alone, but useful to defer surgery — particularly in younger women.</p></div>
+      <div class="type-card"><strong>🚫 Elimination of causative factors</strong><p>Smoking cessation (chronic cough), treatment of constipation, correction of obesity.</p></div>
+    </div>
+    <div class="alert-box">
+      <strong>📌 Medical therapy:</strong> duloxetine (a serotonin-noradrenaline reuptake inhibitor) showed modest efficacy, but its indication was withdrawn following the identification of a slight increase in suicidal ideation risk. Currently <strong>no effective pharmacological therapy exists</strong> for stress urinary incontinence.
+    </div>
+
+    <h3>Surgery — mid-urethral sling</h3>
+    <div class="highlight-quote"><p>The therapeutic revolution was the tension-free vaginal tape (TVT): a synthetic tape that does not obstruct the urethra but merely suspends it. The mechanism of action relies on fibrotic tissue ingrowth into the mesh pores, forming new pubourethral ligaments.</p></div>
+    <div class="surg-grid">
+      <div class="surg-card preferred">
+        <div class="s-badge">Current standard · First choice</div>
+        <strong>TOT / Transobturator mini-sling</strong>
+        <p>The tape is placed transvaginally, with needles passing through the obturator foramen (TOT) or stopping at the obturator membrane (mini-sling). No critical structures are at risk. Procedure duration: 15–20 minutes. Excellent long-term efficacy for urethral hypermobility. Risk of voiding dysfunction ~15%, clean intermittent catheterisation ~4%, de novo urgency ~15%. Erosion risk &lt;1% (minimal mesh volume).</p>
+      </div>
+      <div class="surg-card">
+        <div class="s-badge">Historical · No longer performed</div>
+        <strong>Retropubic TVT</strong>
+        <p>The original tape technique, with needles passed blindly through the retropubic space. Abandoned due to the risk of vascular and visceral injury during needle passage.</p>
+      </div>
+      <div class="surg-card caution">
+        <div class="s-badge">Selected cases · Rare</div>
+        <strong>Artificial urinary sphincter</strong>
+        <p>Indicated only in patients with severe intrinsic sphincter deficiency refractory to sling procedures (e.g. after radical pelvic surgery). High risk of long-term device failure.</p>
+      </div>
+    </div>
+    <p style="font-size:0.88rem;color:var(--warm-gray)">In patients with urethral hypermobility, transobturator slings perform very well. The role of the artificial urinary sphincter is limited to cases with pure sphincteric deficiency not addressable by sling.</p>
+  </section>
+
+  <!-- TREATMENT PROLAPSE -->
+  <section>
+    <h2>🔧 Treatment of Prolapse</h2>
+
+    <div class="alert-box info">
+      <strong>📌 Core principle:</strong> not every prolapse requires treatment. Treatment is indicated only when prolapse causes significant quality-of-life impairment (urinary, bowel, or sexual symptoms, or disabling bulge sensation). An oligosymptomatic prolapse is monitored expectantly.
+    </div>
+
+    <h3>Cystocele (anterior prolapse) — anterior colporrhaphy</h3>
+    <p>The standard repair is <strong>transvaginal anterior colporrhaphy</strong>: incision of the vaginal wall, plication and suture of the pubocervical fascia flaps, closure of the vaginal wall. A minimally invasive, rapid procedure with no synthetic material.</p>
+
+    <div class="mesh-box">
+      <h3>⚖️ The mesh dilemma in transvaginal cystocele repair</h3>
+      <p>Adding a polypropylene mesh reduces prolapse recurrence risk (13% vs 20%), however:</p>
+      <ul>
+        <li>Risk of <strong>vaginal mesh erosion: 12%</strong> (vs 0% without mesh)</li>
+        <li>For every 1,000 patients treated with mesh → <strong>120 erosions</strong>, each requiring surgical removal</li>
+        <li>Recurrences without mesh are predominantly low-grade: patients often accept them</li>
+        <li>The total number of reoperations is <strong>substantially higher</strong> with mesh (erosions + recurrences) than without (recurrences only)</li>
+      </ul>
+      <p style="margin-top:0.7rem"><strong>Conclusion:</strong> anterior colporrhaphy <em>without mesh</em> remains the standard for isolated cystocele, because the transvaginal mesh erosion risk is unacceptably high. The same conclusion applies to cadaveric fascia lata: it does not improve outcomes over native tissue.</p>
+    </div>
+
+    <h3>Uterine prolapse (apical prolapse with uterus in situ)</h3>
+    <div class="highlight-quote"><p>Hysterectomy for prolapse used to be the standard of care. Today this is wrong: the uterus prolapses because supporting mechanisms fail, not because it is diseased. There is no rationale for removing a healthy organ. <strong>Hysteropexy</strong> is now preferred — suspending the uterus without removing it.</p></div>
+    <div class="surg-grid">
+      <div class="surg-card preferred">
+        <div class="s-badge">Current standard · First choice</div>
+        <strong>Robotic hysteropexy ("Amor and Psyche" technique)</strong>
+        <p>A Y-shaped mesh is fixed proximally to the sacral promontory and distally to the uterine body (anterior and posterior walls). The mesh is placed <strong>abdominally</strong>, not transvaginally → near-zero erosion risk (the abdominal cavity is sterile; uterine tissue is thick and robust). Compared to hysterectomy: faster, less blood loss, fewer complications, earlier discharge, equivalent recurrence rate. Risk of occult uterine malignancy when the uterus is left in situ: 0.22%.</p>
+      </div>
+      <div class="surg-card">
+        <div class="s-badge">When the uterus cannot be preserved</div>
+        <strong>Supracervical hysterectomy + cervicosacropexy</strong>
+        <p>If the uterus is pathological (fibroids, cervical dysplasia, BRCA family history, tamoxifen therapy) but the cervix is healthy: the uterine body and fundus are removed while the cervix is retained. The mesh is fixed to the residual cervix (thick tissue → erosion 0.3%) rather than to the vaginal wall (thin tissue → erosion 4%). Erosion risk is reduced tenfold compared to total colposacropexy.</p>
+      </div>
+      <div class="surg-card caution">
+        <div class="s-badge">Post-hysterectomy vaginal vault prolapse</div>
+        <strong>Sacrocolpopexy with cadaveric fascia lata</strong>
+        <p>When both the uterus and cervix have already been removed and mesh must necessarily be anchored to the vaginal wall, cadaveric fascia lata (biological tissue) is used instead of polypropylene to minimise infection and erosion risk.</p>
+      </div>
+    </div>
+    <div class="alert-box">
+      <strong>📌 Abdominal vs transvaginal route:</strong> any mesh placed transvaginally carries a substantially higher erosion/infection risk than when placed abdominally (the vagina harbours bacterial flora; the abdominal cavity is sterile). This is why we prefer the more invasive abdominal approach whenever permanent synthetic material is required.
+    </div>
+  </section>
+
+  <!-- CONCOMITANT INCONTINENCE -->
+  <section>
+    <h2>🔀 Management of Incontinence Concomitant with Prolapse</h2>
+    <p>When a patient presents with both prolapse and stress urinary incontinence, what is our approach?</p>
+
+    <div class="scenario-grid">
+      <div class="scenario">
+        <div class="s-label">Scenario 1</div>
+        <strong>Prolapse without incontinence</strong>
+        <p>Prolapse repair only. No concomitant anti-incontinence procedure.</p>
+      </div>
+      <div class="scenario">
+        <div class="s-label">Scenario 2 — Occult (latent) incontinence</div>
+        <strong>Prolapse masking incontinence</strong>
+        <p>The prolapse acts as a urethral plug and prevents leakage. Urodynamics with the prolapse reduced (pessary) reveals incontinence. Our strategy: repair the prolapse alone and reassess postoperatively. Only patients who become truly incontinent after surgery will then receive a sling (approximately 40%).</p>
+      </div>
+      <div class="scenario">
+        <div class="s-label">Scenario 3 — Overt incontinence</div>
+        <strong>Prolapse with pre-existing incontinence</strong>
+        <p>Same rationale: repair the prolapse alone. If the woman remains incontinent postoperatively, a sling is then added. Why not intervene simultaneously? Because if we place a sling in all patients, we are performing 100 procedures to benefit the 40 who will actually need it — exposing the remaining 60 to unnecessary procedural risk.</p>
+      </div>
+    </div>
+
+    <div class="mesh-box">
+      <h3>🔢 The numerical rationale (Cochrane meta-analysis)</h3>
+      <p>In women with prolapse and occult incontinence, treating prolapse alone vs prolapse + sling:</p>
+      <ul>
+        <li>Prolapse alone → 39% postoperative incontinence rate</li>
+        <li>Prolapse + sling → 12% postoperative incontinence rate</li>
+        <li>To achieve this reduction, 100 slings must be placed in all patients</li>
+        <li>But only 40% will actually need the sling → 60% are treated unnecessarily</li>
+        <li>These 60 "unnecessary" slings still carry risks of erosion, de novo urgency, and voiding dysfunction</li>
+        <li><strong>Conclusion:</strong> treat the prolapse alone; add the sling only in those who truly require it</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">I leak urine when I cough or sneeze — is this normal with age? <span class="arrow">▸</span></button>
+      <div class="faq-a">No, it is not normal. Stress urinary incontinence is a medical condition, not an inevitable consequence of ageing. Many women do not seek treatment, mistakenly believing it to be normal, but effective solutions exist — from pelvic floor rehabilitation to minimally invasive surgery. It is well worth a consultation with a urologist or urogynecologist.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">I feel a ball in my vagina — what could it be? <span class="arrow">▸</span></button>
+      <div class="faq-a">The sensation of a "ball" or protrusion in the vagina is the characteristic symptom of prolapse: descent of the bladder (cystocele), the uterus (uterine prolapse), or both through a weakened pelvic floor. It is often more pronounced during the day or after physical activity, and less noticeable on waking in the morning. It is not dangerous in itself, but if it causes discomfort and affects quality of life it warrants evaluation and, where appropriate, treatment.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">I have been told to do pelvic floor exercises — do they actually work? <span class="arrow">▸</span></button>
+      <div class="faq-a">Yes, they do — although they are often not curative on their own. Pelvic floor rehabilitation with a specialist physiotherapist can improve continence and reduce prolapse grade, particularly in the early stages or in younger women. In younger patients it is especially useful as a strategy to defer surgery, which ideally should be performed as late as possible to reduce the time synthetic materials remain in the body. At minimum, it is beneficial for all mild cases and as preparation for surgery.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">I have uterine prolapse — do I need to have my uterus removed? <span class="arrow">▸</span></button>
+      <div class="faq-a">Not necessarily — and in most cases, no. The uterus prolapses because the ligaments and muscles supporting it have weakened, not because it is diseased. Removing a healthy organ is no longer the first-line choice. Today, hysteropexy is preferred: suspending the uterus to the sacral promontory with a mesh, laparoscopically or robotically, leaving the uterus in place. This approach is faster, has fewer complications, and achieves equivalent efficacy compared to hysterectomy. The uterus should be removed only if it is pathological (symptomatic fibroids, abnormal Pap smear, family history of ovarian or uterine cancer).</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Does prolapse surgery use mesh? Is it safe? <span class="arrow">▸</span></button>
+      <div class="faq-a">It depends on the procedure. For cystocele (bladder prolapse), the standard technique uses native tissue suture without mesh, to avoid the 12% transvaginal erosion risk. For uterine prolapse repaired abdominally (robotic), a small polypropylene mesh is fixed to the sacrum and the uterine body — with near-zero erosion risk, because the abdominal cavity is sterile and uterine tissue is thick. Large-volume transvaginal polypropylene meshes, as used in the past, have been abandoned precisely because of high erosion and infection rates. Today their use is very limited and highly selective.</div>
+    </div>
+  </section>
+
+  <!-- RELATED TOPICS -->
+  <section>
+    <h2>🔗 Related Topics</h2>
+    <div class="topic-links">
+      <a href="overactive-bladder.html" class="topic-link">🔷 Overactive Bladder (OAB)</a>
+      <a href="luts-bph.html" class="topic-link">🔵 LUTS / Benign Prostatic Hyperplasia</a>
+      <a href="bladder-cancer.html" class="topic-link">🔵 Bladder Cancer</a>
+      <a href="index.html" class="topic-link">🏠 Back to Home</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Prof. Giacomo Novara — Associate Professor of Urology, University of Padua</p>
+  <p style="margin-top:0.4rem"><a href="index.html">Home</a> · <a href="mailto:giacomo.novara@unipd.it">giacomo.novara@unipd.it</a> · <a href="index.html#contacts">Contacts</a></p>
+  <p style="margin-top:0.8rem;font-size:0.72rem;opacity:0.6">The information on this page is intended for general informational purposes only and does not substitute the opinion of a specialist physician.</p>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+</script>
+</body>
+</html>

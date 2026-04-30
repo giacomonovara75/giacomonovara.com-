@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benign Scrotal Pathology — Prof. Giacomo Novara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --amber: #8a5a00; --amber-light: #fdf4e3; --amber-mid: #c47c18;
+    --navy: #1a1408; --cream: #fdfbf7; --warm-gray: #66605a;
+    --border: #e0d5c0; --red: #b53228; --green: #1a7a50; --blue: #1e4d7a;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Serif 4', Georgia, serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); font-weight: 300; background: var(--cream); color: var(--navy); line-height: 1.78; font-size: 17px; }
+  header { background: var(--navy); }
+  .header-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; display: flex; align-items: flex-start; gap: 1.4rem; }
+  .header-icon { font-size: 3rem; line-height: 1; flex-shrink: 0; margin-top: 0.3rem; }
+  .site-name { font-size: 0.77rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.45rem; }
+  header h1 { font-family: var(--font-display); font-size: clamp(1.7rem,4vw,2.5rem); font-weight: 700; color: #fff; line-height: 1.18; }
+  .header-sub { font-size: 0.92rem; color: rgba(255,255,255,0.6); margin-top: 0.35rem; font-style: italic; }
+  nav.breadcrumb { background: var(--amber); padding: 0.6rem 1.5rem; font-size: 0.82rem; }
+  nav.breadcrumb .inner { max-width: 900px; margin: 0 auto; display: flex; gap: 0.5rem; align-items: center; }
+  nav.breadcrumb a { color: rgba(255,255,255,0.85); text-decoration: none; }
+  nav.breadcrumb span { color: rgba(255,255,255,0.5); }
+  nav.breadcrumb .current { color: #fff; font-weight: 600; }
+  .page-wrap { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .intro-box { background: var(--amber-light); border-left: 4px solid var(--amber-mid); border-radius: 0 10px 10px 0; padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; font-size: 1.02rem; }
+  .chapter-divider { margin: 2.5rem 0 2rem; display: flex; align-items: center; gap: 1rem; }
+  .chapter-divider .ch-label { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--amber); white-space: nowrap; }
+  .chapter-divider .ch-line { flex: 1; height: 2px; background: linear-gradient(to right, var(--amber-mid), transparent); }
+  section { margin-bottom: 2.5rem; }
+  section h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--amber); margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+  section h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--navy); margin: 1.2rem 0 0.5rem; }
+  p { margin-bottom: 0.9rem; }
+  .cause-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 0.8rem; margin: 1rem 0; }
+  .cause-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; }
+  .cause-card .c-icon { font-size: 1.5rem; margin-bottom: 0.3rem; }
+  .cause-card strong { display: block; font-size: 0.95rem; margin-bottom: 0.25rem; color: var(--navy); }
+  .cause-card p { font-size: 0.85rem; color: var(--warm-gray); margin: 0; }
+  .cause-card.urgent { border-top: 3px solid var(--red); }
+  .cause-card.safe { border-top: 3px solid var(--green); }
+  .timing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+  .timing-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; text-align: center; }
+  .timing-card .t-num { font-size: 1.5rem; font-weight: 700; font-family: var(--font-display); margin-bottom: 0.2rem; }
+  .timing-card .t-label { font-size: 0.8rem; color: var(--warm-gray); line-height: 1.3; }
+  .timing-card.green .t-num { color: var(--green); }
+  .timing-card.yellow .t-num { color: var(--amber-mid); }
+  .timing-card.red .t-num { color: var(--red); }
+  .doppler-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 0.9rem; margin: 1rem 0; }
+  .doppler-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; }
+  .doppler-card .d-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.4rem; }
+  .doppler-card.no-flow .d-label { color: var(--red); }
+  .doppler-card.high-flow .d-label { color: var(--blue); }
+  .doppler-card.focal .d-label { color: var(--green); }
+  .doppler-card strong { display: block; font-size: 0.97rem; margin-bottom: 0.3rem; }
+  .doppler-card p { font-size: 0.85rem; color: var(--warm-gray); margin: 0; }
+  .treat-step { display: flex; align-items: flex-start; gap: 0.9rem; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1.1rem; margin-bottom: 0.6rem; }
+  .treat-step .step-num { background: var(--amber); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 600; flex-shrink: 0; margin-top: 0.1rem; }
+  .treat-step.urgent .step-num { background: var(--red); }
+  .treat-step .step-content strong { display: block; font-size: 0.96rem; margin-bottom: 0.2rem; }
+  .treat-step .step-content p { font-size: 0.88rem; color: var(--warm-gray); margin: 0; }
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 0.9rem; margin: 1.2rem 0; }
+  .stat-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; text-align: center; }
+  .stat-card .num { font-size: 1.9rem; font-weight: 600; color: var(--amber); font-family: var(--font-display); }
+  .stat-card .label { font-size: 0.8rem; color: var(--warm-gray); margin-top: 0.2rem; line-height: 1.3; }
+  .highlight-quote { background: var(--navy); color: #fff; border-radius: 10px; padding: 1.4rem 1.6rem; margin: 1.4rem 0; position: relative; }
+  .highlight-quote::before { content: '"'; font-family: var(--font-display); font-size: 4rem; line-height: 1; color: var(--amber-mid); position: absolute; top: 0.2rem; left: 1rem; opacity: 0.5; }
+  .highlight-quote p { padding-left: 1.5rem; font-style: italic; font-size: 1.05rem; }
+  .alert-box { background: #fff3cd; border: 1px solid #f0c040; border-radius: 10px; padding: 1rem 1.3rem; margin: 1rem 0; font-size: 0.93rem; }
+  .alert-box.danger { background: #fde8e4; border-color: var(--red); }
+  .alert-box.info { background: var(--amber-light); border-color: var(--amber-mid); }
+  .alert-box strong { color: #7a5000; }
+  .alert-box.danger strong { color: #8a2010; }
+  .alert-box.info strong { color: var(--amber); }
+  .detorsion-box { background: #fff; border: 2px solid var(--amber-mid); border-radius: 10px; padding: 1.2rem 1.4rem; margin: 1rem 0; }
+  .detorsion-box h3 { color: var(--amber); font-size: 1rem; margin-bottom: 0.6rem; }
+  .detorsion-box p { font-size: 0.88rem; color: #3a3530; margin-bottom: 0.4rem; }
+  .indications-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+  .ind-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; }
+  .ind-card .i-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; margin-bottom: 0.4rem; }
+  .ind-card.treat .i-label { color: var(--green); }
+  .ind-card.watch .i-label { color: var(--amber); }
+  .ind-card.no .i-label { color: var(--red); }
+  .ind-card p { font-size: 0.86rem; color: var(--warm-gray); margin: 0; }
+  .faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 0.6rem; background: #fff; }
+  .faq-q { width: 100%; background: none; border: none; padding: 1rem 1.2rem; text-align: left; font-family: var(--font-body); font-size: 0.97rem; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .faq-q:hover { background: var(--amber-light); }
+  .faq-q .arrow { font-size: 1.2rem; color: var(--amber); transition: transform 0.22s; flex-shrink: 0; }
+  .faq-q.open .arrow { transform: rotate(90deg); }
+  .faq-a { display: none; padding: 0 1.2rem 1.1rem; font-size: 0.94rem; color: #3a3530; line-height: 1.72; }
+  .faq-a.open { display: block; }
+  .topic-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0; }
+  .topic-link { display: inline-block; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 1rem; font-size: 0.88rem; color: var(--amber); text-decoration: none; transition: background 0.15s, border-color 0.15s; }
+  .topic-link:hover { background: var(--amber-light); border-color: var(--amber-mid); }
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem 1.5rem; font-size: 0.82rem; line-height: 1.8; }
+  footer a { color: rgba(255,255,255,0.8); }
+  @media(max-width:600px) { .indications-grid { grid-template-columns: 1fr; } .stat-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-icon">🟠</div>
+    <div>
+      <p class="site-name">Prof. Giacomo Novara — Urology, University of Padova</p>
+      <h1>Benign Scrotal Pathology</h1>
+      <p class="header-sub">Varicocele · Acute scrotum · Spermatic cord torsion · Epididymo-orchitis</p>
+    </div>
+  </div>
+  <nav class="breadcrumb">
+    <div class="inner">
+      <a href="index-en.html">Home</a><span>›</span>
+      <a href="index-en.html#functional">Functional Urology</a><span>›</span>
+      <span class="current">Benign Scrotal Pathology</span>
+    </div>
+  </nav>
+</header>
+
+<div class="page-wrap">
+
+  <div class="intro-box">
+    Benign scrotal pathology encompasses two clinically very different domains: <strong>varicocele</strong> — the leading treatable cause of male infertility — and the <strong>acute scrotum</strong>, which includes spermatic cord torsion, a true urological emergency in which the time available to save the gonad is measured in hours.
+  </div>
+
+  <!-- ======================== PART 1: VARICOCELE ======================== -->
+  <div class="chapter-divider">
+    <span class="ch-label">Part I — Varicocele</span>
+    <div class="ch-line"></div>
+  </div>
+
+  <section>
+    <h2>🔬 Definition and pathophysiology</h2>
+    <p>Varicocele is the <strong>abnormal dilatation and tortuosity of the veins of the pampiniform plexus</strong>, secondary to reversal of flow in the internal (more frequently) or external spermatic veins. It is the scrotal equivalent of varicose veins of the lower limbs.</p>
+
+    <h3>Why it is predominantly left-sided</h3>
+    <p>The left spermatic vein drains into the left renal vein at a right angle: this creates a higher hydrostatic column and greater resistance to outflow. The right spermatic vein drains directly into the inferior vena cava at an acute angle. This anatomical asymmetry explains the marked left-sided predominance of varicocele. In large left-sided varicoceles, transverse communications (<em>cross-communications</em>) between the two venous systems may feed a contralateral varicocele: correcting left-sided reflux often also reduces the degree of right-sided varicocele.</p>
+
+    <h3>Phlebographic classification (types 1–5)</h3>
+    <p>The classification describes anatomical variants of the left gonadal venous drainage. The so-called "type 1" (single gonadal vein draining at right angles into the renal vein) is present in only 40% of individuals — the majority present variants with multiple veins, capsular collaterals, or duplicated renal veins. This variability is relevant for treatment planning.</p>
+  </section>
+
+  <section>
+    <h2>📋 Who to treat — and who not to</h2>
+    <div class="highlight-quote"><p>Varicocele in itself is not a condition that always requires treatment. There are patients with enormously dilated veins and a normal semen analysis: I do not treat them. And patients with a small varicocele and a dismal semen analysis: I treat them. The decision criterion is the semen analysis, not the degree of dilatation.</p></div>
+    <div class="indications-grid">
+      <div class="ind-card treat">
+        <div class="i-label">✅ Treat</div>
+        <p>Patient with varicocele <strong>AND</strong> dyspermia documented on semen analysis <strong>AND</strong> interest in fertility. Treatment aims to improve seminal parameters (count, motility, morphology) and the probability of pregnancy.</p>
+      </div>
+      <div class="ind-card watch">
+        <div class="i-label">👁 Monitor</div>
+        <p>Varicocele with normal semen analysis → surveillance. Varicocele in minors (&lt;14 years) → semen analysis not available; management is guided by degree of dilatation and testicular volume.</p>
+      </div>
+      <div class="ind-card no">
+        <div class="i-label">🚫 Do not treat</div>
+        <p>Patient with no interest in fertility → diagnosing and treating a condition whose only implications are for fertility makes no sense. Partner &gt;40 years and/or severely compromised semen analysis → refer directly to assisted reproductive technology.</p>
+      </div>
+      <div class="ind-card no">
+        <div class="i-label">⚠️ Pain: caution</div>
+        <p>Pain from varicocele is rarely an independent indication for treatment. Pain often persists after correction. Treatment is indicated only when dyspermia is also present: if pain also improves, so much the better; if it persists, the patient has been forewarned.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔍 Diagnosis</h2>
+    <div class="treat-step"><div class="step-num">1</div><div class="step-content"><strong>Physical examination in the standing position</strong><p>Palpation of the spermatic cord during the Valsalva manoeuvre: in advanced grades (G3–G4) the veins are visible on simple inspection. In lesser grades, the classic "bag of worms" sensation is felt.</p></div></div>
+    <div class="treat-step"><div class="step-num">2</div><div class="step-content"><strong>Scrotal colour Doppler ultrasound</strong><p>It is not sufficient to detect dilated veins: the examination must document <strong>reflux</strong> within these veins during Valsalva. Venous diameter &gt;3 mm with confirmed reflux establishes the diagnosis. It also allows assessment of testicular volume (hypotrophy = already established damage).</p></div></div>
+    <div class="treat-step"><div class="step-num">3</div><div class="step-content"><strong>Semen analysis (adults only)</strong><p>The fundamental examination and primary decision criterion. Assesses count, progressive motility, and morphology of spermatozoa according to WHO criteria. Cannot be requested in minors for legal reasons.</p></div></div>
+  </section>
+
+  <section>
+    <h2>⚕️ Treatment</h2>
+    <p>The objective is to correct reflux in the gonadal veins to improve seminal function. Both antegrade (from below, via the scrotal route) and retrograde (from above, via an endovascular route) approaches are available.</p>
+    <div class="cause-grid">
+      <div class="cause-card">
+        <div class="c-icon">🩺</div>
+        <strong>Antegrade sclerotherapy (scrotal approach)</strong>
+        <p>Under local anaesthesia, a ~1.5 cm scrotal incision is made, the spermatic cord is isolated, a vein of the pampiniform plexus is cannulated, phlebography confirms the anatomy, then air (1 mL) + sclerosant agent (3–4 mL) is injected with the cord clamped distally. Outpatient procedure, duration ~10 minutes. Can treat any anatomical variant. Failure rate ~10%.</p>
+      </div>
+      <div class="cause-card">
+        <div class="c-icon">🔬</div>
+        <strong>Retrograde sclerotherapy (interventional radiology)</strong>
+        <p>Femoral or brachial access, catheterisation of the left renal vein, cannulation of the gonadal vein, sclerotherapy from above. Efficacy comparable to the antegrade approach, but more difficult in anatomical variants with multiple gonadal veins draining separately into the renal vein.</p>
+      </div>
+    </div>
+    <p style="font-size:0.87rem;color:var(--warm-gray)">Guidelines consider the two techniques equivalent. The antegrade scrotal approach may offer a practical advantage in complex anatomical variants, allowing all veins of the plexus to be reached regardless of their number and confluence into the renal vein.</p>
+  </section>
+
+  <section>
+    <h2>📊 Treatment outcomes</h2>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="num">~37%</div><div class="label">Patients achieving spontaneous pregnancy after correction</div></div>
+      <div class="stat-card"><div class="num">×2</div><div class="label">Doubling of ART pregnancy rate after varicocele correction</div></div>
+      <div class="stat-card"><div class="num">6 months</div><div class="label">Minimum time to assess semen analysis improvement</div></div>
+      <div class="stat-card"><div class="num">~10%</div><div class="label">Sclerotherapy failure rate (residual varicocele)</div></div>
+    </div>
+    <p>Treatment improves sperm count, motility, and morphology. Approximately 37% of patients achieve spontaneous pregnancy; in the remainder, correction of varicocele <strong>doubles the success rate of assisted reproductive techniques</strong> compared with untreated patients. Correction is therefore also useful as preparation for ART, with the exception of cases where the partner is of advanced age or the semen analysis reveals complete azoospermia.</p>
+  </section>
+
+  <!-- ======================== PART 2: ACUTE SCROTUM ======================== -->
+  <div class="chapter-divider">
+    <span class="ch-label">Part II — Acute Scrotum</span>
+    <div class="ch-line"></div>
+  </div>
+
+  <section>
+    <h2>🚨 Causes of the acute scrotum</h2>
+    <p>The acute scrotum is the scrotal equivalent of the acute abdomen: acute scrotal pain with possible swelling and erythema. Three main causes account for over 90% of cases:</p>
+    <div class="cause-grid">
+      <div class="cause-card urgent">
+        <div class="c-icon">⏱️</div>
+        <strong>Spermatic cord torsion</strong>
+        <p>Urological emergency. Progressive testicular ischaemia. Time is the critical factor: beyond 24 hours the gonad is lost. Requires immediate treatment.</p>
+      </div>
+      <div class="cause-card safe">
+        <div class="c-icon">🦠</div>
+        <strong>Epididymo-orchitis</strong>
+        <p>Acute infective-inflammatory process of the testis and epididymis. Frequently associated with fever and urinary symptoms. Medical treatment (antibiotics).</p>
+      </div>
+      <div class="cause-card safe">
+        <div class="c-icon">🔵</div>
+        <strong>Torsion of the appendix testis (Morgagni hydatid)</strong>
+        <p>Torsion of a functionless embryological remnant of the Wolffian duct. Clinically benign. Conservative management (analgesia).</p>
+      </div>
+    </div>
+    <div class="alert-box danger">
+      <strong>🚫 The error to avoid:</strong> in the acute scrotum, do not prescribe antibiotics + analgesia and review the patient "in a few days". If the diagnosis of spermatic cord torsion is delayed, the testis undergoes necrosis. Anyone unable to exclude torsion must refer the patient urgently to a centre capable of doing so.
+    </div>
+  </section>
+
+  <section>
+    <h2>⏱️ Spermatic cord torsion — urological emergency</h2>
+
+    <h3>Pathophysiology</h3>
+    <p>Involuntary contraction of the cremaster muscle causes rotation of the testis on its own axis (from 180° up to 720°). This first obstructs venous outflow, then compromises arterial inflow → <strong>progressive and irreversible testicular ischaemia</strong>. The damage is proportional to the degree of torsion and the time elapsed.</p>
+    <p>A distinction is made between <strong>intravaginal torsion</strong> (the most common in young adults: the testis rotates within the tunica vaginalis) and <strong>extravaginal torsion</strong> (typical of the neonate). The predisposing factor is testicular hypermobility due to inadequate fixation of the inferior pole to the scrotal wall.</p>
+
+    <h3>Time window to save the testis</h3>
+    <div class="timing-grid">
+      <div class="timing-card green"><div class="t-num">≈100%</div><div class="t-label">Within 6 hours — orchidopexy almost always possible</div></div>
+      <div class="timing-card yellow"><div class="t-num">50%</div><div class="t-label">Between 6 and 12 hours — halved probability of saving the gonad</div></div>
+      <div class="timing-card red"><div class="t-num">≈0%</div><div class="t-label">After 24 hours — testicular necrosis almost certain</div></div>
+    </div>
+
+    <h3>Clinical presentation and differential diagnosis</h3>
+    <div class="cause-grid">
+      <div class="cause-card urgent">
+        <strong>Spermatic cord torsion</strong>
+        <p>Violent pain of sudden onset (often nocturnal). <strong>No fever, no voiding symptoms.</strong> Hypermobile testis, riding higher than the contralateral side. Altered epididymo-testicular anatomical relationships if torsion is not a multiple of 360°. History of similar self-limiting episodes in the past (subtorsions).</p>
+      </div>
+      <div class="cause-card safe">
+        <strong>Epididymo-orchitis</strong>
+        <p>Less abrupt onset of pain. <strong>Fever present. Urinary symptoms (dysuria, frequency).</strong> Indurated and tender epididymis. Warm and erythematous scrotum. Colour Doppler: hyperaemia.</p>
+      </div>
+      <div class="cause-card safe">
+        <strong>Appendix testis torsion</strong>
+        <p>Pain at the upper pole of the testis, less intense. Normal testis on palpation. The "blue dot" sign occasionally visible (rarely). Colour Doppler: normal intraparenchymal flow, absent flow within the appendix.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔬 Scrotal colour Doppler ultrasound — the key investigation</h2>
+    <p>Colour Doppler ultrasound is the decisive examination. The <strong>contralateral healthy testis is always studied first</strong> to calibrate Doppler parameters, then the affected side is examined. Normal intraparenchymal flow is 1–2 mm/s.</p>
+    <div class="doppler-grid">
+      <div class="doppler-card no-flow">
+        <div class="d-label">Spermatic cord torsion</div>
+        <strong>Absent flow</strong>
+        <p>No intratesticular vascular signal on Doppler. This is the most decisive finding. If absent compared to the contralateral side → torsion until proven otherwise.</p>
+      </div>
+      <div class="doppler-card high-flow">
+        <div class="d-label">Epididymo-orchitis</div>
+        <strong>Vascular hyperaemia</strong>
+        <p>Marked increase in Doppler signal at the epididymis and testis due to acute inflammation. Reactive hydrocele frequently associated.</p>
+      </div>
+      <div class="doppler-card focal">
+        <div class="d-label">Appendix testis torsion</div>
+        <strong>Preserved parenchymal flow, avascular appendix</strong>
+        <p>Regular intraparenchymal flow. The appendix at the upper pole appears hyperechoic and devoid of vascular signal. No surgical urgency.</p>
+      </div>
+    </div>
+    <div class="alert-box info">
+      <strong>📌 Safety principle:</strong> in doubtful cases, surgical exploration is always preferable to watchful waiting. "Exploring a healthy testis is not a problem. Failing to explore a torted testis means condemning it to necrosis." If Doppler is inconclusive, explore.
+    </div>
+  </section>
+
+  <section>
+    <h2>🔧 Treatment of spermatic cord torsion</h2>
+
+    <div class="detorsion-box">
+      <h3>🖐️ Manual detorsion — first attempt</h3>
+      <p><strong>Mechanism:</strong> testes rotate in a <em>lateral-to-medial</em> direction (from the thigh towards the midline). Detorsion is performed in the opposite direction: <em>medial-to-lateral</em> (from the midline towards the thigh).</p>
+      <p><strong>In practice:</strong> right testis → detorsion clockwise (as seen by the patient); left testis → detorsion counter-clockwise.</p>
+      <p><strong>Verification:</strong> pain relief is immediate. Confirmed by colour Doppler: flow must resume, often with reactive hyperaemia.</p>
+      <p><strong>Limitation:</strong> most effective if the patient presents within a few hours. After successful detorsion, elective orchidopexy should be planned (adult) or performed the same day (child).</p>
+    </div>
+
+    <div class="treat-step urgent"><div class="step-num">1</div><div class="step-content"><strong>Manual detorsion</strong><p>Immediate attempt. If successful (pain relief + restoration of Doppler flow) → bilateral orchidopexy planned electively or on the same day.</p></div></div>
+    <div class="treat-step urgent"><div class="step-num">2</div><div class="step-content"><strong>Urgent surgical exploration (if manual detorsion unsuccessful or diagnosis uncertain)</strong><p>Median scrotal incision of 3–4 cm. Opening of the tunica vaginalis, assessment of testicular viability. If viable → detorsion + bilateral orchidopexy (fixation of the inferior pole of both testes to the scrotal wall). If necrotic → orchiectomy (the necrotic testis must be removed to prevent the formation of anti-sperm autoantibodies that would damage the contralateral gonad).</p></div></div>
+    <div class="treat-step"><div class="step-num">3</div><div class="step-content"><strong>Bilateral orchidopexy</strong><p>Fixation must be performed on both sides: the hypermobility that caused the torsion is often bilateral. Preventing contralateral torsion is as important as saving the affected testis.</p></div></div>
+  </section>
+
+  <section>
+    <h2>🦠 Epididymo-orchitis — treatment</h2>
+    <p>Infective-inflammatory process of the testis and epididymis. In the majority of cases the causative organism is a urinary tract or sexually transmitted pathogen.</p>
+    <div class="alert-box">
+      <strong>⚠️ Fluoroquinolones are no longer used empirically.</strong> Resistance to ciprofloxacin and levofloxacin in our geographical area exceeds 20–25%: one in four patients does not receive effective therapy. Recommended alternative:<br><br>
+      <strong>Acute phase (5 days):</strong> ceftriaxone 1 g i.m. (third-generation cephalosporin).<br>
+      <strong>Oral phase (10 days):</strong> oral cephalosporin.<br>
+      Total coverage of approximately 2 weeks.
+    </div>
+    <p>Mild-to-moderate cases can be managed in the outpatient setting with oral therapy alone. Aggressive cases (high fever, systemic signs, scrotal cellulitis) require hospitalisation and parenteral therapy.</p>
+  </section>
+
+  <section>
+    <h2>🔵 Appendix testis torsion — treatment</h2>
+    <p>The appendix testis (Morgagni hydatid) is an embryological remnant of the Wolffian duct with no functional role whatsoever. Its torsion and necrosis has no functional or reproductive clinical relevance.</p>
+    <p><strong>Treatment:</strong> conservative. Analgesia and, where indicated, anti-inflammatory agents. Surgical exploration is not required when the colour Doppler diagnosis is certain. The appendix will resorb spontaneously over several weeks.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>❓ Frequently asked questions</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">I have a varicocele — do I need to have it treated? <span class="arrow">▸</span></button>
+      <div class="faq-a">Not necessarily. Varicocele should not be treated simply because it is present. The primary criterion for deciding whether to treat it is the semen analysis: if seminal parameters are normal, the varicocele is monitored over time without intervention. If, however, the semen analysis shows a reduction in sperm count, motility, or morphology, and you are interested in having children, then treatment is indicated. The procedure is minimally invasive (a small scrotal incision under local anaesthesia, duration ~10 minutes) and is performed as an outpatient. Results are assessed after approximately 6 months.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">I have acute testicular pain — what should I do? <span class="arrow">▸</span></button>
+      <div class="faq-a">Acute and intense testicular pain of sudden onset is a urological emergency until proven otherwise. The most dangerous cause is spermatic cord torsion: the testis rotates on itself, cutting off its blood supply. If not treated within 6 hours, the gonad may suffer irreversible necrosis. Do not wait to see if it passes by itself and do not accept a prescription for antibiotics without excluding torsion: go to the emergency department immediately for urgent evaluation with scrotal ultrasound.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Does varicocele cause pain? <span class="arrow">▸</span></button>
+      <div class="faq-a">Varicocele may cause a sense of heaviness or scrotal discomfort, particularly after prolonged standing or intense physical activity. It rarely causes true acute pain. The problem is that even after varicocele correction, the discomfort often persists — because it may have other contributing causes. For this reason, pain alone is usually not a sufficient indication for treatment. If there is also an abnormal semen analysis, intervention is undertaken to improve fertility, and the patient is informed that pain may improve but is not guaranteed to do so.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What are my chances of having a child after varicocele treatment? <span class="arrow">▸</span></button>
+      <div class="faq-a">Approximately 37% of patients treated for varicocele achieve spontaneous pregnancy within 12–18 months following treatment. This is a significant result, even if not guaranteed. The probability depends on many factors: the extent of baseline seminal damage, the partner's age (the most important factor), and the presence of any female fertility component. In patients who do not achieve spontaneous pregnancy, improvement in seminal parameters after varicocele correction doubles the success rate of assisted reproductive techniques.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">I had an episode of scrotal pain that resolved on its own — did something serious happen? <span class="arrow">▸</span></button>
+      <div class="faq-a">An episode of intense and sudden scrotal pain that resolves spontaneously may represent a "subtorsion": torsion of the testis that detorted on its own, perhaps because the patient touched himself and inadvertently untwisted the spermatic cord. This is an important sign not to be ignored: those who have experienced such an episode are at risk of a complete torsion in the future. It is important to be assessed by a urologist to plan a preventive orchidopexy (fixation of the testis to the scrotal wall), which prevents recurrence.</div>
+    </div>
+  </section>
+
+  <!-- RELATED TOPICS -->
+  <section>
+    <h2>🔗 Related topics</h2>
+    <div class="topic-links">
+      <a href="testicular-cancer.html" class="topic-link">🟢 Testicular Cancer</a>
+      <a href="erectile-dysfunction.html" class="topic-link">❤️ Erectile Dysfunction</a>
+      <a href="luts-benign-prostatic-hyperplasia.html" class="topic-link">🔵 LUTS / Benign Prostatic Hyperplasia</a>
+      <a href="index-en.html" class="topic-link">🏠 Back to Home</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Prof. Giacomo Novara — Associate Professor of Urology, University of Padova</p>
+  <p style="margin-top:0.4rem"><a href="index-en.html">Home</a> · <a href="mailto:giacomo.novara@unipd.it">giacomo.novara@unipd.it</a> · <a href="index-en.html#contacts">Contacts</a></p>
+  <p style="margin-top:0.8rem;font-size:0.72rem;opacity:0.6">The information on this page is intended for educational purposes only and does not replace the advice of a specialist physician.</p>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+</script>
+</body>
+</html>
