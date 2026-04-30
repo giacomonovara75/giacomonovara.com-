@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Landing page / redirect -->
+  <url>
+    <loc>https://giacomonovara.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://giacomonovara.com/"/>
+  </url>
+
+  <!-- Index italiano -->
+  <url>
+    <loc>https://giacomonovara.com/index-it.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://giacomonovara.com/"/>
+  </url>
+
+  <!-- Index inglese -->
+  <url>
+    <loc>https://giacomonovara.com/index-en.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://giacomonovara.com/"/>
+  </url>
+
+  <!-- Pagine cliniche italiane -->
+  <url>
+    <loc>https://giacomonovara.com/neoplasia-prostatica.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/neoplasia-prostatica.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/prostate-cancer.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/neoplasia-vescicale.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/neoplasia-vescicale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/bladder-cancer.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/neoplasia-alta-via.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/neoplasia-alta-via.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/upper-tract-urothelial-carcinoma.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/neoplasia-renale.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/neoplasia-renale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/kidney-cancer.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/neoplasia-testicolare.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/neoplasia-testicolare.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/testicular-cancer.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/tumore-del-pene.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/tumore-del-pene.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/penile-cancer.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/luts-ipertrofia-prostatica.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/luts-ipertrofia-prostatica.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/luts-benign-prostatic-hyperplasia.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/vescica-iperattiva.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/vescica-iperattiva.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/overactive-bladder.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/prolassi-genitourinari.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/prolassi-genitourinari.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/genitourinary-prolapse.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/disfunzione-erettile.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/disfunzione-erettile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/erectile-dysfunction.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/patologia-scrotale-benigna.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/patologia-scrotale-benigna.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/scrotal-pathology.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/giunto-pieloureterale.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/giunto-pieloureterale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/ureteropelvic-junction-obstruction.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/stenosi-ureterali.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/stenosi-ureterali.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/ureteral-strictures.html"/>
+  </url>
+
+  <!-- Pagine cliniche inglesi -->
+  <url>
+    <loc>https://giacomonovara.com/prostate-cancer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/prostate-cancer.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/neoplasia-prostatica.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/bladder-cancer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/bladder-cancer.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/neoplasia-vescicale.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/upper-tract-urothelial-carcinoma.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/upper-tract-urothelial-carcinoma.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/neoplasia-alta-via.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/kidney-cancer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/kidney-cancer.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/neoplasia-renale.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/testicular-cancer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/testicular-cancer.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/neoplasia-testicolare.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/penile-cancer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/penile-cancer.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/tumore-del-pene.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/luts-benign-prostatic-hyperplasia.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/luts-benign-prostatic-hyperplasia.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/luts-ipertrofia-prostatica.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/overactive-bladder.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/overactive-bladder.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/vescica-iperattiva.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/genitourinary-prolapse.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/genitourinary-prolapse.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/prolassi-genitourinari.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/erectile-dysfunction.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/erectile-dysfunction.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/disfunzione-erettile.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/scrotal-pathology.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/scrotal-pathology.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/patologia-scrotale-benigna.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/ureteropelvic-junction-obstruction.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/ureteropelvic-junction-obstruction.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/giunto-pieloureterale.html"/>
+  </url>
+
+  <url>
+    <loc>https://giacomonovara.com/ureteral-strictures.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://giacomonovara.com/ureteral-strictures.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://giacomonovara.com/stenosi-ureterali.html"/>
+  </url>
+
+</urlset>
