@@ -191,15 +191,15 @@
     <table class="stats-table">
       <tr>
         <td><div class="stat-num">5,000+</div><div class="stat-label">Surgical procedures</div></td>
-        <td><div class="stat-num" id="stat-papers">600+</div><div class="stat-label">Scientific publications</div><div class="stat-live" id="stat-papers-live">↻ updated via OpenAlex</div></td>
+        <td><div class="stat-num" id="stat-papers">700+</div><div class="stat-label">Scientific publications</div><div class="stat-live" id="stat-papers-live">↻ updated May 2026 · Google Scholar</div></td>
       </tr>
       <tr>
         <td><div class="stat-num">20+</div><div class="stat-label">Years of clinical activity</div></td>
-        <td><div class="stat-num" id="stat-hindex">103</div><div class="stat-label">H-index</div><div class="stat-live" id="stat-hindex-live">↻ updated via OpenAlex</div></td>
+        <td><div class="stat-num" id="stat-hindex">103</div><div class="stat-label">H-index</div><div class="stat-live" id="stat-hindex-live">↻ updated May 2026 · Google Scholar</div></td>
       </tr>
       <tr>
         <td><div class="stat-num">10+</div><div class="stat-label">Years of academic teaching</div></td>
-        <td><div class="stat-num" id="stat-citations">36,000+</div><div class="stat-label">Total citations</div><div class="stat-live" id="stat-citations-live">↻ updated via OpenAlex</div></td>
+        <td><div class="stat-num" id="stat-citations">36,000+</div><div class="stat-label">Total citations</div><div class="stat-live" id="stat-citations-live">↻ updated May 2026 · Google Scholar</div></td>
       </tr>
     </table>
 
@@ -293,7 +293,7 @@
     <div class="contact-grid">
       <div class="contact-card"><div class="cc-icon">📧</div><strong>Email</strong><a href="mailto:giacomo.novara@unipd.it">giacomo.novara@unipd.it</a><br><a href="mailto:giacomonovara@gmail.com">giacomonovara@gmail.com</a></div>
       <div class="contact-card"><div class="cc-icon">📞</div><strong>Secretary</strong><a href="tel:0498211250">+39 049 821 1250</a></div>
-      <div class="contact-card" style="grid-column:span 2"><div class="cc-icon">📅</div><strong>Appointments</strong><p style="margin-bottom:0.3rem">Tel: <a href="tel:0490990854">+39 049 099 0854</a></p><p style="margin:0">Mail: <a href="mailto:prenotazioni.liberaprofessione@aopd.veneto.it">prenotazioni.liberaprofessione@aopd.veneto.it</a></p></div>
+      <div class="contact-card" style="grid-column:span 2"><div class="cc-icon">📅</div><strong>Appointments</strong><p style="margin-bottom:0.3rem">Tel: <a href="tel:0490990854">+39 049 099 0854</a></p><p style="margin-bottom:0.3rem">Mail: <a href="mailto:prenotazioni.liberaprofessione@aopd.veneto.it">prenotazioni.liberaprofessione@aopd.veneto.it</a></p><p style="margin:0">Web: <a href="https://www.aopd.veneto.it/attivita-libero-professionale-ambulatoriale" target="_blank" rel="noopener">www.aopd.veneto.it/attivita-libero-professionale-ambulatoriale</a></p></div>
       <div class="contact-card"><div class="cc-icon">🏥</div><strong>Clinical address</strong><p>Urology Unit, Padova University Hospital<br>Via Giustiniani 2, 35128 Padova, Italy</p><a href="https://www.aopd.veneto.it" target="_blank" rel="noopener">www.aopd.veneto.it →</a></div>
       <div class="contact-card"><div class="cc-icon">🎓</div><strong>Academic address</strong><p>DiSCOG — University of Padova<br>Via Giustiniani 2, 35128 Padova, Italy</p></div>
       <div class="contact-card"><div class="cc-icon">🔬</div><strong>PubMed</strong><a href="https://pubmed.ncbi.nlm.nih.gov/?term=novara+giacomo&sort=date" target="_blank" rel="noopener">Full PubMed profile →</a></div>
@@ -372,17 +372,53 @@ async function fetchScholarStats() {
     if (!res.ok) throw new Error();
     const data = await res.json();
     if (!data.results?.length) throw new Error();
-    const author = data.results.reduce((best,a) => a.cited_by_count>(best.cited_by_count||0)?a:best, {});
-    if (author.works_count) document.getElementById('stat-papers').textContent = author.works_count+'+';
-    if (author.summary_stats?.h_index) document.getElementById('stat-hindex').textContent = author.summary_stats.h_index;
-    if (author.cited_by_count) { const c=author.cited_by_count; document.getElementById('stat-citations').textContent = c>=1000?(Math.floor(c/1000)*1000).toLocaleString('en-GB')+'+':c+'+'; }
-    const now = new Date().toLocaleDateString('en-GB',{month:'long',year:'numeric'});
-    ['stat-papers-live','stat-hindex-live','stat-citations-live'].forEach(id => document.getElementById(id).textContent=`↻ updated ${now} · OpenAlex`);
+    // Values manually updated from Google Scholar (May 2026) — do not overwrite
+    // stat-papers: 700+  |  stat-hindex: 103  |  stat-citations: 36,000+
   } catch(e) {
     ['stat-papers-live','stat-hindex-live','stat-citations-live'].forEach(id => document.getElementById(id).textContent='');
   }
 }
 fetchScholarStats();
 </script>
+
+<!-- FLOATING CTA -->
+<button onclick="document.getElementById('modal-prenota').style.display='flex'" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;background:#d4793b;color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:0.88rem;font-weight:700;padding:0.8rem 1.5rem;border-radius:30px;border:none;cursor:pointer;box-shadow:0 4px 18px rgba(212,121,59,0.35);display:flex;align-items:center;gap:0.5rem;transition:background 0.2s;" onmouseover="this.style.background='#c06830'" onmouseout="this.style.background='#d4793b'">📅 Book a consultation</button>
+
+<!-- MODAL BOOKING -->
+<div id="modal-prenota" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(15,40,64,0.7);align-items:center;justify-content:center;padding:1.5rem;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#faf8f4;border-radius:16px;padding:2.5rem 2rem;max-width:520px;width:100%;position:relative;font-family:'Source Serif 4',Georgia,serif;">
+    <button onclick="document.getElementById('modal-prenota').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#6b6560;line-height:1;">✕</button>
+    <div style="text-align:center;margin-bottom:1.8rem;">
+      <div style="font-size:2.5rem;margin-bottom:0.5rem;">📅</div>
+      <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;font-weight:700;color:#0f2840;margin:0 0 0.3rem;">Book a consultation</h2>
+      <p style="font-size:0.9rem;color:#6b6560;margin:0;">Urology Unit — Padova University Hospital</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:0.8rem;">
+      <div style="background:#fff;border:1px solid #ddd8d0;border-radius:10px;padding:1rem 1.2rem;display:flex;align-items:center;gap:1rem;">
+        <div style="font-size:1.6rem;">📞</div>
+        <div>
+          <div style="font-size:0.8rem;color:#6b6560;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.2rem;">Telephone</div>
+          <a href="tel:0490990854" style="font-size:1rem;font-weight:600;color:#1a7a72;text-decoration:none;">+39 049 099 0854</a>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #ddd8d0;border-radius:10px;padding:1rem 1.2rem;display:flex;align-items:center;gap:1rem;">
+        <div style="font-size:1.6rem;">📧</div>
+        <div>
+          <div style="font-size:0.8rem;color:#6b6560;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.2rem;">Email</div>
+          <a href="mailto:prenotazioni.liberaprofessione@aopd.veneto.it" style="font-size:0.88rem;font-weight:600;color:#1a7a72;text-decoration:none;">prenotazioni.liberaprofessione@aopd.veneto.it</a>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #ddd8d0;border-radius:10px;padding:1rem 1.2rem;display:flex;align-items:center;gap:1rem;">
+        <div style="font-size:1.6rem;">🌐</div>
+        <div>
+          <div style="font-size:0.8rem;color:#6b6560;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.2rem;">Online booking</div>
+          <a href="https://www.aopd.veneto.it/attivita-libero-professionale-ambulatoriale" target="_blank" rel="noopener" style="font-size:0.88rem;font-weight:600;color:#1a7a72;text-decoration:none;">www.aopd.veneto.it →</a>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:0.78rem;color:#6b6560;text-align:center;margin-top:1.5rem;">Private outpatient clinic — Urology Unit, Via Giustiniani 2, Padova</p>
+  </div>
+</div>
+
 </body>
 </html>
