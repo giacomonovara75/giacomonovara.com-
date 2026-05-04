@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3ECK3MX2MY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3ECK3MX2MY');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Informazioni per i colleghi medici che intendono riferire un paziente al Prof. Giacomo Novara, Urologo, Università di Padova.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://giacomonovara.com/per-i-colleghi.html">
+<title>Riferimento Pazienti — Prof. Giacomo Novara, Urologia Padova</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --teal: #1a7a72; --teal-light: #e8f5f4; --teal-mid: #2a9d8f;
+    --navy: #0f2840; --cream: #faf8f4; --warm-gray: #6b6560;
+    --border: #ddd8d0; --accent: #d4793b;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Serif 4', Georgia, serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); font-weight: 300; background: var(--cream); color: var(--navy); line-height: 1.75; font-size: 17px; }
+
+  /* HERO */
+  .hero { background: var(--navy); color: #fff; padding: 3.5rem 1.5rem 2.8rem; }
+  .hero-inner { max-width: 900px; margin: 0 auto; display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap; }
+  .hero-avatar { width: 90px; height: 90px; border-radius: 50%; flex-shrink: 0; border: 3px solid rgba(255,255,255,0.2); overflow: hidden; }
+  .hero-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-text .label { font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.4rem; }
+  .hero-text h1 { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; line-height: 1.15; }
+  .hero-text .role { font-size: 1rem; color: rgba(255,255,255,0.72); margin-top: 0.4rem; font-style: italic; }
+  .hero-text .affil { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 0.25rem; }
+
+  /* NAV */
+  nav.sitenav { background: var(--teal); padding: 0 1.5rem; position: sticky; top: 0; z-index: 100; }
+  nav.sitenav .inner { max-width: 900px; margin: 0 auto; display: flex; gap: 0; overflow-x: auto; align-items: center; }
+  nav.sitenav a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 0.85rem 1.1rem; font-size: 0.85rem; white-space: nowrap; transition: background 0.15s, color 0.15s; display: block; }
+  nav.sitenav a:hover { background: rgba(255,255,255,0.15); color: #fff; }
+  nav.sitenav a.back { display: flex; align-items: center; gap: 0.35rem; }
+
+  /* LAYOUT */
+  .page-wrap { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+  .section-title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+  .section-subtitle { font-size: 0.92rem; color: var(--warm-gray); margin-bottom: 1.8rem; }
+  .section-divider { border: none; border-top: 2px solid var(--border); margin: 3rem 0; }
+
+  /* INDICAZIONI */
+  .ref-group { margin-bottom: 2rem; }
+  .ref-group-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+  .ref-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; }
+  .ref-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; }
+  .ref-card strong { display: block; font-size: 0.92rem; color: var(--navy); margin-bottom: 0.35rem; font-weight: 600; }
+  .ref-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.2rem; }
+  .ref-card ul li { font-size: 0.83rem; color: var(--warm-gray); padding-left: 0.9rem; position: relative; }
+  .ref-card ul li::before { content: '·'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+
+  /* URGENZA BADGE */
+  .urg { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; border-radius: 20px; padding: 0.1rem 0.5rem; margin-left: 0.4rem; vertical-align: middle; }
+  .urg-r  { background: #e8f5f4; color: #1a7a72; }
+  .urg-p  { background: #fef3c7; color: #b45309; }
+  .urg-u  { background: #fee2e2; color: #b91c1c; }
+
+  /* CONTATTI */
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .contact-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; }
+  .contact-card .cc-icon { font-size: 1.8rem; margin-bottom: 0.4rem; }
+  .contact-card strong { display: block; font-size: 0.9rem; margin-bottom: 0.2rem; }
+  .contact-card a { font-size: 0.85rem; color: var(--teal); text-decoration: none; }
+  .contact-card a:hover { text-decoration: underline; }
+  .contact-card p { font-size: 0.83rem; color: var(--warm-gray); margin: 0; }
+
+  /* FORM */
+  .ref-form { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 2rem; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-group label { font-size: 0.82rem; font-weight: 600; color: var(--navy); letter-spacing: 0.02em; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea { font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; color: var(--navy); background: var(--cream); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem 0.9rem; transition: border-color 0.15s, box-shadow 0.15s; }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { outline: none; border-color: var(--teal-mid); box-shadow: 0 0 0 3px rgba(42,157,143,0.12); }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+  .form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6560' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.9rem center; padding-right: 2.2rem; }
+  .form-section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin: 1.4rem 0 0.75rem; grid-column: 1/-1; border-bottom: 1px solid var(--teal-light); padding-bottom: 0.4rem; }
+  .btn-submit { background: var(--teal); color: #fff; border: none; border-radius: 10px; padding: 0.85rem 2rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.15s; margin-top: 0.5rem; width: 100%; }
+  .btn-submit:hover { background: var(--teal-mid); }
+
+  /* NOTA PRIVACY */
+  .privacy-note { font-size: 0.78rem; color: var(--warm-gray); margin-top: 1rem; line-height: 1.5; }
+
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem 1.5rem; font-size: 0.82rem; line-height: 1.8; }
+  footer a { color: rgba(255,255,255,0.8); }
+
+  @media(max-width:600px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .form-group.full { grid-column: 1; }
+    .form-section-label { grid-column: 1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-avatar"><img src="foto-novara.jpg" alt="Prof. Giacomo Novara"></div>
+    <div class="hero-text">
+      <p class="label">Informazioni per i colleghi</p>
+      <h1>Riferimento Pazienti</h1>
+      <p class="role">Prof. Giacomo Novara — Urologia, Università di Padova</p>
+      <p class="affil">Clinica Urologica, Azienda Ospedale-Università di Padova</p>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="sitenav">
+  <div class="inner">
+    <a href="index-it.html" class="back">← Torna al sito</a>
+    <a href="#indicazioni">Indicazioni al riferimento</a>
+    <a href="#contatti">Contatti</a>
+    <a href="#modulo">Modulo di riferimento</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- INTRO -->
+  <section style="margin-bottom:3rem">
+    <h2 class="section-title">Informazioni per i colleghi</h2>
+    <p>Questa pagina è dedicata ai medici di medicina generale, specialisti e altri professionisti sanitari che desiderino riferire un paziente per una valutazione urologica specialistica. Di seguito sono indicate le principali situazioni cliniche per cui il riferimento è appropriato, i contatti della segreteria e un modulo per trasmettere le informazioni cliniche essenziali.</p>
+    <p style="margin-top:0.8rem">⚠ Questo sistema di riferimento è indicato per condizioni <strong>elettive e non urgenti/emergenti</strong>. In caso di urgenza clinica, il paziente deve essere indirizzato al Pronto Soccorso o ai percorsi urgenti previsti dalla struttura.</p>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- INDICAZIONI AL RIFERIMENTO -->
+  <section id="indicazioni" style="margin-bottom:3rem">
+    <h2 class="section-title">Indicazioni al riferimento</h2>
+    <p class="section-subtitle">Principali diagnosi di sospetto e motivi di invio — con indicazione di priorità orientativa</p>
+
+    <!-- ONCOLOGIA -->
+    <div class="ref-group">
+      <div class="ref-group-title">🔬 Oncologia Urologica</div>
+      <div class="ref-grid">
+
+        <div class="ref-card">
+          <strong>Neoplasia della prostata</strong>
+          <ul>
+            <li>PSA elevato</li>
+            <li>mpMRI con PIRADS 3–5</li>
+            <li>Pazienti candidati a biopsia prostatica</li>
+            <li>Biopsia positiva per adenocarcinoma, candidato a prostatectomia radicale</li>
+            <li>Biopsia positiva per adenocarcinoma, candidato a sorveglianza attiva</li>
+            <li>Biopsia positiva per adenocarcinoma, candidato a trattamenti multimodali</li>
+            <li>Carcinoma prostatico avanzato</li>
+            <li>Recidiva biochimica post-trattamento</li>
+            <li>Second opinion</li>
+          </ul>
+        </div>
+
+        <div class="ref-card">
+          <strong>Neoplasia della vescica</strong>
+          <ul>
+            <li>Ematuria macroscopica mono- o pluriepisodica</li>
+            <li>Riscontro radiologico di neoplasia vescicale</li>
+            <li>Neoplasia vescicale non-muscolo invasiva</li>
+            <li>Neoplasia vescicale non-muscolo invasiva che necessita di trattamento con BCG</li>
+            <li>Neoplasia vescicale refrattaria a BCG</li>
+            <li>Neoplasia vescicale muscolo invasiva, candidato a cistectomia radicale</li>
+            <li>Neoplasia vescicale avanzata/metastatica</li>
+            <li>Second opinion</li>
+          </ul>
+        </div>
+
+        <div class="ref-card">
+          <strong>Neoplasia del rene</strong>
+          <ul>
+            <li>Massa renale solida o cistica</li>
+            <li>Carcinoma renale confermato, candidato a nefrectomia parziale o radicale</li>
+            <li>Neoplasia renale bilaterale</li>
+            <li>Neoplasia renale in monorene</li>
+            <li>Pazienti candidati a sorveglianza attiva</li>
+            <li>Pazienti candidati a crioablazione</li>
+            <li>RCC metastatico, valutazione chirurgica</li>
+            <li>Second opinion</li>
+
+          </ul>
+        </div>
+
+        <div class="ref-card">
+          <strong>Neoplasia dell'alta via escretrice</strong>
+          <ul>
+            <li>Ureteroidronefrosi</li>
+            <li>Lesione urotelio pielocaliceale o ureterale</li>
+            <li>Candidato a nefroureterectomia radicale</li>
+            <li>Citologia urinaria positiva o sospetta</li>
+            <li>Second opinion</li>
+          </ul>
+        </div>
+
+        <div class="ref-card">
+          <strong>Neoplasia del testicolo</strong>
+          <ul>
+            <li>Massa testicolare solida all'ecografia</li>
+            <li>Marcatori tumorali elevati (AFP, β-HCG, LDH)</li>
+            <li>Follow-up oncologico post-orchifunicolectomia</li>
+            <li>Pazienti candidati a linfoadenectomia retroperitoneale</li>
+            <li>Second opinion</li>
+          </ul>
+        </div>
+
+        <div class="ref-card">
+          <strong>Neoplasia del pene</strong>
+          <ul>
+            <li>Lesione sospetta del glande o prepuzio, non responsiva a terapia topica</li>
+            <li>Carcinoma squamocellulare confermato, staging e pianificazione chirurgica</li>
+            <li>Pazienti candidati a linfoadenectomia inguinale laparoscopica (VEIL)</li>
+            <li>Adenopatie inguinali in paziente con neoplasia penile</li>
+            <li>Second opinion</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FUNZIONALE -->
+    <div class="ref-group">
+      <div class="ref-group-title">🩺 Urologia Funzionale e Ricostruttiva</div>
+      <div class="ref-grid">
+
+        <div class="ref-card">
+          <strong>LUTS / Ipertrofia prostatica benigna</strong>
+          <ul>
+            <li>Sintomi del basso apparato urinario</li>
+            <li>Fallimento o intolleranza della terapia medica ottimizzata</li>
+            <li>Ritenzione urinaria acuta recidivante</li>
+            <li>Chirurgia robotica dell'ipertrofia prostatica voluminosa</li>
+            <li>Diverticoli vescicali, calcolosi vescicale o idronefrosi da ostruzione</li>
+            <li>Second opinion</li>
+          </ul>
+        </div>
+
+        <div class="ref-card">
+          <strong>Vescica iperattiva (OAB)</strong>
+          <ul>
+            <li>Urgenza/incontinenza da urgenza</li>
+            <li>Candidato a tossina botulinica intravescicale o neuromodulazione sacrale</li>
+            <li>Second opinion</li>
+          </ul>
+        </div>
+
+        <div class="ref-card">
+          <strong>Prolasso genitourinario femminile</strong>
+          <ul>
+            <li>Prolasso ≥ stadio II (POP-Q) sintomatico</li>
+            <li>Recidiva dopo chirurgia precedente</li>
+            <li>Candidata a sacrocolposuspension robotica</li>
+            <li>Second opinion</li>
+          </ul>
+        </div>
+
+        <div class="ref-card">
+          <strong>Stenosi ureterali</strong>
+          <ul>
+            <li>Stenosi iatrogena (post-ginecologica, post-chirurgica, post-radioterapia)</li>
+            <li>Idronefrosi ostruttiva con deterioramento della funzione renale</li>
+            <li>Candidato a ureteroplastica, psoas hitch o ureterocistoneostomia</li>
+            <li>Second opinion</li>
+          </ul>
+        </div>
+
+        <div class="ref-card">
+          <strong>Malattia del giunto pielo-ureterale</strong>
+          <ul>
+            <li>Idronefrosi sintomatica (dolore, IVU ricorrenti, calcolosi)</li>
+            <li>Ostruzione UPJ confermata alla renografia con diuretico</li>
+            <li>Candidato a pieloplastica robotica (Anderson-Hynes)</li>
+            <li>Second opinion</li>
+          </ul>
+        </div>
+
+        <div class="ref-card">
+          <strong>Disfunzione erettile</strong>
+          <ul>
+            <li>DE post-prostatectomia</li>
+            <li>DE idiopatica e vasculogenica</li>
+            <li>Second opinion</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- CONTATTI -->
+  <section id="contatti" style="margin-bottom:3rem">
+    <h2 class="section-title">Contatti</h2>
+    <p class="section-subtitle">Per prenotazioni, informazioni cliniche e urgenze</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="cc-icon">📞</div>
+        <strong>Segreteria</strong>
+        <a href="tel:0498211250">049 821 1250</a>
+        <p style="margin-top:0.3rem">Lun–Ven, 9:00–13:00</p>
+      </div>
+      <div class="contact-card">
+        <div class="cc-icon">📧</div>
+        <strong>Email</strong>
+        <a href="mailto:giacomo.novara@unipd.it">giacomo.novara@unipd.it</a>
+        <a href="mailto:giacomonovara@gmail.com" style="display:block;margin-top:0.2rem">giacomonovara@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="cc-icon">🏥</div>
+        <strong>Sede clinica</strong>
+        <p>Clinica Urologica<br>Via Giustiniani 2, 35128 Padova</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- MODULO DI RIFERIMENTO -->
+  <section id="modulo" style="margin-bottom:3rem">
+    <h2 class="section-title">Modulo di riferimento</h2>
+    <p class="section-subtitle">Compili il modulo sottostante: verrà generata una email pre-compilata da inviare alla segreteria</p>
+
+    <div class="ref-form">
+      <form id="referral-form" novalidate>
+        <div class="form-grid">
+
+          <div class="form-section-label">Dati del paziente</div>
+
+          <div class="form-group">
+            <label for="pz-cognome">Cognome *</label>
+            <input type="text" id="pz-cognome" name="pz-cognome" placeholder="Cognome del paziente" required>
+          </div>
+          <div class="form-group">
+            <label for="pz-nome">Nome *</label>
+            <input type="text" id="pz-nome" name="pz-nome" placeholder="Nome del paziente" required>
+          </div>
+          <div class="form-group">
+            <label for="pz-ddn">Data di nascita</label>
+            <input type="date" id="pz-ddn" name="pz-ddn">
+          </div>
+          <div class="form-group">
+            <label for="pz-sesso">Sesso</label>
+            <select id="pz-sesso" name="pz-sesso">
+              <option value="">— Seleziona —</option>
+              <option value="M">Maschio</option>
+              <option value="F">Femmina</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pz-citta">Città di residenza</label>
+            <input type="text" id="pz-citta" name="pz-citta" placeholder="Comune di residenza">
+          </div>
+          <div class="form-group">
+            <label for="pz-tel">Telefono del paziente</label>
+            <input type="tel" id="pz-tel" name="pz-tel" placeholder="Per contatto diretto">
+          </div>
+          <div class="form-group full">
+            <label for="pz-email">Email del paziente <span style="font-size:0.75rem;color:var(--warm-gray);font-weight:300;">(almeno una email obbligatoria)</span></label>
+            <input type="email" id="pz-email" name="pz-email" placeholder="Per comunicazioni al paziente">
+          </div>
+
+          <div class="form-section-label">Motivo del riferimento</div>
+
+          <div class="form-group full">
+            <label for="diagnosi">Diagnosi di sospetto / Quesito clinico *</label>
+            <textarea id="diagnosi" name="diagnosi" placeholder="Es. PSA 12 ng/mL in progressione, mpMRI con PIRADS 4 al lobo sx — valutazione per biopsia e pianificazione terapeutica" required></textarea>
+          </div>
+          <div class="form-group full">
+            <label for="esami">Esami già effettuati</label>
+            <textarea id="esami" name="esami" placeholder="Es. PSA, ecografia, TC, RM, esame urine, citologia urinaria, esiti bioptici…" style="min-height:75px;"></textarea>
+          </div>
+          <div class="form-group full">
+            <label for="terapia">Terapia in corso rilevante</label>
+            <input type="text" id="terapia" name="terapia" placeholder="Es. alfa-litici, anticoagulanti, chemioterapia…">
+          </div>
+          <div class="form-group full">
+            <label for="note">Note aggiuntive</label>
+            <input type="text" id="note" name="note" placeholder="Informazioni cliniche aggiuntive rilevanti">
+          </div>
+
+          <div class="form-section-label">Dati del medico referente</div>
+
+          <div class="form-group">
+            <label for="med-nome">Nome e cognome *</label>
+            <input type="text" id="med-nome" name="med-nome" placeholder="Dr. / Dott.ssa…" required>
+          </div>
+          <div class="form-group">
+            <label for="med-specialita">Specialità / Ruolo</label>
+            <input type="text" id="med-specialita" name="med-specialita" placeholder="Es. MMG, Oncologo, Radiologo…">
+          </div>
+          <div class="form-group">
+            <label for="med-tel">Telefono di riferimento</label>
+            <input type="tel" id="med-tel" name="med-tel" placeholder="Per eventuale contatto diretto">
+          </div>
+          <div class="form-group">
+            <label for="med-email">Email <span style="font-size:0.75rem;color:var(--warm-gray);font-weight:300;">(almeno una email obbligatoria)</span></label>
+            <input type="email" id="med-email" name="med-email" placeholder="Per conferma di ricezione">
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn-submit">✉ Invia riferimento per email</button>
+
+        <p class="privacy-note">⚠ Il modulo genera una email pre-compilata tramite il client di posta del dispositivo in uso. I dati inseriti non vengono trasmessi ad alcun server esterno. Si raccomanda di non includere dati sensibili non strettamente necessari al riferimento clinico.</p>
+        <p class="privacy-note" style="margin-top:0.6rem">In caso di problemi tecnici con il modulo, è possibile inviare il riferimento direttamente a <a href="mailto:giacomonovara@gmail.com" style="color:var(--teal);">giacomonovara@gmail.com</a>.</p>
+      </form>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Prof. Giacomo Novara — Professore Associato di Urologia, Università degli Studi di Padova</p>
+  <p style="margin-top:0.4rem"><a href="index-it.html">← Torna al sito principale</a> · <a href="https://giacomonovara.com">giacomonovara.com</a></p>
+</footer>
+
+<script>
+document.getElementById('referral-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const g = id => (document.getElementById(id).value || '').trim();
+
+  const pz     = `${g('pz-cognome')} ${g('pz-nome')}`.trim();
+  const ddn    = g('pz-ddn');
+  const sesso  = g('pz-sesso');
+  const citta  = g('pz-citta');
+  const pzTel  = g('pz-tel');
+  const pzEmail= g('pz-email');
+  const diag   = g('diagnosi');
+  const esami  = g('esami');
+  const ter    = g('terapia');
+  const note   = g('note');
+  const med    = g('med-nome');
+  const spec   = g('med-specialita');
+  const tel    = g('med-tel');
+  const email  = g('med-email');
+
+  // Campi obbligatori: nome paziente, diagnosi, nome medico + almeno una email
+  if (!g('pz-cognome') || !g('pz-nome') || !diag || !med) {
+    alert('Si prega di compilare almeno: cognome e nome del paziente, diagnosi di sospetto e nome del medico referente.');
+    return;
+  }
+  if (!pzEmail && !email) {
+    alert('È necessario fornire almeno un indirizzo email: del paziente oppure del medico referente.');
+    return;
+  }
+
+  const body =
+`RIFERIMENTO PAZIENTE — Prof. Giacomo Novara, Urologia Padova
+${'─'.repeat(60)}
+
+PAZIENTE
+  Nome e cognome   : ${pz || '—'}
+  Data di nascita  : ${ddn || '—'}
+  Sesso            : ${sesso || '—'}
+  Città di residenza: ${citta || '—'}
+  Telefono         : ${pzTel || '—'}
+  Email            : ${pzEmail || '—'}
+
+MOTIVO DEL RIFERIMENTO
+  Diagnosi di sospetto / Quesito clinico:
+  ${diag}
+
+  Esami già effettuati:
+  ${esami || '—'}
+
+  Terapia in corso rilevante:
+  ${ter || '—'}
+
+  Note aggiuntive:
+  ${note || '—'}
+
+MEDICO REFERENTE
+  Nome             : ${med}
+  Specialità       : ${spec || '—'}
+  Telefono         : ${tel || '—'}
+  Email            : ${email || '—'}
+
+${'─'.repeat(60)}
+Riferimento generato tramite giacomonovara.com/per-i-colleghi.html`;
+
+  const subject = encodeURIComponent(`Riferimento paziente — ${pz}`);
+  const bodyEnc = encodeURIComponent(body);
+  window.location.href = `mailto:giacomo.novara@unipd.it?subject=${subject}&body=${bodyEnc}`;
+});
+</script>
+
+</body>
+</html>

@@ -71,6 +71,9 @@
     --border: #ddd8d0; --accent: #d4793b;
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'Source Serif 4', Georgia, serif;
+    --blue-did: #1e5fa8; --blue-did-light: #dbeafe; --blue-did-mid: #2d74c4;
+    --amber-did: #b45309; --amber-did-light: #fef3c7; --amber-did-mid: #d97706;
+    --purple-did: #7c3aed; --purple-did-light: #ede9fe; --purple-did-mid: #8b5cf6;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -89,8 +92,8 @@
   .badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 0.3rem 0.8rem; font-size: 0.78rem; color: rgba(255,255,255,0.8); }
 
   nav.sitenav { background: var(--teal); padding: 0 1.5rem; position: sticky; top: 0; z-index: 100; }
-  nav.sitenav .inner { max-width: 900px; margin: 0 auto; display: flex; gap: 0; overflow-x: auto; }
-  nav.sitenav a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 0.85rem 1.1rem; font-size: 0.85rem; white-space: nowrap; transition: background 0.15s, color 0.15s; display: block; }
+  nav.sitenav .inner { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0; }
+  nav.sitenav a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 0.7rem 1.1rem; font-size: 0.85rem; white-space: nowrap; transition: background 0.15s, color 0.15s; display: block; }
   nav.sitenav a:hover { background: rgba(255,255,255,0.15); color: #fff; }
 
   .page-wrap { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
@@ -172,6 +175,47 @@
   footer a { color: rgba(255,255,255,0.8); }
 
   @media(max-width:600px) { .about-grid { grid-template-columns: 1fr; } .hero-inner { gap: 1.5rem; } }
+
+  /* ── DIDATTICA ────────────────────────────────────────────── */
+
+  .edu-group { margin-bottom: 2.2rem; }
+  .edu-group-hdr { display: flex; align-items: center; gap: 0.9rem; padding: 0.8rem 1.2rem; border-radius: 10px; margin-bottom: 0; cursor: pointer; user-select: none; }
+  .edu-group-hdr::after { content: '›'; margin-left: auto; font-size: 1.4rem; line-height: 1; color: var(--warm-gray); transition: transform 0.28s ease; display: block; flex-shrink: 0; }
+  .edu-group.open .edu-group-hdr { border-radius: 10px 10px 0 0; }
+  .edu-group.open .edu-group-hdr::after { transform: rotate(90deg); }
+  .edu-group-hdr .eg-icon { font-size: 1.4rem; flex-shrink: 0; }
+  .edu-group-hdr .eg-text strong { display: block; font-size: 0.95rem; color: var(--navy); }
+  .edu-group-hdr .eg-text span { font-size: 0.8rem; color: var(--warm-gray); }
+  .edu-body { max-height: 0; overflow: hidden; transition: max-height 0.38s ease, padding 0.28s ease; padding: 0; }
+  .edu-group.open .edu-body { max-height: 3000px; padding: 0.85rem 0 0; }
+  .edu-hdr-teal   { background: var(--teal-light);        border-left: 4px solid var(--teal); }
+  .edu-hdr-blue   { background: var(--blue-did-light);    border-left: 4px solid var(--blue-did); }
+  .edu-hdr-amber  { background: var(--amber-did-light);   border-left: 4px solid var(--amber-did); }
+  .edu-hdr-purple { background: var(--purple-did-light);  border-left: 4px solid var(--purple-did); }
+
+  .edu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(252px, 1fr)); gap: 0.65rem; }
+  .edu-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; text-decoration: none; color: var(--navy); transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s; }
+  .edu-card.edu-prep { opacity: 0.55; cursor: default; pointer-events: none; }
+  .edu-n { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; padding: 0.12rem 0.5rem; border-radius: 20px; display: inline-block; align-self: flex-start; }
+  .edu-t { font-size: 0.9rem; font-weight: 600; font-family: var(--font-display); color: var(--navy); line-height: 1.3; }
+  .edu-badge-status { font-size: 0.7rem; border-radius: 20px; padding: 0.12rem 0.55rem; display: inline-block; align-self: flex-start; margin-top: 0.15rem; }
+  .edu-avail { background: var(--teal-light); color: var(--teal); }
+  .edu-prep-badge { background: #f3f4f6; color: #6b7280; }
+
+  .edu-teal  .edu-n { background: var(--teal-light);        color: var(--teal); }
+  .edu-teal  .edu-card:not(.edu-prep):hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(15,40,64,0.1); border-color: var(--teal-mid); }
+  .edu-blue  .edu-n { background: var(--blue-did-light);    color: var(--blue-did); }
+  .edu-blue  .edu-card:not(.edu-prep):hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(15,40,64,0.1); border-color: var(--blue-did-mid); }
+  .edu-amber .edu-n { background: var(--amber-did-light);   color: var(--amber-did); }
+  .edu-amber .edu-card:not(.edu-prep):hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(15,40,64,0.1); border-color: var(--amber-did-mid); }
+  .edu-purple .edu-n { background: var(--purple-did-light); color: var(--purple-did); }
+  .edu-purple .edu-card:not(.edu-prep):hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(15,40,64,0.1); border-color: var(--purple-did-mid); }
+
+  .edu-disclaimer { font-size: 0.82rem; color: var(--warm-gray); margin-top: 1.8rem; padding: 0.8rem 1.2rem; background: #fff; border: 1px solid var(--border); border-radius: 8px; }
+
+  .edu-subgroup { margin-bottom: 1.2rem; }
+  .edu-subgroup-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple-did); margin-bottom: 0.5rem; padding-left: 0.1rem; display: flex; align-items: center; gap: 0.5rem; }
+  .edu-subgroup-label::after { content: ''; flex: 1; height: 1px; background: var(--purple-did-light); }
 </style>
 
 <script type="text/javascript" src="https://embeds.iubenda.com/widgets/22957954-6c48-4ee9-9e01-ce87316d0049.js"></script>
@@ -214,12 +258,14 @@
 <!-- NAVBAR -->
 <nav class="sitenav">
   <div class="inner">
-    <a href="#oncologia">Urologia Oncologica</a>
     <a href="#chirurgia-robotica">Chirurgia Robotica</a>
+    <a href="#oncologia">Urologia Oncologica</a>
     <a href="#funzionale">Patologie Non Oncologiche</a>
+    <a href="#didattica">Didattica</a>
     <a href="#pubblicazioni">Pubblicazioni</a>
+    <a href="per-i-colleghi.html">Per i Colleghi</a>
     <a href="#contatti">Contatti</a>
-    <a href="index-en.html" style="margin-left:auto;opacity:0.85;font-size:0.85rem;letter-spacing:0.02em;">🇬🇧 English</a>
+    <a href="index-en.html" style="opacity:0.85;font-size:0.85rem;letter-spacing:0.02em;">🇬🇧 English</a>
   </div>
 </nav>
 
@@ -544,6 +590,133 @@
 
   <hr class="section-divider">
 
+  <!-- DIDATTICA -->
+  <section id="didattica" style="margin-bottom:3rem">
+    <h2 class="section-title">Didattica</h2>
+    <p class="section-subtitle">Materiali delle lezioni per studenti e medici in formazione — Università degli Studi di Padova</p>
+
+    <!-- 🎓 Medicina LM -->
+    <div class="edu-group edu-teal">
+      <div class="edu-group-hdr edu-hdr-teal">
+        <span class="eg-icon">🎓</span>
+        <div class="eg-text">
+          <strong>Studenti di Medicina e Chirurgia</strong>
+          <span>Corso di Laurea Magistrale in Medicina e Chirurgia · 12 moduli</span>
+        </div>
+      </div>
+      <div class="edu-body">
+      <div class="edu-grid">
+        <a href="https://drive.google.com/file/d/1p-N9PMcWpyDec8giVj8pWZ-YyyQNBs8c/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">01</span><span class="edu-t">Neoplasia della vescica e dell'alta via escretrice</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1L3o21QGaESRrTwGnpZG67TtCPrCQd1sg/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">02</span><span class="edu-t">Neoplasia del rene</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1JJdf41tgOdClulkFxvhSld6mbteu5vmx/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">03</span><span class="edu-t">Neoplasia della prostata</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1Cv_TGFoWeL_50hh83vzBlFdubd1gCdkQ/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">04</span><span class="edu-t">Neoplasia del testicolo</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1SSixCbDWE8atr6-Fc3E8KQUcHFzc2XT4/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">05</span><span class="edu-t">LUTS, BPH e OAB</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/19zZrr9_SfARxHRFOPuxaeP6Nko-vWLIP/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">06</span><span class="edu-t">Calcolosi urinaria</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1XhD9cRWRJYkgKIo8-3EwgosfSnpV-k_A/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">07</span><span class="edu-t">Scroto acuto</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1w8-qdw1tuy1bFX-Eo8oTGD3aBrNIltrV/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">08</span><span class="edu-t">Varicocele</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1bptfW9MBMc4L2zOc48oMR7SC7JazDYCe/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">09</span><span class="edu-t">Disfunzione erettile</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/179kJ-BrowsbRyZm0J7iSJGWavMHAIFoQ/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">10</span><span class="edu-t">Incontinenza urinaria maschile da sforzo</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1yTEVCLGTL-Hs2bcSFR3_dqnLleflqL_B/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">11</span><span class="edu-t">Traumi urogenitali e stenosi ureterali</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1s0GzpKk9v2sPKr7YAR4crWokezFbn21H/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">12</span><span class="edu-t">Incontinenza urinaria da sforzo femminile e prolassi genitourinari</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+      </div>
+      </div>
+    </div>
+
+    <!-- 🩺 Infermieristica -->
+    <div class="edu-group edu-blue">
+      <div class="edu-group-hdr edu-hdr-blue">
+        <span class="eg-icon">🩺</span>
+        <div class="eg-text">
+          <strong>Studenti di Infermieristica</strong>
+          <span>Corso di Laurea in Infermieristica · 7 moduli</span>
+        </div>
+      </div>
+      <div class="edu-body">
+      <div class="edu-grid">
+        <a href="https://drive.google.com/file/d/12rK2DuY-Ug7sIGFOI23c9vAjPAoE9p4A/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">01</span><span class="edu-t">Neoplasia della vescica e dell'alta via escretrice</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/15Jzlsm3ZLEZ_K0vKCjvVXxO7yNWlOUgP/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">02</span><span class="edu-t">Neoplasia del rene</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/19KJAk5WyH9rWgrH2tjFKTScp9npmfBO9/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">03</span><span class="edu-t">Neoplasia della prostata</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1CWm8g3HXLz7Pkunai2BbaIhkjKK9c-n7/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">04</span><span class="edu-t">Neoplasia del testicolo</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1mKWpsRoaQL1tPVjttxhqh85ucBghtLeO/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">05</span><span class="edu-t">LUTS e BPH</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1fCJgmL19XtR6MvqR-HcSc6JX11DZUZdc/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">06</span><span class="edu-t">Calcolosi urinaria</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1jGdAnlSTRt_-gMaoTjncLKjfaRaT3QWZ/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">07</span><span class="edu-t">Cateterismo ureterale</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+      </div>
+      </div>
+    </div>
+
+    <!-- 🔬 Medici in Formazione Specialistica -->
+    <div class="edu-group edu-amber">
+      <div class="edu-group-hdr edu-hdr-amber">
+        <span class="eg-icon">🔬</span>
+        <div class="eg-text">
+          <strong>Medici in Formazione Specialistica</strong>
+          <span>Scuole di Specializzazione — Università degli Studi di Padova · 12 moduli</span>
+        </div>
+      </div>
+      <div class="edu-body">
+      <div class="edu-grid">
+        <a href="https://drive.google.com/file/d/19LueSS5xWaC8PUYF5aO0Dbwfr5ChuRYF/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">01</span><span class="edu-t">Neoplasia della vescica e dell'alta via escretrice</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/19diixvgdvHDKaGU2MjGyIQb9MCSPDDou/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">02</span><span class="edu-t">Neoplasia del rene</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1MtpFYnibHXSZJ56825BOskAIMBJDkeWQ/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">03</span><span class="edu-t">Neoplasia della prostata</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1OjTlfjFaOo0EjuEPF4827DKAazbYJXcU/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">04</span><span class="edu-t">Neoplasia del testicolo</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1ytHypSUpKZ31gCPyoyVn9DiiF4aTjxyK/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">05</span><span class="edu-t">LUTS, BPH e OAB</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1Qqt_9ZS7pdspmG-UPLkmBGIPKsKV11nF/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">06</span><span class="edu-t">Calcolosi urinaria</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1Pq_0TyB15n4_UyBmTvKmtIn7BEU5BXGS/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">07</span><span class="edu-t">Scroto acuto</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/18LsfBsevpMjHOIJuPD_t-UtrJDyyaJSB/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">08</span><span class="edu-t">Varicocele</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1BJiU1P4tnBVTs8bl6QQyuLxfYhluC6al/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">09</span><span class="edu-t">Disfunzione erettile</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1jLu6qL_G2OgSW6lrEe0preB-Ey8ueobY/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">10</span><span class="edu-t">Incontinenza urinaria maschile da sforzo</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/1rid1HKrIdLWKOuTrzLTiMbM0aA-e4Qlm/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">11</span><span class="edu-t">Traumi urogenitali e stenosi ureterali</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        <a href="https://drive.google.com/file/d/12_SAiUREzbZjxYVSzhZZjbFTYgI0GcEG/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">12</span><span class="edu-t">Incontinenza urinaria da sforzo femminile e prolassi genitourinari</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+      </div>
+      </div>
+    </div>
+
+    <!-- 📋 Master -->
+    <div class="edu-group edu-purple">
+      <div class="edu-group-hdr edu-hdr-purple">
+        <span class="eg-icon">📋</span>
+        <div class="eg-text">
+          <strong>Master</strong>
+          <span>Programmi di Master universitario · 6 moduli</span>
+        </div>
+      </div>
+      <div class="edu-body">
+
+      <!-- TAPU -->
+      <div class="edu-subgroup">
+        <div class="edu-subgroup-label">TAPU — Patologia ureterale</div>
+        <div class="edu-grid">
+          <a href="https://drive.google.com/file/d/1RxExVcHI_kRt3xCKLcC7bhozMRA9MQcp/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">01</span><span class="edu-t">Neoplasia dell'alta via escretrice</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+          <a href="https://drive.google.com/file/d/1zLtJ3fOFN8hYqB-hVsfpWZsHHNa2E5cO/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">02</span><span class="edu-t">Stenosi ureterale</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        </div>
+      </div>
+
+      <!-- URORAD -->
+      <div class="edu-subgroup">
+        <div class="edu-subgroup-label">URORAD — Uroradiologia</div>
+        <div class="edu-grid">
+          <a href="https://drive.google.com/file/d/1FlMJw_aMeJG7VxA9dSledkTmtV-RMX8Y/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">01</span><span class="edu-t">Diagnosi per immagini nelle patologie benigne</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+          <a href="https://drive.google.com/file/d/19SYSG0lF2XSdZXIQ2TBxvhS0RJfrW-dM/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">02</span><span class="edu-t">Diagnosi e stadiazione delle neoplasie urologiche</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        </div>
+      </div>
+
+      <!-- TIPRO -->
+      <div class="edu-subgroup">
+        <div class="edu-subgroup-label">TIPRO — Patologia prostatica benigna</div>
+        <div class="edu-grid">
+          <a href="https://drive.google.com/file/d/1S7fX1LvGElnBlwJpi9oRU8z6Mk18MIds/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">01</span><span class="edu-t">LUTS — inquadramento e terapia medica</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+          <a href="https://drive.google.com/file/d/1PFx3Um_Vij2_qCQFPCLZK6a_v2AVWLTk/view" target="_blank" rel="noopener" class="edu-card"><span class="edu-n">02</span><span class="edu-t">LUTS — terapie chirurgiche</span><span class="edu-badge-status edu-avail">Disponibile</span></a>
+        </div>
+      </div>
+
+      </div><!-- /edu-body Master -->
+    </div><!-- /edu-group Master -->
+
+    <p class="edu-disclaimer">📌 <em>I materiali sono riservati agli studenti regolarmente iscritti ai corsi dell'Università degli Studi di Padova.</em></p>
+  </section>
+
+  <hr class="section-divider">
+
   <!-- PUBBLICAZIONI -->
   <section id="pubblicazioni" style="margin-bottom:3rem">
     <h2 class="section-title">Pubblicazioni Scientifiche</h2>
@@ -602,6 +775,12 @@
         <p style="margin-bottom:0.3rem">Tel: <a href="tel:0490990854">049 099 0854</a></p>
         <p style="margin-bottom:0.3rem">Mail: <a href="mailto:prenotazioni.liberaprofessione@aopd.veneto.it">prenotazioni.liberaprofessione@aopd.veneto.it</a></p>
         <p style="margin:0">Web: <a href="https://www.aopd.veneto.it/attivita-libero-professionale-ambulatoriale" target="_blank" rel="noopener">www.aopd.veneto.it/attivita-libero-professionale-ambulatoriale</a></p>
+      </div>
+      <div class="contact-card" style="grid-column: 1 / -1;">
+        <div class="cc-icon">🩻</div>
+        <strong>Per i Colleghi</strong>
+        <p style="margin-bottom:0.3rem">Riferimento pazienti, indicazioni cliniche e modulo di invio</p>
+        <a href="per-i-colleghi.html">Pagina dedicata ai colleghi →</a>
       </div>
       <div class="contact-card">
         <div class="cc-icon">🏥</div>
@@ -809,6 +988,63 @@ fetchScholarStats();
     <p style="font-size:0.78rem;color:#6b6560;text-align:center;margin-top:1.5rem;">Libera professione intramuraria — Clinica Urologica, Via Giustiniani 2, Padova</p>
   </div>
 </div>
+
+<!-- MODALE PDF -->
+<div id="pdf-modal" style="display:none;position:fixed;inset:0;z-index:600;background:rgba(15,40,64,0.88);align-items:center;justify-content:center;padding:1.2rem;" onclick="if(event.target===this)closePdf()">
+  <div style="background:#fff;border-radius:14px;width:100%;max-width:960px;height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.4);">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.65rem 1rem;border-bottom:1px solid #ddd8d0;flex-shrink:0;gap:0.75rem;">
+      <span id="pdf-modal-title" style="font-family:'Source Serif 4',Georgia,serif;font-size:0.9rem;font-weight:600;color:#0f2840;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;"></span>
+      <a id="pdf-download-btn" href="#" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:0.35rem;background:var(--teal);color:#fff;text-decoration:none;font-family:'Source Serif 4',Georgia,serif;font-size:0.8rem;font-weight:600;padding:0.38rem 0.85rem;border-radius:20px;white-space:nowrap;transition:background 0.15s;flex-shrink:0;"
+         onmouseover="this.style.background='#2a9d8f'" onmouseout="this.style.background='#1a7a72'">
+        ↓ Scarica PDF
+      </a>
+      <button onclick="closePdf()" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:#6b6560;line-height:1;flex-shrink:0;padding:0 0.2rem;" title="Chiudi">✕</button>
+    </div>
+    <div style="position:relative;flex:1;overflow:hidden;">
+      <iframe id="pdf-frame" src="" style="width:100%;height:calc(100% + 52px);margin-top:-52px;border:none;display:block;" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- ACCORDION DIDATTICA + PDF VIEWER -->
+<script>
+// Accordion
+document.querySelectorAll('.edu-group-hdr').forEach(hdr => {
+  hdr.addEventListener('click', () => {
+    const group = hdr.closest('.edu-group');
+    const isOpen = group.classList.contains('open');
+    document.querySelectorAll('.edu-group').forEach(g => g.classList.remove('open'));
+    if (!isOpen) group.classList.add('open');
+  });
+});
+
+// PDF modal
+function openPdf(id, title) {
+  document.getElementById('pdf-frame').src = `https://drive.google.com/file/d/${id}/preview`;
+  document.getElementById('pdf-modal-title').textContent = title || '';
+  document.getElementById('pdf-download-btn').href = `https://drive.google.com/uc?export=download&id=${id}`;
+  const modal = document.getElementById('pdf-modal');
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closePdf() {
+  document.getElementById('pdf-modal').style.display = 'none';
+  document.getElementById('pdf-frame').src = '';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePdf(); });
+
+// Intercetta click su tutte le card con link Drive
+document.querySelectorAll('.edu-card[href*="drive.google.com"]').forEach(card => {
+  card.addEventListener('click', e => {
+    e.preventDefault();
+    const match = card.href.match(/\/d\/([^/]+)\//);
+    const title = card.querySelector('.edu-t')?.textContent || '';
+    if (match) openPdf(match[1], title);
+  });
+});
+</script>
 
 </body>
 </html>
