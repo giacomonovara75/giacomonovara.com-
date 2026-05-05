@@ -11,7 +11,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Lower urinary tract symptoms and benign prostatic hyperplasia (BPH): symptoms, diagnosis, medical therapy, endoscopic and laser surgery. Prof. Giacomo Novara, Padova.">
+<meta name="description" content="Lower urinary tract symptoms and benign prostatic hyperplasia (BPH): symptoms, diagnosis, medical therapy, endoscopic and laser surgery. Prof. Giacomo Novara, Padova. Interactive clinical calculators: IPSS and IIEF-5.">
 <link rel="canonical" href="https://giacomonovara.com/luts-benign-prostatic-hyperplasia.html">
 <link rel="alternate" hreflang="it" href="https://giacomonovara.com/luts-ipertrofia-prostatica.html">
 <link rel="alternate" hreflang="en" href="https://giacomonovara.com/luts-benign-prostatic-hyperplasia.html">
@@ -20,7 +20,7 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://giacomonovara.com/luts-benign-prostatic-hyperplasia.html">
 <meta property="og:title" content="LUTS / Benign Prostatic Hyperplasia — Prof. Giacomo Novara">
-<meta property="og:description" content="Lower urinary tract symptoms and benign prostatic hyperplasia (BPH): symptoms, diagnosis, medical therapy, endoscopic and laser surgery. Prof. Giacomo Novara, Padova.">
+<meta property="og:description" content="Lower urinary tract symptoms and benign prostatic hyperplasia (BPH): symptoms, diagnosis, medical therapy, endoscopic and laser surgery. Prof. Giacomo Novara, Padova. Interactive clinical calculators: IPSS and IIEF-5.">
 <meta property="og:image" content="https://giacomonovara.com/foto-novara.jpg">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Prof. Giacomo Novara">
@@ -31,6 +31,7 @@
 <meta name="twitter:description" content="Lower urinary tract symptoms and benign prostatic hyperplasia (BPH): symptoms, diagnosis, medical therapy, endoscopic and laser surgery. Prof. Giacomo Novara, Padova.">
 <meta name="twitter:image" content="https://giacomonovara.com/foto-novara.jpg">
 <!-- Additional meta tags -->
+<meta name="keywords" content="LUTS, benign prostatic hyperplasia, BPH, lower urinary tract symptoms, IPSS, IPSS calculator, IIEF-5, erectile dysfunction, alpha-blockers, 5-alpha-reductase inhibitors, TURP, laser prostate, urologist Padova, Giacomo Novara">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Prof. Giacomo Novara">
 <meta name="language" content="en">
@@ -107,7 +108,29 @@
     ]
   },
   "name": "LUTS / Benign Prostatic Hyperplasia — Prof. Giacomo Novara",
-  "description": "Lower urinary tract symptoms and benign prostatic hyperplasia (BPH): symptoms, diagnosis, medical therapy, endoscopic and laser surgery. Prof. Giacomo Novara, Padova."
+  "description": "Lower urinary tract symptoms and benign prostatic hyperplasia (BPH): symptoms, diagnosis, medical therapy, endoscopic and laser surgery. Prof. Giacomo Novara, Padova.",
+  "hasPart": [
+    {
+      "@type": "MedicalWebPage",
+      "name": "IPSS Calculator — International Prostate Symptom Score",
+      "description": "Interactive tool for calculating the IPSS score: 7 validated questions on urinary symptoms plus a quality-of-life question. Classification: mild (0-7), moderate (8-19), severe (20-35).",
+      "about": {
+        "@type": "MedicalTest",
+        "name": "International Prostate Symptom Score",
+        "alternateName": "IPSS"
+      }
+    },
+    {
+      "@type": "MedicalWebPage",
+      "name": "IIEF-5 Calculator — International Index of Erectile Function",
+      "description": "Interactive tool for calculating the IIEF-5 (SHIM) score: 5 validated questions assessing erectile function. Classification: no ED (22-25), mild (17-21), mild-moderate (12-16), moderate (8-11), severe (1-7).",
+      "about": {
+        "@type": "MedicalTest",
+        "name": "International Index of Erectile Function",
+        "alternateName": "IIEF-5"
+      }
+    }
+  ]
 }
 </script>
 <title>LUTS / Benign Prostatic Hyperplasia — Prof. Giacomo Novara</title>
@@ -375,6 +398,291 @@
     <div class="treat-step"><div class="step-num">6</div><div class="step-content"><strong>Uroflowmetry</strong><p>An excellent screening test (normal flow = no obstruction), but a poor diagnostic test: it cannot distinguish the <em>obstructed</em> patient (high pressure, low flow) from the <em>hypocontractile</em> one (low pressure, low flow). Both produce a similar trace, but management is radically different.</p></div></div>
     <div class="treat-step"><div class="step-num">7</div><div class="step-content"><strong>Pressure-flow urodynamic study</strong><p>Indicated in selected cases: young patients, age >70 with possible detrusor damage, residual >200 mL, known neurological disease, prior pelvic surgery or radiotherapy, failed previous surgery. Definitively distinguishes obstructed from hypocontractile bladder.</p></div></div>
   </section>
+
+  <!-- ===== CLINICAL CALCULATORS ===== -->
+  <section style="margin-top:2rem;">
+    <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;font-weight:700;color:#0f2840;margin-bottom:0.3rem;">🧮 Self-assessment tools</h2>
+    <p style="font-size:0.9rem;color:#6b6560;margin-bottom:1.5rem;">Validated clinical questionnaires. Results are indicative — bring your score to your urologist appointment.</p>
+
+    <!-- IPSS -->
+    <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;font-weight:700;color:#0f2840;margin-bottom:0.3rem;">📋 IPSS — International Prostate Symptom Score</h3>
+    <!-- IPSS CALCULATOR -->
+    <div id="calc-ipss">
+      <p style="font-size:0.82rem;color:#6b6560;margin-bottom:1rem;font-style:italic;">Referring to the <strong>past 4 weeks</strong>, how often have the following occurred?</p>
+      <div id="ipss-progress-txt" style="font-size:0.75rem;color:#6b6560;">0 of 8 answers</div>
+      <div style="background:#ddd8d0;border-radius:4px;height:4px;margin:0.25rem 0 1rem;"><div id="ipss-pbar" style="background:#1a7a72;height:4px;border-radius:4px;width:0%;transition:width 0.3s;"></div></div>
+      <div id="ipss-questions"></div>
+      <div id="ipss-result" style="display:none;background:#fff;border:2px solid #1a7a72;border-radius:12px;padding:1.2rem 1.5rem;margin-top:1rem;">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.6rem;">
+          <div id="ipss-score-num" style="font-size:2.8rem;font-weight:700;color:#1a7a72;line-height:1;"></div>
+          <div><div style="font-size:0.78rem;color:#6b6560;">IPSS total score (out of 35)</div><div id="ipss-score-cat" style="font-size:1rem;font-weight:700;"></div></div>
+        </div>
+        <div style="background:#e8f5f4;border-radius:8px;height:10px;margin:0.5rem 0;overflow:hidden;"><div id="ipss-bar" style="height:100%;border-radius:8px;transition:width 0.6s;width:0%;"></div></div>
+        <div id="ipss-qol" style="background:#fff7ed;border-radius:8px;padding:0.6rem 0.9rem;font-size:0.85rem;margin-top:0.6rem;"></div>
+        <div style="background:#f0f4f8;border-radius:8px;padding:0.7rem 1rem;margin-top:0.6rem;font-size:0.82rem;color:#0f2840;">
+          <strong>What does this mean?</strong><br>
+          <span id="ipss-interpretation"></span>
+        </div>
+        <div id="ipss-summary" style="background:#0f2840;color:#fff;border-radius:8px;padding:0.7rem 1rem;margin-top:0.8rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.4rem;">
+          <span style="font-size:0.85rem;opacity:0.8;">Total IPSS score</span>
+          <span id="ipss-summary-score" style="font-size:1.3rem;font-weight:700;letter-spacing:0.05em;"></span>
+        </div>
+        <p style="font-size:0.72rem;color:#6b6560;font-style:italic;border-top:1px solid #ddd8d0;padding-top:0.6rem;margin-top:0.8rem;">⚠️ Informational tool only. Does not replace specialist urological assessment. Bring this result to your next appointment.</p>
+        <button onclick="resetCalc('ipss')" style="background:none;border:1px solid #1a7a72;color:#1a7a72;border-radius:8px;padding:0.35rem 0.9rem;font-size:0.78rem;cursor:pointer;margin-top:0.6rem;font-family:inherit;">↺ Reset</button>
+        <button onclick="printResult('ipss')" style="background:#1a7a72;color:#fff;border:none;border-radius:8px;padding:0.35rem 0.9rem;font-size:0.78rem;cursor:pointer;margin-top:0.6rem;margin-left:0.5rem;font-family:inherit;">🖨️ Print result</button>
+      </div>
+    </div>
+
+    <hr style="border:none;border-top:2px solid #ddd8d0;margin:2rem 0;">
+    <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;font-weight:700;color:#0f2840;margin-bottom:0.3rem;">IIEF-5 — International Index of Erectile Function</h3>
+    <p style="font-size:0.82rem;color:#6b6560;margin-bottom:1rem;">LUTS and erectile dysfunction are frequently associated (~80% co-prevalence in severe LUTS at age 60). Complete if sexually active in the past 6 months.</p>
+    <!-- IIEF-5 CALCULATOR -->
+    <div id="calc-iief">
+      <div id="iief-progress-txt" style="font-size:0.75rem;color:#6b6560;">0 of 5 answers</div>
+      <div style="background:#ddd8d0;border-radius:4px;height:4px;margin:0.25rem 0 1rem;"><div id="iief-pbar" style="background:#d4793b;height:4px;border-radius:4px;width:0%;transition:width 0.3s;"></div></div>
+      <div id="iief-questions"></div>
+      <div id="iief-result" style="display:none;background:#fff;border:2px solid #d4793b;border-radius:12px;padding:1.2rem 1.5rem;margin-top:1rem;">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.6rem;">
+          <div id="iief-score-num" style="font-size:2.8rem;font-weight:700;color:#d4793b;line-height:1;"></div>
+          <div><div style="font-size:0.78rem;color:#6b6560;">IIEF-5 total score (out of 25)</div><div id="iief-score-cat" style="font-size:1rem;font-weight:700;"></div></div>
+        </div>
+        <div style="background:#fef3e2;border-radius:8px;height:10px;margin:0.5rem 0;overflow:hidden;"><div id="iief-bar" style="height:100%;border-radius:8px;transition:width 0.6s;width:0%;"></div></div>
+        <div style="background:#f0f4f8;border-radius:8px;padding:0.7rem 1rem;margin-top:0.6rem;font-size:0.82rem;color:#0f2840;">
+          <strong>What does this mean?</strong><br>
+          <span id="iief-interpretation"></span>
+        </div>
+        <div id="iief-summary" style="background:#0f2840;color:#fff;border-radius:8px;padding:0.7rem 1rem;margin-top:0.8rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.4rem;">
+          <span style="font-size:0.85rem;opacity:0.8;">Total IIEF-5 score</span>
+          <span id="iief-summary-score" style="font-size:1.3rem;font-weight:700;letter-spacing:0.05em;"></span>
+        </div>
+        <p style="font-size:0.72rem;color:#6b6560;font-style:italic;border-top:1px solid #ddd8d0;padding-top:0.6rem;margin-top:0.8rem;">⚠️ Informational tool only. Erectile dysfunction is highly treatable — discuss this result with your urologist.</p>
+        <button onclick="resetCalc('iief')" style="background:none;border:1px solid #d4793b;color:#d4793b;border-radius:8px;padding:0.35rem 0.9rem;font-size:0.78rem;cursor:pointer;margin-top:0.6rem;font-family:inherit;">↺ Reset</button>
+        <button onclick="printResult('iief')" style="background:#d4793b;color:#fff;border:none;border-radius:8px;padding:0.35rem 0.9rem;font-size:0.78rem;cursor:pointer;margin-top:0.6rem;margin-left:0.5rem;font-family:inherit;">🖨️ Print result</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  var QBLOCK = 'background:#fff;border:1px solid #ddd8d0;border-radius:10px;padding:0.9rem 1rem;margin-bottom:0.6rem;';
+  var QBLOCK_OK_TEAL = QBLOCK + 'border-left:3px solid #1a7a72;';
+  var QBLOCK_OK_AMBER = QBLOCK + 'border-left:3px solid #d4793b;';
+  var OPT_BASE = 'border:1px solid #ddd8d0;background:#faf8f4;border-radius:7px;padding:0.28rem 0.5rem;font-size:0.72rem;cursor:pointer;color:#0f2840;transition:all 0.15s;flex:1;min-width:58px;text-align:center;font-family:inherit;';
+  var OPT_SEL_TEAL = OPT_BASE + 'background:#1a7a72;color:#fff;border-color:#1a7a72;';
+  var OPT_SEL_AMBER = OPT_BASE + 'background:#d4793b;color:#fff;border-color:#d4793b;';
+
+  function qNum(n, color) {
+    return '<span style="display:inline-flex;align-items:center;justify-content:center;background:'+color+';color:#fff;border-radius:50%;width:20px;height:20px;font-size:0.7rem;margin-right:0.35rem;vertical-align:middle;flex-shrink:0;">'+n+'</span>';
+  }
+
+  // ─── IPSS ────────────────────────────────────────────────────────
+  var IPSS_Q = [
+    'Sensation of incomplete bladder emptying after urinating',
+    'Need to urinate again within 2 hours of your last void',
+    'Stopping and starting again several times when urinating',
+    'Difficulty postponing urination (urgency)',
+    'Weak urinary stream',
+    'Need to push or strain to begin urinating',
+    'Number of times you got up to urinate from bedtime until morning (nocturia)'
+  ];
+  var OPTS5 = ['Not at all (0)','< 1 in 5 times (1)','< Half the time (2)','About half (3)','> Half the time (4)','Almost always (5)'];
+  var OPTS_N = ['None (0)','1 time (1)','2 times (2)','3 times (3)','4 times (4)','5+ times (5)'];
+  var OPTS_QOL = ['Delighted (0)','Pleased (1)','Mostly satisfied (2)','Mixed (3)','Mostly dissatisfied (4)','Unhappy (5)','Terrible (6)'];
+  var QOL_LBL = ['Delighted','Pleased','Mostly satisfied','Mixed','Mostly dissatisfied','Unhappy','Terrible'];
+  var ipssAns = Array(7).fill(null), ipssQol = null;
+
+  function renderIPSS() {
+    var c = document.getElementById('ipss-questions'); c.innerHTML = '';
+    IPSS_Q.forEach(function(q, i) {
+      var opts = (i===6 ? OPTS_N : OPTS5);
+      var answered = ipssAns[i] !== null;
+      var d = document.createElement('div');
+      d.style.cssText = answered ? QBLOCK_OK_TEAL : QBLOCK;
+      d.innerHTML = '<div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;">' + qNum(i+1,'#1a7a72') + q + '</div>'
+        + '<div style="display:flex;flex-wrap:wrap;gap:0.3rem;">'
+        + opts.map(function(o,j){ return '<button style="'+(ipssAns[i]===j?OPT_SEL_TEAL:OPT_BASE)+'" onclick="ipssSet('+i+','+j+')">'+o+'</button>'; }).join('')
+        + '</div>';
+      c.appendChild(d);
+    });
+    var d2 = document.createElement('div');
+    d2.style.cssText = (ipssQol!==null ? 'background:#fff7ed;border:1px solid #f0c080;border-radius:10px;padding:0.9rem 1rem;margin-bottom:0.6rem;border-left:3px solid #d4793b;' : 'background:#fff7ed;border:1px solid #f0c080;border-radius:10px;padding:0.9rem 1rem;margin-bottom:0.6rem;');
+    d2.innerHTML = '<div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;">' + qNum('QoL','#d4793b') + 'If you were to spend the rest of your life with your urinary condition just the way it is now, how would you feel?</div>'
+      + '<div style="display:flex;flex-wrap:wrap;gap:0.3rem;">'
+      + OPTS_QOL.map(function(o,j){ return '<button style="'+(ipssQol===j?OPT_SEL_AMBER:OPT_BASE)+'" onclick="ipssQolSet('+j+')">'+o+'</button>'; }).join('')
+      + '</div>';
+    c.appendChild(d2);
+    ipssProgress(); ipssResult();
+  }
+
+  function ipssSet(q,v){ ipssAns[q]=v; renderIPSS(); }
+  function ipssQolSet(v){ ipssQol=v; renderIPSS(); }
+
+  function ipssProgress(){
+    var n = ipssAns.filter(function(a){return a!==null;}).length + (ipssQol!==null?1:0);
+    document.getElementById('ipss-progress-txt').textContent = n+' of 8 answers';
+    document.getElementById('ipss-pbar').style.width = (n/8*100)+'%';
+  }
+
+  function ipssResult(){
+    var all = ipssAns.every(function(a){return a!==null;}) && ipssQol!==null;
+    var r = document.getElementById('ipss-result');
+    if(!all){ r.style.display='none'; return; }
+    var tot = ipssAns.reduce(function(s,a){return s+a;},0);
+    var pct = tot/35*100;
+    var cat, col, interp;
+    if(tot<=7){ cat='Mild symptoms'; col='#2a9d8f'; interp='Your score falls in the mild range. Behavioural measures (evening fluid restriction, bladder training) are usually the appropriate first step. A urological assessment is still recommended to exclude other causes.'; }
+    else if(tot<=19){ cat='Moderate symptoms'; col='#d4793b'; interp='Your score falls in the moderate range. Medical treatment (alpha-blockers and/or 5-alpha-reductase inhibitors) is often indicated. A urological assessment is recommended to plan the appropriate therapeutic pathway.'; }
+    else{ cat='Severe symptoms'; col='#c0392b'; interp='Your score falls in the severe range. Urgent urological assessment is indicated to exclude complications (urinary retention, renal impairment) and evaluate whether surgical treatment is required.'; }
+    document.getElementById('ipss-score-num').textContent = tot;
+    var sc = document.getElementById('ipss-score-cat'); sc.textContent=cat; sc.style.color=col;
+    var bar = document.getElementById('ipss-bar'); bar.style.width=pct+'%'; bar.style.background=col;
+    document.getElementById('ipss-qol').innerHTML = '<strong>Quality of life:</strong> '+QOL_LBL[ipssQol]+' ('+ipssQol+'/6)';
+    document.getElementById('ipss-interpretation').textContent = interp;
+    document.getElementById('ipss-summary-score').textContent = tot + ' / 35 — ' + cat;
+    r.style.display='block';
+    r.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+
+  // ─── IIEF-5 ──────────────────────────────────────────────────────
+  var IIEF_Q = [
+    { text: 'How do you rate your confidence that you could get and keep an erection?',
+      opts: ['Very low (1)','Low (2)','Moderate (3)','High (4)','Very high (5)'], base: 1 },
+    { text: 'When you had erections with sexual stimulation, how often were your erections hard enough for penetration?',
+      opts: ['No sexual activity (0)','Almost never (1)','A few times < half (2)','Sometimes ~half (3)','Most times > half (4)','Almost always (5)'], base: 0 },
+    { text: 'During sexual intercourse, how often were you able to maintain your erection after penetration?',
+      opts: ['Did not attempt (0)','Almost never (1)','A few times < half (2)','Sometimes ~half (3)','Most times > half (4)','Almost always (5)'], base: 0 },
+    { text: 'During sexual intercourse, how difficult was it to maintain your erection to completion?',
+      opts: ['Did not attempt (0)','Extremely difficult (1)','Very difficult (2)','Difficult (3)','Slightly difficult (4)','Not difficult (5)'], base: 0 },
+    { text: 'When you attempted sexual intercourse, how often was it satisfactory for you?',
+      opts: ['Did not attempt (0)','Almost never (1)','A few times < half (2)','Sometimes ~half (3)','Most times > half (4)','Almost always (5)'], base: 0 }
+  ];
+  var iiefAns = Array(5).fill(null);
+
+  function renderIIEF(){
+    var c = document.getElementById('iief-questions'); c.innerHTML='';
+    IIEF_Q.forEach(function(q,i){
+      var answered = iiefAns[i]!==null;
+      var d = document.createElement('div');
+      d.style.cssText = answered ? QBLOCK_OK_AMBER : QBLOCK;
+      d.innerHTML = '<div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;">'+qNum(i+1,'#d4793b')+q.text+'</div>'
+        + '<div style="display:flex;flex-wrap:wrap;gap:0.3rem;">'
+        + q.opts.map(function(o,j){ return '<button style="'+(iiefAns[i]===j?OPT_SEL_AMBER:OPT_BASE)+'" onclick="iiefSet('+i+','+j+')">'+o+'</button>'; }).join('')
+        + '</div>';
+      c.appendChild(d);
+    });
+    iiefProgress(); iiefResult();
+  }
+
+  function iiefSet(q,v){ iiefAns[q]=v; renderIIEF(); }
+
+  function iiefProgress(){
+    var n = iiefAns.filter(function(a){return a!==null;}).length;
+    document.getElementById('iief-progress-txt').textContent = n+' of 5 answers';
+    document.getElementById('iief-pbar').style.width = (n/5*100)+'%';
+  }
+
+  function iiefResult(){
+    var all = iiefAns.every(function(a){return a!==null;});
+    var r = document.getElementById('iief-result');
+    if(!all){ r.style.display='none'; return; }
+    var tot = iiefAns.reduce(function(s,a,i){ return s + (a + IIEF_Q[i].base); }, 0);
+    var pct = (tot-1)/24*100;
+    var cat, col, interp;
+    if(tot>=22){ cat='No erectile dysfunction'; col='#2a9d8f'; interp='Score within normal range. No significant erectile dysfunction detected.'; }
+    else if(tot>=17){ cat='Mild erectile dysfunction'; col='#5aaa8a'; interp='Mild erectile dysfunction. Often related to psychological or early vascular factors. Responds well to pharmacological treatment (PDE5 inhibitors) when indicated.'; }
+    else if(tot>=12){ cat='Mild-to-moderate erectile dysfunction'; col='#d4793b'; interp='Mild-to-moderate erectile dysfunction. A urological assessment is recommended to identify possible organic causes (vascular, hormonal, neurological) and plan treatment.'; }
+    else if(tot>=8){ cat='Moderate erectile dysfunction'; col='#c07020'; interp='Moderate erectile dysfunction. A full urological assessment including hormonal and cardiovascular evaluation is recommended before starting any treatment.'; }
+    else{ cat='Severe erectile dysfunction'; col='#c0392b'; interp='Severe erectile dysfunction. Specialised urological assessment is recommended to identify treatable causes and discuss available therapeutic options, including second- and third-line treatments.'; }
+    document.getElementById('iief-score-num').textContent = tot;
+    var sc = document.getElementById('iief-score-cat'); sc.textContent=cat; sc.style.color=col;
+    var bar = document.getElementById('iief-bar'); bar.style.width=Math.max(4,pct)+'%'; bar.style.background=col;
+    document.getElementById('iief-interpretation').textContent = interp;
+    document.getElementById('iief-summary-score').textContent = tot + ' / 25 — ' + cat;
+    r.style.display='block';
+    r.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+
+  function resetCalc(which){
+    if(which==='ipss'){ ipssAns=Array(7).fill(null); ipssQol=null; renderIPSS(); document.getElementById('ipss-result').style.display='none'; }
+    else { iiefAns=Array(5).fill(null); renderIIEF(); document.getElementById('iief-result').style.display='none'; }
+  }
+
+  // ─── PRINT ───────────────────────────────────────────────────────
+  function printResult(which) {
+    var today = new Date().toLocaleDateString('en-GB', {day:'2-digit', month:'2-digit', year:'numeric'});
+    var title, questions, answers, opts_list, scoreText, catText, interpText, extra, accentColor;
+
+    if (which === 'ipss') {
+      title = 'IPSS — International Prostate Symptom Score';
+      questions = IPSS_Q;
+      answers = ipssAns;
+      opts_list = questions.map(function(q,i){ return i===6 ? OPTS_N : OPTS5; });
+      var tot = ipssAns.reduce(function(s,a){return s+a;},0);
+      scoreText = tot + ' / 35';
+      var sc = document.getElementById('ipss-score-cat');
+      catText = sc ? sc.textContent : '';
+      var interp = document.getElementById('ipss-interpretation');
+      interpText = interp ? interp.textContent : '';
+      extra = '<p style="margin:0.5rem 0;"><strong>Quality of life (QoL):</strong> ' + (ipssQol!==null ? QOL_LBL[ipssQol] + ' (' + ipssQol + '/6)' : '—') + '</p>';
+      accentColor = '#1a7a72';
+    } else {
+      title = 'IIEF-5 — International Index of Erectile Function (SHIM)';
+      questions = IIEF_Q.map(function(q){return q.text;});
+      answers = iiefAns;
+      opts_list = IIEF_Q.map(function(q){return q.opts;});
+      var tot2 = iiefAns.reduce(function(s,a,i){ return s + (a + IIEF_Q[i].base); }, 0);
+      scoreText = tot2 + ' / 25';
+      var sc2 = document.getElementById('iief-score-cat');
+      catText = sc2 ? sc2.textContent : '';
+      var interp2 = document.getElementById('iief-interpretation');
+      interpText = interp2 ? interp2.textContent : '';
+      extra = '';
+      accentColor = '#d4793b';
+    }
+
+    var qRows = '';
+    var qArr = (which==='ipss') ? IPSS_Q : IIEF_Q.map(function(q){return q.text;});
+    qArr.forEach(function(q, i) {
+      var optHtml = opts_list[i].map(function(o, j) {
+        var selected = (answers[i] === j);
+        return '<span style="display:inline-block;margin:2px 4px 2px 0;padding:3px 8px;border-radius:4px;font-size:11px;border:1px solid '+(selected?accentColor:'#ccc')+';background:'+(selected?accentColor:'#f5f5f5')+';color:'+(selected?'#fff':'#555')+';">'+o+'</span>';
+      }).join('');
+      qRows += '<tr style="border-bottom:1px solid #eee;"><td style="padding:8px 6px;vertical-align:top;font-weight:600;font-size:12px;color:#0f2840;width:24px;">'+(i+1)+'.</td><td style="padding:8px 6px;font-size:12px;color:#0f2840;vertical-align:top;">'+q+'<br><div style="margin-top:5px;">'+optHtml+'</div></td></tr>';
+    });
+
+    if (which === 'ipss') {
+      var qolOptHtml = OPTS_QOL.map(function(o,j){
+        var sel = (ipssQol===j);
+        return '<span style="display:inline-block;margin:2px 4px 2px 0;padding:3px 8px;border-radius:4px;font-size:11px;border:1px solid '+(sel?'#d4793b':'#ccc')+';background:'+(sel?'#d4793b':'#f5f5f5')+';color:'+(sel?'#fff':'#555')+';">'+o+'</span>';
+      }).join('');
+      qRows += '<tr style="border-bottom:1px solid #eee;background:#fff7ed;"><td style="padding:8px 6px;vertical-align:top;font-weight:600;font-size:12px;color:#0f2840;">QoL</td><td style="padding:8px 6px;font-size:12px;color:#0f2840;vertical-align:top;">If you were to spend the rest of your life with your urinary condition just the way it is now, how would you feel?<br><div style="margin-top:5px;">'+qolOptHtml+'</div></td></tr>';
+    }
+
+    var printWin = window.open('', '_blank', 'width=800,height=900');
+    printWin.document.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>'+title+'</title>'
+      + '<style>body{font-family:Georgia,serif;margin:0;padding:20px 30px;color:#0f2840;font-size:13px;}h1{font-size:16px;color:'+accentColor+';margin-bottom:2px;}h2{font-size:13px;font-weight:normal;color:#555;margin:0 0 12px;}table{width:100%;border-collapse:collapse;}tr:nth-child(even){background:#fafafa;}.result-box{margin-top:16px;border:2px solid '+accentColor+';border-radius:8px;padding:12px 16px;}.score-line{font-size:22px;font-weight:700;color:'+accentColor+';}.footer{margin-top:20px;padding-top:10px;border-top:1px solid #ddd;font-size:10px;color:#888;text-align:center;}@media print{body{margin:0;padding:15px 20px;}}</style>'
+      + '</head><body>'
+      + '<h1>' + title + '</h1>'
+      + '<h2>Date: ' + today + ' &nbsp;|&nbsp; Patient: ___________________________</h2>'
+      + '<table>' + qRows + '</table>'
+      + '<div class="result-box">'
+      + '<div class="score-line">Total score: ' + scoreText + '</div>'
+      + '<div style="font-size:14px;font-weight:700;margin:4px 0;">' + catText + '</div>'
+      + extra
+      + '<div style="font-size:11px;color:#444;margin-top:8px;">' + interpText + '</div>'
+      + '</div>'
+      + '<p style="font-size:10px;color:#888;font-style:italic;margin-top:12px;">⚠️ Informational tool only. Does not replace specialist urological assessment.</p>'
+      + '<div class="footer">giacomonovara.com &nbsp;&middot;&nbsp; Prof. Giacomo Novara &mdash; Urology Unit, University of Padova</div>'
+      + '<script>window.onload=function(){window.print();}<\/script>'
+      + '</body></html>');
+    printWin.document.close();
+  }
+
+  renderIPSS();
+  renderIIEF();
+  </script>
+  <!-- ===== END CALCULATORS ===== -->
+
+
 
   <!-- BEHAVIOURAL MEASURES -->
   <section>
