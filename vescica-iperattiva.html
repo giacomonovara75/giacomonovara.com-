@@ -11,7 +11,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Vescica iperattiva (OAB): urgenza minzionale, pollachiuria, incontinenza da urgenza, terapia anticolinergica, botulino e neuromodulazione sacrale. Prof. Giacomo Novara, Padova.">
+<meta name="description" content="Vescica iperattiva (OAB): urgenza minzionale, pollachiuria, incontinenza da urgenza, terapia anticolinergica, botulino e neuromodulazione sacrale. Prof. Giacomo Novara, Padova. Calcolatori clinici interattivi: IPSS e ICIQ-UI SF.">
 <link rel="canonical" href="https://giacomonovara.com/vescica-iperattiva.html">
 <link rel="alternate" hreflang="it" href="https://giacomonovara.com/vescica-iperattiva.html">
 <link rel="alternate" hreflang="en" href="https://giacomonovara.com/overactive-bladder.html">
@@ -20,7 +20,7 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://giacomonovara.com/vescica-iperattiva.html">
 <meta property="og:title" content="Vescica Iperattiva (OAB) — Prof. Giacomo Novara">
-<meta property="og:description" content="Vescica iperattiva (OAB): urgenza minzionale, pollachiuria, incontinenza da urgenza, terapia anticolinergica, botulino e neuromodulazione sacrale. Prof. Giacomo Novara, Padova.">
+<meta property="og:description" content="Vescica iperattiva (OAB): urgenza minzionale, pollachiuria, incontinenza da urgenza, terapia anticolinergica, botulino e neuromodulazione sacrale. Prof. Giacomo Novara, Padova. Calcolatori clinici interattivi: IPSS e ICIQ-UI SF.">
 <meta property="og:image" content="https://giacomonovara.com/foto-novara.jpg">
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="Prof. Giacomo Novara">
@@ -31,6 +31,7 @@
 <meta name="twitter:description" content="Vescica iperattiva (OAB): urgenza minzionale, pollachiuria, incontinenza da urgenza, terapia anticolinergica, botulino e neuromodulazione sacrale. Prof. Giacomo Novara, Padova.">
 <meta name="twitter:image" content="https://giacomonovara.com/foto-novara.jpg">
 <!-- Additional meta tags -->
+<meta name="keywords" content="IPSS, punteggio IPSS, calcolatore IPSS, ICIQ-UI SF, incontinenza urinaria, calcolatore ICIQ">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Prof. Giacomo Novara">
 <meta name="language" content="it">
@@ -107,7 +108,27 @@
     ]
   },
   "name": "Vescica Iperattiva (OAB) — Prof. Giacomo Novara",
-  "description": "Vescica iperattiva (OAB): urgenza minzionale, pollachiuria, incontinenza da urgenza, terapia anticolinergica, botulino e neuromodulazione sacrale. Prof. Giacomo Novara, Padova."
+  "description": "Vescica iperattiva (OAB): urgenza minzionale, pollachiuria, incontinenza da urgenza, terapia anticolinergica, botulino e neuromodulazione sacrale. Prof. Giacomo Novara, Padova.",
+  "hasPart": [
+    {
+      "@type": "MedicalWebPage",
+      "name": "Calcolatore IPSS",
+      "about": {
+        "@type": "MedicalTest",
+        "name": "International Prostate Symptom Score",
+        "alternateName": "IPSS"
+      }
+    },
+    {
+      "@type": "MedicalWebPage",
+      "name": "Calcolatore ICIQ-UI SF",
+      "about": {
+        "@type": "MedicalTest",
+        "name": "International Consultation on Incontinence Questionnaire - Short Form",
+        "alternateName": "ICIQ-UI SF"
+      }
+    }
+  ]
 }
 </script>
 <title>Vescica Iperattiva (OAB) — Prof. Giacomo Novara</title>
@@ -350,6 +371,241 @@
     </div>
   </section>
 
+  <!-- ===== CALCOLATORI CLINICI ===== -->
+  <section style="margin-top:2rem;">
+    <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;font-weight:700;color:#0f2840;margin-bottom:0.3rem;">🧮 Strumenti di autovalutazione</h2>
+    <p style="font-size:0.9rem;color:#6b6560;margin-bottom:1.5rem;">Questionari clinici validati. I risultati sono indicativi: portarli al proprio urologo.</p>
+    <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;font-weight:700;color:#0f2840;margin-bottom:0.3rem;">📋 IPSS — Punteggio Internazionale dei Sintomi Prostatici</h3>
+    <p style="font-size:0.82rem;color:#6b6560;margin-bottom:1rem;font-style:italic;">Nelle <strong>ultime 4 settimane</strong>, con quale frequenza si sono verificati i seguenti disturbi?</p>
+    <div id="ipss-ptxt" style="font-size:0.75rem;color:#6b6560;">0 di 8 risposte</div>
+    <div style="background:#ddd8d0;border-radius:4px;height:4px;margin:0.25rem 0 1rem;"><div id="ipss-pb" style="background:#1a7a72;height:4px;border-radius:4px;width:0%;transition:width 0.3s;"></div></div>
+    <div id="ipss-q"></div>
+    <div id="ipss-res" style="display:none;background:#fff;border:2px solid #1a7a72;border-radius:12px;padding:1.2rem 1.5rem;margin-top:1rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.6rem;">
+        <div id="ipss-snum" style="font-size:2.8rem;font-weight:700;color:#1a7a72;line-height:1;"></div>
+        <div><div style="font-size:0.78rem;color:#6b6560;">Punteggio IPSS (su 35)</div><div id="ipss-scat" style="font-size:1rem;font-weight:700;"></div></div>
+      </div>
+      <div style="background:#e8f5f4;border-radius:8px;height:10px;margin:0.5rem 0;overflow:hidden;"><div id="ipss-bar" style="height:100%;border-radius:8px;transition:width 0.6s;width:0%;"></div></div>
+      <div id="ipss-qol" style="background:#fff7ed;border-radius:8px;padding:0.6rem 0.9rem;font-size:0.85rem;margin-top:0.6rem;"></div>
+      <div style="background:#f0f4f8;border-radius:8px;padding:0.7rem 1rem;margin-top:0.6rem;font-size:0.82rem;color:#0f2840;">
+        <strong>Cosa significa?</strong><br><span id="ipss-interp"></span>
+      </div>
+      <div style="background:#0f2840;color:#fff;border-radius:8px;padding:0.7rem 1rem;margin-top:0.8rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.4rem;">
+        <span style="font-size:0.85rem;opacity:0.8;">Punteggio totale IPSS</span>
+        <span id="ipss-sum" style="font-size:1.3rem;font-weight:700;letter-spacing:0.05em;"></span>
+      </div>
+      <p style="font-size:0.72rem;color:#6b6560;font-style:italic;border-top:1px solid #ddd8d0;padding-top:0.6rem;margin-top:0.8rem;">⚠️ Strumento informativo. Portare il risultato all'appuntamento con il proprio urologo.</p>
+      <button onclick="rstIPSS()" style="background:none;border:1px solid #1a7a72;color:#1a7a72;border-radius:8px;padding:0.35rem 0.9rem;font-size:0.78rem;cursor:pointer;margin-top:0.6rem;font-family:inherit;">↺ Ricomincia</button>
+      <button onclick="prtIPSS()" style="background:#1a7a72;color:#fff;border:none;border-radius:8px;padding:0.35rem 0.9rem;font-size:0.78rem;cursor:pointer;margin-top:0.6rem;margin-left:0.5rem;font-family:inherit;">🖨️ Stampa risultato</button>
+    </div>
+    <hr style="border:none;border-top:2px solid #ddd8d0;margin:2rem 0;">
+    <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;font-weight:700;color:#0f2840;margin-bottom:0.3rem;">ICIQ-UI SF — Questionario Internazionale per l'Incontinenza Urinaria</h3>
+    <p style="font-size:0.82rem;color:#6b6560;margin-bottom:1rem;font-style:italic;">Fare riferimento alle <strong>ultime 4 settimane</strong>.</p>
+    <div id="iciq-ptxt" style="font-size:0.75rem;color:#6b6560;">0 di 4 risposte</div>
+    <div style="background:#ddd8d0;border-radius:4px;height:4px;margin:0.25rem 0 1rem;"><div id="iciq-pb" style="background:#2a6099;height:4px;border-radius:4px;width:0%;transition:width 0.3s;"></div></div>
+    <div id="iciq-q"></div>
+    <div id="iciq-res" style="display:none;background:#fff;border:2px solid #2a6099;border-radius:12px;padding:1.2rem 1.5rem;margin-top:1rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.6rem;">
+        <div id="iciq-snum" style="font-size:2.8rem;font-weight:700;color:#2a6099;line-height:1;"></div>
+        <div><div style="font-size:0.78rem;color:#6b6560;">Punteggio ICIQ-UI SF (su 21)</div><div id="iciq-scat" style="font-size:1rem;font-weight:700;"></div></div>
+      </div>
+      <div style="background:#e8eef5;border-radius:8px;height:10px;margin:0.5rem 0;overflow:hidden;"><div id="iciq-bar" style="height:100%;border-radius:8px;transition:width 0.6s;width:0%;"></div></div>
+      <div id="iciq-type" style="background:#f0f4f8;border-radius:8px;padding:0.5rem 0.8rem;font-size:0.82rem;margin-top:0.6rem;"></div>
+      <div id="iciq-impact" style="background:#f0f4f8;border-radius:8px;padding:0.5rem 0.8rem;font-size:0.82rem;margin-top:0.4rem;"></div>
+      <div style="background:#f0f4f8;border-radius:8px;padding:0.7rem 1rem;margin-top:0.6rem;font-size:0.82rem;color:#0f2840;">
+        <strong>Cosa significa?</strong><br><span id="iciq-interp"></span>
+      </div>
+      <div style="background:#0f2840;color:#fff;border-radius:8px;padding:0.7rem 1rem;margin-top:0.8rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.4rem;">
+        <span style="font-size:0.85rem;opacity:0.8;">Punteggio totale ICIQ-UI SF</span>
+        <span id="iciq-sum" style="font-size:1.3rem;font-weight:700;letter-spacing:0.05em;"></span>
+      </div>
+      <p style="font-size:0.72rem;color:#6b6560;font-style:italic;border-top:1px solid #ddd8d0;padding-top:0.6rem;margin-top:0.8rem;">⚠️ Strumento informativo. Non sostituisce la valutazione specialistica urologica o uroginecologica.</p>
+      <button onclick="rstICIQ()" style="background:none;border:1px solid #2a6099;color:#2a6099;border-radius:8px;padding:0.35rem 0.9rem;font-size:0.78rem;cursor:pointer;margin-top:0.6rem;font-family:inherit;">↺ Ricomincia</button>
+      <button onclick="prtICIQ()" style="background:#2a6099;color:#fff;border:none;border-radius:8px;padding:0.35rem 0.9rem;font-size:0.78rem;cursor:pointer;margin-top:0.6rem;margin-left:0.5rem;font-family:inherit;">🖨️ Stampa risultato</button>
+    </div>
+  </section>
+  <!-- ===== FINE CALCOLATORI ===== -->
+
+  <script>
+  var QB = 'background:#fff;border:1px solid #ddd8d0;border-radius:10px;padding:0.9rem 1rem;margin-bottom:0.6rem;';
+  var QB_T = QB + 'border-left:3px solid #1a7a72;';
+  var QB_A = QB + 'border-left:3px solid #d4793b;';
+  var QB_B = QB + 'border-left:3px solid #2a6099;';
+  var OB = 'border:1px solid #ddd8d0;background:#faf8f4;border-radius:7px;padding:0.28rem 0.5rem;font-size:0.72rem;cursor:pointer;color:#0f2840;transition:all 0.15s;flex:1;min-width:58px;text-align:center;font-family:inherit;';
+  var OB_T = OB + 'background:#1a7a72;color:#fff;border-color:#1a7a72;';
+  var OB_A = OB + 'background:#d4793b;color:#fff;border-color:#d4793b;';
+  var OB_B = OB + 'background:#2a6099;color:#fff;border-color:#2a6099;';
+  function qN(n,c){return '<span style="display:inline-flex;align-items:center;justify-content:center;background:'+c+';color:#fff;border-radius:50%;width:20px;height:20px;font-size:0.7rem;margin-right:0.35rem;vertical-align:middle;flex-shrink:0;">'+n+'</span>';}
+
+  // ─── IPSS ────────────────────────────────────────────────────────
+  var iQ=['Sensazione di svuotamento vescicale incompleto dopo la minzione','Necessit\u00e0 di urinare di nuovo entro 2 ore dall\'ultima minzione','Interruzione e ripresa del getto urinario pi\u00f9 volte durante la stessa minzione','Difficolt\u00e0 a rimandare la minzione (urgenza minzionale)','Getto urinario debole','Necessit\u00e0 di spingere o fare sforzo per iniziare a urinare','Numero di minzioni notturne (dal momento di andare a letto al risveglio)'];
+  var iO5=['Mai (0)','<1 volta su 5 (1)','Meno della met\u00e0 (2)','Circa la met\u00e0 (3)','Pi\u00f9 della met\u00e0 (4)','Quasi sempre (5)'];
+  var iON=['Nessuna (0)','1 volta (1)','2 volte (2)','3 volte (3)','4 volte (4)','\u22655 volte (5)'];
+  var iOQ=['Molto soddisfatto (0)','Soddisfatto (1)','Abbastanza soddisfatto (2)','Cos\u00ec cos\u00ec (3)','Abbastanza insoddisfatto (4)','Insoddisfatto (5)','Pessimo (6)'];
+  var iQL=['Molto soddisfatto','Soddisfatto','Abbastanza soddisfatto','Cos\u00ec cos\u00ec','Abbastanza insoddisfatto','Insoddisfatto','Pessimo'];
+  var iA=Array(7).fill(null), iQA=null;
+
+  function rIPSS(){
+    var c=document.getElementById('ipss-q');c.innerHTML='';
+    iQ.forEach(function(q,i){
+      var opts=(i===6?iON:iO5);
+      var d=document.createElement('div');
+      d.style.cssText=iA[i]!==null?QB_T:QB;
+      d.innerHTML='<div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;">'+qN(i+1,'#1a7a72')+q+'</div>'
+        +'<div style="display:flex;flex-wrap:wrap;gap:0.3rem;">'
+        +opts.map(function(o,j){return '<button style="'+(iA[i]===j?OB_T:OB)+'" onclick="iSA('+i+','+j+')">'+o+'</button>';}).join('')
+        +'</div>';
+      c.appendChild(d);
+    });
+    var d2=document.createElement('div');
+    d2.style.cssText=(iQA!==null?'background:#fff7ed;border:1px solid #f0c080;border-radius:10px;padding:0.9rem 1rem;margin-bottom:0.6rem;border-left:3px solid #d4793b;':'background:#fff7ed;border:1px solid #f0c080;border-radius:10px;padding:0.9rem 1rem;margin-bottom:0.6rem;');
+    d2.innerHTML='<div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;">'+qN('QoL','#d4793b')+'Se dovesse trascorrere il resto della sua vita con questi sintomi urinari cos\u00ec come sono ora, come si sentirebbe?</div>'
+      +'<div style="display:flex;flex-wrap:wrap;gap:0.3rem;">'
+      +iOQ.map(function(o,j){return '<button style="'+(iQA===j?OB_A:OB)+'" onclick="iSQ('+j+')">'+o+'</button>';}).join('')
+      +'</div>';
+    c.appendChild(d2);
+    iPrg();iRes();
+  }
+  function iSA(q,v){iA[q]=v;rIPSS();}
+  function iSQ(v){iQA=v;rIPSS();}
+  function iPrg(){
+    var n=iA.filter(function(a){return a!==null;}).length+(iQA!==null?1:0);
+    document.getElementById('ipss-ptxt').textContent=n+' di 8 risposte';
+    document.getElementById('ipss-pb').style.width=(n/8*100)+'%';
+  }
+  function iRes(){
+    var all=iA.every(function(a){return a!==null;})&&iQA!==null;
+    var r=document.getElementById('ipss-res');
+    if(!all){r.style.display='none';return;}
+    var tot=iA.reduce(function(s,a){return s+a;},0);
+    var cat,col,interp;
+    if(tot<=7){cat='Sintomi lievi';col='#2a9d8f';interp='I suoi sintomi sono nella fascia lieve. La terapia comportamentale (restrizione idrica serale, training vescicale) \u00e8 di solito sufficiente come primo passo. Utile comunque una valutazione urologica.';}
+    else if(tot<=19){cat='Sintomi moderati';col='#d4793b';interp='I suoi sintomi rientrano nella fascia moderata. Spesso si procede con terapia farmacologica (alfa-bloccanti e/o 5-alfa-reduttasi inibitori). \u00c8 consigliata una valutazione urologica.';}
+    else{cat='Sintomi gravi';col='#c0392b';interp='I suoi sintomi sono nella fascia grave. \u00c8 indicata una valutazione urologica urgente per escludere complicanze e valutare se sia necessario un trattamento chirurgico.';}
+    document.getElementById('ipss-snum').textContent=tot;
+    var sc=document.getElementById('ipss-scat');sc.textContent=cat;sc.style.color=col;
+    document.getElementById('ipss-bar').style.width=(tot/35*100)+'%';
+    document.getElementById('ipss-bar').style.background=col;
+    document.getElementById('ipss-qol').innerHTML='<strong>Qualit\u00e0 di vita:</strong> '+iQL[iQA]+' ('+iQA+'/6)';
+    document.getElementById('ipss-interp').textContent=interp;
+    document.getElementById('ipss-sum').textContent=tot+' / 35 — '+cat;
+    r.style.display='block';r.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  function rstIPSS(){iA=Array(7).fill(null);iQA=null;rIPSS();document.getElementById('ipss-res').style.display='none';}
+  function prtIPSS(){
+    var today=new Date().toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit',year:'numeric'});
+    var tot=iA.reduce(function(s,a){return s+a;},0);
+    var cat=document.getElementById('ipss-scat')?document.getElementById('ipss-scat').textContent:'';
+    var interp=document.getElementById('ipss-interp')?document.getElementById('ipss-interp').textContent:'';
+    var rows='';
+    iQ.forEach(function(q,i){
+      var opts=(i===6?iON:iO5);
+      var btns=opts.map(function(o,j){
+        return '<span style="display:inline-block;margin:2px 4px 2px 0;padding:3px 8px;border-radius:4px;font-size:11px;border:1px solid '+(iA[i]===j?'#1a7a72':'#ccc')+';background:'+(iA[i]===j?'#1a7a72':'#f5f5f5')+';color:'+(iA[i]===j?'#fff':'#555')+';">'+o+'</span>';
+      }).join('');
+      rows+='<tr style="border-bottom:1px solid #eee;"><td style="padding:8px 6px;font-weight:600;font-size:12px;width:24px;">'+(i+1)+'.</td><td style="padding:8px 6px;font-size:12px;">'+q+'<br><div style="margin-top:4px;">'+btns+'</div></td></tr>';
+    });
+    var qolBtns=iOQ.map(function(o,j){return '<span style="display:inline-block;margin:2px 4px 2px 0;padding:3px 8px;border-radius:4px;font-size:11px;border:1px solid '+(iQA===j?'#d4793b':'#ccc')+';background:'+(iQA===j?'#d4793b':'#f5f5f5')+';color:'+(iQA===j?'#fff':'#555')+';">'+o+'</span>';}).join('');
+    rows+='<tr style="background:#fff7ed;border-bottom:1px solid #eee;"><td style="padding:8px 6px;font-weight:600;font-size:12px;">QoL</td><td style="padding:8px 6px;font-size:12px;">Se dovesse trascorrere il resto della sua vita con questi sintomi urinari cos\u00ec come sono ora, come si sentirebbe?<br><div style="margin-top:4px;">'+qolBtns+'</div></td></tr>';
+    var pw=window.open('','_blank','width=800,height=900');
+    pw.document.write('<!DOCTYPE html><html><head><meta charset="UTF-8"><title>IPSS \u2014 Punteggio Internazionale dei Sintomi Prostatici</title><style>body{font-family:Georgia,serif;margin:0;padding:20px 30px;color:#0f2840;font-size:13px;}h1{font-size:16px;color:#1a7a72;margin-bottom:2px;}h2{font-size:13px;font-weight:normal;color:#555;margin:0 0 12px;}table{width:100%;border-collapse:collapse;}tr:nth-child(even){background:#fafafa;}.rb{margin-top:16px;border:2px solid #1a7a72;border-radius:8px;padding:12px 16px;}.sl{font-size:22px;font-weight:700;color:#1a7a72;}.ft{margin-top:20px;padding-top:10px;border-top:1px solid #ddd;font-size:10px;color:#888;text-align:center;}@media print{body{padding:15px 20px;}}</style></head><body>'
+      +'<h1>IPSS \u2014 Punteggio Internazionale dei Sintomi Prostatici</h1><h2>'+today+' &nbsp;|&nbsp; Paziente: ___________________________</h2>'
+      +'<table>'+rows+'</table>'
+      +'<div class="rb"><div class="sl">'+tot+' / 35</div><div style="font-size:14px;font-weight:700;margin:4px 0;">'+cat+'</div><div style="font-size:11px;color:#444;margin-top:8px;">'+interp+'</div></div>'
+      +'<p style="font-size:10px;color:#888;font-style:italic;margin-top:12px;">Strumento informativo. Non sostituisce la valutazione specialistica. Portare il risultato al prossimo appuntamento con il proprio urologo.</p>'
+      +'<div class="ft">giacomonovara.com \u00b7 Prof. Giacomo Novara \u2014 Clinica Urologica, Universit\u00e0 di Padova</div>'
+      +'<script>window.onload=function(){window.print();}<\/script></body></html>');
+    pw.document.close();
+  }
+
+  // ─── ICIQ-UI SF ──────────────────────────────────────────────────
+  var cQ1=['Mai (0)','Una volta a settimana o meno (1)','Due o tre volte a settimana (2)','Una volta al giorno (3)','Diverse volte al giorno (4)','Continuamente (5)'];
+  var cQ2=['Non perde urina (0)','Una piccola quantit\u00e0 (2)','Una quantit\u00e0 moderata (4)','Una grande quantit\u00e0 (6)'];
+  var cQ3=[{t:'Non perde mai urina',v:0},{t:'Perde urina prima di arrivare al bagno (urgenza)',v:3},{t:'Perde urina quando tossisce o starnutisce (sforzo)',v:2},{t:'Perde urina quando dorme',v:1},{t:'Perde urina quando si muove o fa attivit\u00e0 fisica',v:2},{t:'Perde urina quando ha finito di urinare e si \u00e8 rivestita/o',v:1},{t:'Perde urina senza un motivo apparente',v:3},{t:'Perde urina continuamente',v:4}];
+  var cA=[null,null,null];
+  var cQ3S=[];
+
+  function rICIQ(){
+    var c=document.getElementById('iciq-q');c.innerHTML='';
+    var d1=document.createElement('div');d1.style.cssText=cA[0]!==null?QB_B:QB;
+    d1.innerHTML='<div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;">'+qN(1,'#2a6099')+'Con quale frequenza perde urina?</div>'
+      +'<div style="display:flex;flex-wrap:wrap;gap:0.3rem;">'
+      +cQ1.map(function(o,j){return '<button style="'+(cA[0]===j?OB_B:OB)+'" onclick="cSA(0,'+j+')">'+o+'</button>';}).join('')+'</div>';
+    c.appendChild(d1);
+    var d2=document.createElement('div');d2.style.cssText=cA[1]!==null?QB_B:QB;
+    d2.innerHTML='<div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;">'+qN(2,'#2a6099')+'Quanta urina perde di solito (indipendentemente se usa protezioni)?</div>'
+      +'<div style="display:flex;flex-wrap:wrap;gap:0.3rem;">'
+      +cQ2.map(function(o,j){return '<button style="'+(cA[1]===j?OB_B:OB)+'" onclick="cSA(1,'+j+')">'+o+'</button>';}).join('')+'</div>';
+    c.appendChild(d2);
+    var d3=document.createElement('div');d3.style.cssText=cQ3S.length>0?QB_B:QB;
+    d3.innerHTML='<div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;">'+qN(3,'#2a6099')+'Quando perde urina? <span style="font-weight:400;font-size:0.78rem;color:#6b6560;">(pu\u00f2 selezionare pi\u00f9 risposte)</span></div>'
+      +'<div style="display:flex;flex-direction:column;gap:0.35rem;">'
+      +cQ3.map(function(o,j){var s=cQ3S.indexOf(j)>=0;return '<button style="text-align:left;padding:0.4rem 0.7rem;font-size:0.8rem;border-radius:7px;border:1px solid '+(s?'#2a6099':'#ddd8d0')+';background:'+(s?'#2a6099':'#faf8f4')+';color:'+(s?'#fff':'#0f2840')+';cursor:pointer;font-family:inherit;" onclick="cQ3T('+j+')">'+(s?'\u2713 ':'')+o.t+'</button>';}).join('')+'</div>';
+    c.appendChild(d3);
+    var sv=cA[2]!==null?cA[2]:0;
+    var d4=document.createElement('div');
+    d4.style.cssText=cA[2]!==null?QB_B:QB;
+    d4.innerHTML='<div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;">'+qN(4,'#2a6099')+'Quanto i problemi di perdita di urina interferiscono con la sua vita quotidiana?'+'</div><div style="font-size:0.78rem;color:#6b6560;margin-bottom:0.5rem;">Inserire un numero intero da 0 a 10</div>'+'<input id="iciq-ni" type="number" min="0" max="10" step="1"'+'  placeholder="0–10" oninput="cSlide(this.value)" onchange="cSlide(this.value)"'+'  style="width:90px;font-size:1.4rem;font-weight:700;color:#2a6099;border:2px solid #2a6099;border-radius:8px;padding:0.3rem 0.5rem;text-align:center;font-family:inherit;">';
+    var _ni=d4.querySelector('#iciq-ni');
+    if(_ni&&cA[2]!==null){_ni.value=cA[2];}
+    c.appendChild(d4);
+    cPrg();cRes();
+  }
+  function cSA(q,v){cA[q]=v;rICIQ();}
+  function cQ3T(j){var i=cQ3S.indexOf(j);if(i>=0)cQ3S.splice(i,1);else cQ3S.push(j);rICIQ();}
+  function cSlide(v){var n=parseInt(v);if(!isNaN(n)&&n>=0&&n<=10){cA[2]=n;}else if(v===''||v===undefined||v===null){cA[2]=null;}var _ni=document.getElementById('iciq-ni');if(_ni&&cA[2]!==null){_ni.value=cA[2];}cPrg();cRes();}
+  function cPrg(){
+    var n=(cA[0]!==null?1:0)+(cA[1]!==null?1:0)+(cQ3S.length>0?1:0)+(cA[2]!==null?1:0);
+    document.getElementById('iciq-ptxt').textContent=n+' di 4 risposte';
+    document.getElementById('iciq-pb').style.width=(n/4*100)+'%';
+  }
+  function cRes(){
+    var all=cA[0]!==null&&cA[1]!==null&&cA[2]!==null;
+    var r=document.getElementById('iciq-res');
+    if(!all){r.style.display='none';return;}
+    var tot=[0,1,2,3,4,5][cA[0]]+[0,2,4,6][cA[1]]+cA[2];
+    var cat,col,interp;
+    if(tot<=5){cat='Incontinenza lieve';col='#2a9d8f';interp='Perdita urinaria lieve. Le misure conservative (training del pavimento pelvico, restrizione idrica serale) rappresentano il primo approccio. Una valutazione urologica/uroginecologica \u00e8 comunque raccomandata.';}
+    else if(tot<=12){cat='Incontinenza moderata';col='#d4793b';interp='Perdita urinaria moderata. \u00c8 indicata una valutazione specialistica per definire il tipo di incontinenza (da urgenza, da stress, mista) e pianificare il trattamento appropriato.';}
+    else{cat='Incontinenza grave';col='#c0392b';interp='Perdita urinaria grave con impatto significativo sulla qualit\u00e0 di vita. \u00c8 raccomandata una valutazione urologica/uroginecologica per definire il percorso diagnostico-terapeutico.';}
+    document.getElementById('iciq-snum').textContent=tot;
+    var sc=document.getElementById('iciq-scat');sc.textContent=cat;sc.style.color=col;
+    document.getElementById('iciq-bar').style.width=(tot/21*100)+'%';
+    document.getElementById('iciq-bar').style.background=col;
+    document.getElementById('iciq-interp').textContent=interp;
+    document.getElementById('iciq-type').innerHTML='<strong>Tipo di perdita riferita:</strong> '+(cQ3S.map(function(j){return cQ3[j].t;}).join('; ')||'\u2014');
+    document.getElementById('iciq-impact').innerHTML='<strong>Impatto sulla qualit\u00e0 di vita:</strong> '+cA[2]+'/10';
+    document.getElementById('iciq-sum').textContent=tot+' / 21 \u2014 '+cat;
+    r.style.display='block';r.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  function rstICIQ(){cA=[null,null,null];cQ3S=[];rICIQ();document.getElementById('iciq-res').style.display='none';}
+  function prtICIQ(){
+    var today=new Date().toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit',year:'numeric'});
+    var tot=(cA[0]!==null&&cA[1]!==null&&cA[2]!==null)?[0,1,2,3,4,5][cA[0]]+[0,2,4,6][cA[1]]+cA[2]:'\u2014';
+    var cat=document.getElementById('iciq-scat')?document.getElementById('iciq-scat').textContent:'';
+    var interp=document.getElementById('iciq-interp')?document.getElementById('iciq-interp').textContent:'';
+    var q3str=cQ3S.map(function(j){return cQ3[j].t;}).join('<br>')||'\u2014';
+    var pw=window.open('','_blank','width=800,height=900');
+    pw.document.write('<!DOCTYPE html><html><head><meta charset="UTF-8"><title>ICIQ-UI SF \u2014 Questionario Internazionale per l&#39;Incontinenza Urinaria</title><style>body{font-family:Georgia,serif;margin:0;padding:20px 30px;color:#0f2840;font-size:13px;}h1{font-size:16px;color:#2a6099;margin-bottom:2px;}h2{font-size:13px;font-weight:normal;color:#555;margin:0 0 12px;}table{width:100%;border-collapse:collapse;}tr:nth-child(even){background:#fafafa;}.rb{margin-top:16px;border:2px solid #2a6099;border-radius:8px;padding:12px 16px;}.sl{font-size:22px;font-weight:700;color:#2a6099;}.ft{margin-top:20px;padding-top:10px;border-top:1px solid #ddd;font-size:10px;color:#888;text-align:center;}@media print{body{padding:15px 20px;}}</style></head><body>'
+      +'<h1>ICIQ-UI SF \u2014 Questionario Internazionale per l&#39;Incontinenza Urinaria</h1><h2>'+today+' &nbsp;|&nbsp; Paziente: ___________________________</h2>'
+      +'<table>'
+      +'<tr><td style="padding:8px 6px;font-weight:600;font-size:12px;width:24px;">1.</td><td style="padding:8px 6px;font-size:12px;">Con quale frequenza perde urina?<br><strong>'+(cA[0]!==null?cQ1[cA[0]]:'\u2014')+'</strong></td></tr>'
+      +'<tr><td style="padding:8px 6px;font-weight:600;font-size:12px;">2.</td><td style="padding:8px 6px;font-size:12px;">Quanta urina perde di solito?<br><strong>'+(cA[1]!==null?cQ2[cA[1]]:'\u2014')+'</strong></td></tr>'
+      +'<tr><td style="padding:8px 6px;font-weight:600;font-size:12px;">3.</td><td style="padding:8px 6px;font-size:12px;">Quando perde urina?<br><strong>'+q3str+'</strong></td></tr>'
+      +'<tr><td style="padding:8px 6px;font-weight:600;font-size:12px;">4.</td><td style="padding:8px 6px;font-size:12px;">Impatto sulla vita quotidiana<br><strong>'+(cA[2]!==null?cA[2]+'/10':'\u2014')+'</strong></td></tr>'
+      +'</table>'
+      +'<div class="rb"><div class="sl">'+tot+' / 21</div><div style="font-size:14px;font-weight:700;margin:4px 0;">'+cat+'</div><div style="font-size:11px;color:#444;margin-top:8px;">'+interp+'</div></div>'
+      +'<p style="font-size:10px;color:#888;font-style:italic;margin-top:12px;">Strumento informativo. Non sostituisce la valutazione specialistica urologica o uroginecologica.</p>'
+      +'<div class="ft">giacomonovara.com \u00b7 Prof. Giacomo Novara \u2014 Clinica Urologica, Universit\u00e0 di Padova</div>'
+      +'<script>window.onload=function(){window.print();}<\/script></body></html>');
+    pw.document.close();
+  }
+
+  rIPSS();
+  rICIQ();
+  </script>
+
+
   <!-- TRATTAMENTO - MISURE COMPORTAMENTALI -->
   <section>
     <h2>🧘 Prima linea: misure comportamentali</h2>
@@ -459,6 +715,11 @@
   </section>
 
   <!-- FAQ -->
+  
+
+  
+
+
   <section>
     <h2>❓ Domande frequenti dei pazienti</h2>
     <div class="faq-item">

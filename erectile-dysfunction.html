@@ -11,7 +11,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Erectile dysfunction: pathophysiology, diagnosis, PDE5 inhibitors, intracavernous injections and sexual rehabilitation after radical prostatectomy. Prof. Giacomo Novara, Padova.">
+<meta name="description" content="Erectile dysfunction: pathophysiology, diagnosis, PDE5 inhibitors, intracavernous injections and sexual rehabilitation after radical prostatectomy. Prof. Giacomo Novara, Padova. Interactive clinical calculators: IIEF-5.">
 <link rel="canonical" href="https://giacomonovara.com/erectile-dysfunction.html">
 <link rel="alternate" hreflang="it" href="https://giacomonovara.com/disfunzione-erettile.html">
 <link rel="alternate" hreflang="en" href="https://giacomonovara.com/erectile-dysfunction.html">
@@ -20,7 +20,7 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://giacomonovara.com/erectile-dysfunction.html">
 <meta property="og:title" content="Erectile Dysfunction — Prof. Giacomo Novara">
-<meta property="og:description" content="Erectile dysfunction: pathophysiology, diagnosis, PDE5 inhibitors, intracavernous injections and sexual rehabilitation after radical prostatectomy. Prof. Giacomo Novara, Padova.">
+<meta property="og:description" content="Erectile dysfunction: pathophysiology, diagnosis, PDE5 inhibitors, intracavernous injections and sexual rehabilitation after radical prostatectomy. Prof. Giacomo Novara, Padova. Interactive clinical calculators: IIEF-5.">
 <meta property="og:image" content="https://giacomonovara.com/foto-novara.jpg">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Prof. Giacomo Novara">
@@ -31,6 +31,7 @@
 <meta name="twitter:description" content="Erectile dysfunction: pathophysiology, diagnosis, PDE5 inhibitors, intracavernous injections and sexual rehabilitation after radical prostatectomy. Prof. Giacomo Novara, Padova.">
 <meta name="twitter:image" content="https://giacomonovara.com/foto-novara.jpg">
 <!-- Additional meta tags -->
+<meta name="keywords" content="IIEF-5, erectile dysfunction, IIEF-5 calculator">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Prof. Giacomo Novara">
 <meta name="language" content="en">
@@ -107,7 +108,18 @@
     ]
   },
   "name": "Erectile Dysfunction — Prof. Giacomo Novara",
-  "description": "Erectile dysfunction: pathophysiology, diagnosis, PDE5 inhibitors, intracavernous injections and sexual rehabilitation after radical prostatectomy. Prof. Giacomo Novara, Padova."
+  "description": "Erectile dysfunction: pathophysiology, diagnosis, PDE5 inhibitors, intracavernous injections and sexual rehabilitation after radical prostatectomy. Prof. Giacomo Novara, Padova.",
+  "hasPart": [
+    {
+      "@type": "MedicalWebPage",
+      "name": "Calculator IIEF-5",
+      "about": {
+        "@type": "MedicalTest",
+        "name": "International Index of Erectile Function",
+        "alternateName": "IIEF-5"
+      }
+    }
+  ]
 }
 </script>
 <title>Erectile Dysfunction — Prof. Giacomo Novara</title>
@@ -262,7 +274,7 @@
 
 <header>
   <div class="header-inner">
-    <div class="header-icon">❤️</div>
+    <div class="header-icon">📊</div>
     <div>
       <p class="site-name">Prof. Giacomo Novara — Urology, University of Padova</p>
       <h1>Erectile Dysfunction</h1>
@@ -377,6 +389,114 @@
     <div class="treat-step"><div class="step-num">4</div><div class="step-content"><strong>Physical examination</strong><p>Body hair distribution (signs of hypogonadism), weight/BMI, genitalia (phimosis, Peyronie's plaques, testicular volume), blood pressure.</p></div></div>
     <div class="treat-step"><div class="step-num">5</div><div class="step-content"><strong>Penile colour Doppler ultrasound (selected cases)</strong><p>Assesses cavernous arterial flow at baseline and after intracavernous injection of prostaglandin. Allows distinction between arterial and venous vasculogenic ED. Not routinely indicated.</p></div></div>
   </section>
+
+  <!-- ===== CLINICAL CALCULATORS ===== -->
+  <section style="margin-top:2rem;">
+    <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;font-weight:700;color:#0f2840;margin-bottom:0.3rem;">🧮 Self-assessment tools</h2>
+    <p style="font-size:0.9rem;color:#6b6560;margin-bottom:1.5rem;">Validated clinical questionnaires. Results are indicative — bring your score to your urologist.</p>
+    <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;font-weight:700;color:#0f2840;margin-bottom:0.3rem;">📊 IIEF-5 — International Index of Erectile Function</h3>
+    <p style="font-size:0.82rem;color:#6b6560;margin-bottom:1rem;font-style:italic;">Referring to the <strong>past 6 months</strong>. Complete if sexually active.</p>
+    <div id="iief-ptxt" style="font-size:0.75rem;color:#6b6560;">0 of 5 answers</div>
+    <div style="background:#ddd8d0;border-radius:4px;height:4px;margin:0.25rem 0 1rem;"><div id="iief-pb" style="background:#d4793b;height:4px;border-radius:4px;width:0%;transition:width 0.3s;"></div></div>
+    <div id="iief-q"></div>
+    <div id="iief-res" style="display:none;background:#fff;border:2px solid #d4793b;border-radius:12px;padding:1.2rem 1.5rem;margin-top:1rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.6rem;">
+        <div id="iief-snum" style="font-size:2.8rem;font-weight:700;color:#d4793b;line-height:1;"></div>
+        <div><div style="font-size:0.78rem;color:#6b6560;">IIEF-5 score (out of 25)</div><div id="iief-scat" style="font-size:1rem;font-weight:700;"></div></div>
+      </div>
+      <div style="background:#fef3e2;border-radius:8px;height:10px;margin:0.5rem 0;overflow:hidden;"><div id="iief-bar" style="height:100%;border-radius:8px;transition:width 0.6s;width:0%;"></div></div>
+      <div style="background:#f0f4f8;border-radius:8px;padding:0.7rem 1rem;margin-top:0.6rem;font-size:0.82rem;color:#0f2840;">
+        <strong>What does this mean?</strong><br><span id="iief-interp"></span>
+      </div>
+      <div style="background:#0f2840;color:#fff;border-radius:8px;padding:0.7rem 1rem;margin-top:0.8rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.4rem;">
+        <span style="font-size:0.85rem;opacity:0.8;">Total IIEF-5 score</span>
+        <span id="iief-sum" style="font-size:1.3rem;font-weight:700;letter-spacing:0.05em;"></span>
+      </div>
+      <p style="font-size:0.72rem;color:#6b6560;font-style:italic;border-top:1px solid #ddd8d0;padding-top:0.6rem;margin-top:0.8rem;">⚠️ Informational tool only. Erectile dysfunction is highly treatable — discuss this with your urologist.</p>
+      <button onclick="rstIIEF()" style="background:none;border:1px solid #d4793b;color:#d4793b;border-radius:8px;padding:0.35rem 0.9rem;font-size:0.78rem;cursor:pointer;margin-top:0.6rem;font-family:inherit;">↺ Reset</button>
+      <button onclick="prtIIEF()" style="background:#d4793b;color:#fff;border:none;border-radius:8px;padding:0.35rem 0.9rem;font-size:0.78rem;cursor:pointer;margin-top:0.6rem;margin-left:0.5rem;font-family:inherit;">🖨️ Print result</button>
+    </div>
+  </section>
+  <!-- ===== END CALCULATORS ===== -->
+
+  <script>
+  var QB = 'background:#fff;border:1px solid #ddd8d0;border-radius:10px;padding:0.9rem 1rem;margin-bottom:0.6rem;';
+  var QB_T = QB + 'border-left:3px solid #1a7a72;';
+  var QB_A = QB + 'border-left:3px solid #d4793b;';
+  var QB_B = QB + 'border-left:3px solid #2a6099;';
+  var OB = 'border:1px solid #ddd8d0;background:#faf8f4;border-radius:7px;padding:0.28rem 0.5rem;font-size:0.72rem;cursor:pointer;color:#0f2840;transition:all 0.15s;flex:1;min-width:58px;text-align:center;font-family:inherit;';
+  var OB_T = OB + 'background:#1a7a72;color:#fff;border-color:#1a7a72;';
+  var OB_A = OB + 'background:#d4793b;color:#fff;border-color:#d4793b;';
+  var OB_B = OB + 'background:#2a6099;color:#fff;border-color:#2a6099;';
+  function qN(n,c){return '<span style="display:inline-flex;align-items:center;justify-content:center;background:'+c+';color:#fff;border-radius:50%;width:20px;height:20px;font-size:0.7rem;margin-right:0.35rem;vertical-align:middle;flex-shrink:0;">'+n+'</span>';}
+
+  // ─── IIEF-5 ──────────────────────────────────────────────────────
+  var eQ=[{t:'How do you rate your confidence that you could get and keep an erection?',o:['Very low (1)','Low (2)','Moderate (3)','High (4)','Very high (5)'],b:1},{t:'When you had erections with sexual stimulation, how often were your erections hard enough for penetration?',o:['No sexual activity (0)','Almost never (1)','A few times <half (2)','Sometimes ~half (3)','Most times >half (4)','Almost always (5)'],b:0},{t:'During sexual intercourse, how often were you able to maintain your erection after penetration?',o:['Did not attempt (0)','Almost never (1)','A few times <half (2)','Sometimes ~half (3)','Most times >half (4)','Almost always (5)'],b:0},{t:'During sexual intercourse, how difficult was it to maintain your erection to completion?',o:['Did not attempt (0)','Extremely difficult (1)','Very difficult (2)','Difficult (3)','Slightly difficult (4)','Not difficult (5)'],b:0},{t:'When you attempted sexual intercourse, how often was it satisfactory for you?',o:['Did not attempt (0)','Almost never (1)','A few times <half (2)','Sometimes ~half (3)','Most times >half (4)','Almost always (5)'],b:0}];
+  var eA=Array(5).fill(null);
+
+  function rIIEF(){
+    var c=document.getElementById('iief-q');c.innerHTML='';
+    eQ.forEach(function(q,i){
+      var d=document.createElement('div');
+      d.style.cssText=eA[i]!==null?QB_A:QB;
+      d.innerHTML='<div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;">'+qN(i+1,'#d4793b')+q.t+'</div>'
+        +'<div style="display:flex;flex-wrap:wrap;gap:0.3rem;">'
+        +q.o.map(function(o,j){return '<button style="'+(eA[i]===j?OB_A:OB)+'" onclick="eSA('+i+','+j+')">'+o+'</button>';}).join('')
+        +'</div>';
+      c.appendChild(d);
+    });
+    ePrg();eRes();
+  }
+  function eSA(q,v){eA[q]=v;rIIEF();}
+  function ePrg(){
+    var n=eA.filter(function(a){return a!==null;}).length;
+    document.getElementById('iief-ptxt').textContent=n+' of 5 answers';
+    document.getElementById('iief-pb').style.width=(n/5*100)+'%';
+  }
+  function eRes(){
+    var all=eA.every(function(a){return a!==null;});
+    var r=document.getElementById('iief-res');
+    if(!all){r.style.display='none';return;}
+    var tot=eA.reduce(function(s,a,i){return s+(a+eQ[i].b);},0);
+    var cat,col,interp;
+    if(tot>=22){cat='No erectile dysfunction';col='#2a9d8f';interp='Score within normal range. No significant erectile dysfunction detected.';}
+    else if(tot>=17){cat='Mild erectile dysfunction';col='#5aaa8a';interp='Mild ED. Often related to psychological or early vascular factors. Responds well to PDE5 inhibitors when indicated.';}
+    else if(tot>=12){cat='Mild-to-moderate ED';col='#d4793b';interp='Mild-to-moderate ED. Urological assessment recommended to identify organic causes and plan treatment.';}
+    else if(tot>=8){cat='Moderate ED';col='#c07020';interp='Moderate ED. Full urological assessment recommended including hormonal and cardiovascular evaluation.';}
+    else{cat='Severe ED';col='#c0392b';interp='Severe ED. Specialist urological assessment recommended to identify treatable causes and discuss available options.';}
+    document.getElementById('iief-snum').textContent=tot;
+    var sc=document.getElementById('iief-scat');sc.textContent=cat;sc.style.color=col;
+    document.getElementById('iief-bar').style.width=Math.max(4,(tot-1)/24*100)+'%';
+    document.getElementById('iief-bar').style.background=col;
+    document.getElementById('iief-interp').textContent=interp;
+    document.getElementById('iief-sum').textContent=tot+' / 25 \u2014 '+cat;
+    r.style.display='block';r.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  function rstIIEF(){eA=Array(5).fill(null);rIIEF();document.getElementById('iief-res').style.display='none';}
+  function prtIIEF(){
+    var today=new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'2-digit',year:'numeric'});
+    var tot=eA.reduce(function(s,a,i){return s+(a+eQ[i].b);},0);
+    var cat=document.getElementById('iief-scat')?document.getElementById('iief-scat').textContent:'';
+    var interp=document.getElementById('iief-interp')?document.getElementById('iief-interp').textContent:'';
+    var rows='';
+    eQ.forEach(function(q,i){
+      var btns=q.o.map(function(o,j){return '<span style="display:inline-block;margin:2px 4px 2px 0;padding:3px 8px;border-radius:4px;font-size:11px;border:1px solid '+(eA[i]===j?'#d4793b':'#ccc')+';background:'+(eA[i]===j?'#d4793b':'#f5f5f5')+';color:'+(eA[i]===j?'#fff':'#555')+';">'+o+'</span>';}).join('');
+      rows+='<tr style="border-bottom:1px solid #eee;"><td style="padding:8px 6px;font-weight:600;font-size:12px;width:24px;">'+(i+1)+'.</td><td style="padding:8px 6px;font-size:12px;">'+q.t+'<br><div style="margin-top:4px;">'+btns+'</div></td></tr>';
+    });
+    var pw=window.open('','_blank','width=800,height=900');
+    pw.document.write('<!DOCTYPE html><html><head><meta charset="UTF-8"><title>IIEF-5 \u2014 International Index of Erectile Function (SHIM)</title><style>body{font-family:Georgia,serif;margin:0;padding:20px 30px;color:#0f2840;font-size:13px;}h1{font-size:16px;color:#d4793b;margin-bottom:2px;}h2{font-size:13px;font-weight:normal;color:#555;margin:0 0 12px;}table{width:100%;border-collapse:collapse;}tr:nth-child(even){background:#fafafa;}.rb{margin-top:16px;border:2px solid #d4793b;border-radius:8px;padding:12px 16px;}.sl{font-size:22px;font-weight:700;color:#d4793b;}.ft{margin-top:20px;padding-top:10px;border-top:1px solid #ddd;font-size:10px;color:#888;text-align:center;}@media print{body{padding:15px 20px;}}</style></head><body>'
+      +'<h1>IIEF-5 \u2014 International Index of Erectile Function (SHIM)</h1><h2>'+today+' &nbsp;|&nbsp; Patient: ___________________________</h2>'
+      +'<table>'+rows+'</table>'
+      +'<div class="rb"><div class="sl">'+tot+' / 25</div><div style="font-size:14px;font-weight:700;margin:4px 0;">'+cat+'</div><div style="font-size:11px;color:#444;margin-top:8px;">'+interp+'</div></div>'
+      +'<p style="font-size:10px;color:#888;font-style:italic;margin-top:12px;">Informational tool only. Erectile dysfunction is highly treatable \u2014 discuss this result with your urologist.</p>'
+      +'<div class="ft">giacomonovara.com \u00b7 Prof. Giacomo Novara \u2014 Urology Unit, University of Padova</div>'
+      +'<script>window.onload=function(){window.print();}<\/script></body></html>');
+    pw.document.close();
+  }
+
+  rIIEF();
+  </script>
+
 
   <!-- PRINCETON CONSENSUS -->
   <section>
@@ -510,6 +630,10 @@
   </section>
 
   <!-- FAQ -->
+  
+  
+
+
   <section>
     <h2>❓ Frequently asked questions</h2>
     <div class="faq-item">
