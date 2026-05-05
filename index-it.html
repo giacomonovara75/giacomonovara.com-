@@ -29,35 +29,232 @@
 <meta name="twitter:title" content="Prof. Giacomo Novara — Urologia, Università di Padova">
 <meta name="twitter:description" content="Sito ufficiale del Prof. Giacomo Novara, Professore Associato di Urologia all'Università di Padova. Specialista in chirurgia robotica, oncologia urologica (prostata, vescica, rene) e urologia funzionale.">
 <meta name="twitter:image" content="https://giacomonovara.com/foto-novara.jpg">
+<!-- Additional meta tags -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Prof. Giacomo Novara">
+<meta name="language" content="it">
+<meta name="keywords" content="urologo Padova, urologo oncologo, chirurgia robotica prostata, prostatectomia radicale robotica, tumore prostata Padova, cistectomia robotica, tumore rene nefrectomia parziale, tumore vescica, Giacomo Novara urologo, Università Padova urologia, urologia funzionale, LUTS ipertrofia prostatica, oncologia urologica Italia">
+<meta name="geo.region" content="IT-PD">
+<meta name="geo.placename" content="Padova">
+<meta name="geo.position" content="45.4064;11.8768">
+<meta name="ICBM" content="45.4064, 11.8768">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": [
-    "Person",
-    "Physician"
-  ],
-  "@id": "https://giacomonovara.com/#novara",
-  "name": "Giacomo Novara",
-  "honorificPrefix": "Prof.",
-  "jobTitle": "Professore Associato di Urologia",
-  "affiliation": {
-    "@type": "Hospital",
-    "name": "Università di Padova – Azienda Ospedaliale di Padova",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Padova",
-      "addressCountry": "IT"
+  "@graph": [
+    {
+      "@type": ["Person", "Physician"],
+      "@id": "https://giacomonovara.com/#novara",
+      "name": "Giacomo Novara",
+      "honorificPrefix": "Prof.",
+      "honorificSuffix": "FEBU",
+      "givenName": "Giacomo",
+      "familyName": "Novara",
+      "jobTitle": "Professore Associato di Urologia",
+      "nationality": {
+        "@type": "Country",
+        "name": "Italy"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://giacomonovara.com/foto-novara.jpg",
+        "contentUrl": "https://giacomonovara.com/foto-novara.jpg",
+        "caption": "Prof. Giacomo Novara, Professore Associato di Urologia, Università di Padova"
+      },
+      "url": "https://giacomonovara.com/index-it.html",
+      "description": "Professore Associato di Urologia all'Università di Padova. Specialista in chirurgia robotica, oncologia urologica (prostata, vescica, rene, alta via escretrice) e urologia funzionale. Oltre 700 pubblicazioni scientifiche su riviste indicizzate, H-index 103, 36.000+ citazioni.",
+      "affiliation": [
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://www.unipd.it/#organization",
+          "name": "Università degli Studi di Padova",
+          "alternateName": "University of Padova",
+          "url": "https://www.unipd.it",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via 8 Febbraio 2",
+            "addressLocality": "Padova",
+            "postalCode": "35122",
+            "addressCountry": "IT"
+          }
+        },
+        {
+          "@type": "Hospital",
+          "@id": "https://www.aopd.veneto.it/#hospital",
+          "name": "Azienda Ospedale-Università di Padova",
+          "alternateName": "Padova University Hospital",
+          "url": "https://www.aopd.veneto.it",
+          "department": {
+            "@type": "MedicalOrganization",
+            "name": "U.O.C. Clinica Urologica",
+            "medicalSpecialty": "Urology"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via Giustiniani 2",
+            "addressLocality": "Padova",
+            "postalCode": "35128",
+            "addressCountry": "IT"
+          }
+        }
+      ],
+      "worksFor": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Università degli Studi di Padova",
+          "url": "https://www.unipd.it"
+        },
+        {
+          "@type": "Hospital",
+          "name": "Azienda Ospedale-Università di Padova",
+          "url": "https://www.aopd.veneto.it"
+        }
+      ],
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Università degli Studi di Palermo",
+          "alternateName": "University of Palermo",
+          "url": "https://www.unipa.it"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Università degli Studi di Verona",
+          "alternateName": "University of Verona",
+          "url": "https://www.univr.it"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Università degli Studi di Padova",
+          "url": "https://www.unipd.it"
+        },
+        {
+          "@type": "Hospital",
+          "name": "OLV Hospital – Onze-Lieve-Vrouwziekenhuis",
+          "alternateName": "Vattikuti Robotic Surgery Institute",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Aalst",
+            "addressCountry": "BE"
+          }
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Fellow of the European Board of Urology",
+          "abbreviation": "FEBU",
+          "credentialCategory": "Certificazione Professionale",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "European Association of Urology",
+            "alternateName": "EAU",
+            "url": "https://www.uroweb.org"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Laurea in Medicina e Chirurgia con lode – 110/110 cum laude",
+          "credentialCategory": "degree",
+          "dateCreated": "2000",
+          "recognizedBy": {
+            "@type": "EducationalOrganization",
+            "name": "Università degli Studi di Palermo"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Diploma di Specializzazione in Urologia con lode – 50/50 cum laude",
+          "credentialCategory": "degree",
+          "dateCreated": "2005",
+          "recognizedBy": {
+            "@type": "EducationalOrganization",
+            "name": "Università degli Studi di Padova"
+          }
+        }
+      ],
+      "medicalSpecialty": [
+        "Urology",
+        "Surgical Oncology"
+      ],
+      "knowsAbout": [
+        "Chirurgia Robotica",
+        "Sistema Da Vinci",
+        "Oncologia Urologica",
+        "Tumore della Prostata",
+        "Prostatectomia Radicale Robot-Assistita",
+        "Tumore della Vescica",
+        "Cistectomia Radicale Robot-Assistita",
+        "Carcinoma a Cellule Renali",
+        "Nefrectomia Parziale Robot-Assistita",
+        "Carcinoma dell'Alta Via Escretrice",
+        "Nefroureterectomia Radicale",
+        "Tumore del Testicolo",
+        "Tumore del Pene",
+        "Ipertrofia Prostatica Benigna",
+        "Sintomi del Basso Apparato Urinario",
+        "Vescica Iperattiva",
+        "Prolasso Genito-Urinario Femminile",
+        "Stenosi del Giunto Pielo-Ureterale",
+        "Pieloplastica Robotica",
+        "Stenosi Ureterali",
+        "Disfunzione Erettile",
+        "Chirurgia Laparoscopica",
+        "Training Chirurgico",
+        "Fattori Prognostici nei Tumori Urologici",
+        "Classificazione PADUA"
+      ],
+      "award": [
+        "2008 – Reviewer of the Month, European Urology",
+        "2010 – Reviewer of the Year, European Urology",
+        "2010 – European Urology Best Scientific Paper Prize: Classificazione PADUA dei tumori renali",
+        "2011 – Best Abstract, EAU Annual Meeting (Sessione 42 – RCC: diagnosi e prognosi)",
+        "2011 – Best Abstract, EAU Annual Meeting (Sessione 51 – RCC: chirurgia nephron-sparing)",
+        "2013 – European Urology Prize for Best Paper on Clinical Research: Pathologic Nodal Staging Score for Bladder Cancer",
+        "2013 – European Urology Prize for Best Scientific Paper by a Young Urologist (≤35 anni)",
+        "2015 – Italian Matula Award, Società Italiana di Urologia (SIU)",
+        "2017 – Best Poster, EAU Annual Meeting (Sessione 79 – nefrectomia parziale mini-invasiva)"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Giustiniani 2",
+        "addressLocality": "Padova",
+        "postalCode": "35128",
+        "addressCountry": "IT"
+      },
+      "telephone": "+390498211250",
+      "email": "giacomonovara@gmail.com",
+      "sameAs": [
+        "https://x.com/giacomonovara",
+        "https://twitter.com/giacomonovara",
+        "https://www.linkedin.com/in/giacomo-novara-86ab7949/",
+        "https://orcid.org/0000-0003-4693-5058",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=novara+giacomo&sort=date",
+        "https://scholar.google.com/citations?user=Y8c_UiMAAAAJ",
+        "https://www.discog.unipd.it/giacomo-novara"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://giacomonovara.com/index-it.html",
+      "url": "https://giacomonovara.com/index-it.html",
+      "name": "Prof. Giacomo Novara — Urologia, Università di Padova",
+      "description": "Sito ufficiale del Prof. Giacomo Novara, Professore Associato di Urologia all'Università di Padova. Specialista in chirurgia robotica, oncologia urologica e urologia funzionale.",
+      "inLanguage": "it",
+      "about": {
+        "@id": "https://giacomonovara.com/#novara"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://giacomonovara.com/#website",
+        "url": "https://giacomonovara.com",
+        "name": "Prof. Giacomo Novara",
+        "inLanguage": ["it", "en"]
+      }
     }
-  },
-  "medicalSpecialty": "Urology",
-  "description": "Sito ufficiale del Prof. Giacomo Novara, Professore Associato di Urologia all'Università di Padova. Specialista in chirurgia robotica, oncologia urologica (prostata, vescica, rene) e urologia funzionale.",
-  "url": "https://giacomonovara.com/index-it.html",
-  "image": "https://giacomonovara.com/foto-novara.jpg",
-  "sameAs": [
-    "https://twitter.com/giacomonovara",
-    "https://www.linkedin.com/in/giacomonovara/",
-    "https://scholar.google.com/citations?user=Y8c_UiMAAAAJ",
-    "https://orcid.org/0000-0003-4693-5058"
   ]
 }
 </script>
