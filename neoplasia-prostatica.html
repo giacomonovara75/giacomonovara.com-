@@ -197,6 +197,16 @@
     .topics-grid, .risk-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 480px) { .topics-grid { grid-template-columns: 1fr; } }
+
+  /* Back to top button */
+  #btt-btn {
+    display:none;position:fixed;bottom:5.5rem;right:1.5rem;z-index:199;
+    width:42px;height:42px;border-radius:50%;border:none;cursor:pointer;
+    background:rgba(14,28,56,0.85);color:#fff;font-size:1.2rem;
+    box-shadow:0 2px 10px rgba(0,0,0,0.25);transition:opacity 0.2s,background 0.2s;
+    align-items:center;justify-content:center;
+  }
+  #btt-btn:hover { background:rgba(14,28,56,1); }
 </style>
 
 <script type="text/javascript" src="https://embeds.iubenda.com/widgets/22957954-6c48-4ee9-9e01-ce87316d0049.js"></script>
@@ -265,9 +275,9 @@
 <body>
 
 <nav>
-  <a class="nav-logo" href="index.html">Prof. <span>Giacomo Novara</span></a>
-  <a class="nav-back" href="index.html#pazienti">← Per i pazienti</a>
-  <a href="index.html#contatti" class="nav-cta">Contatti</a>
+  <a class="nav-logo" href="index.html" aria-label="Homepage Prof. Giacomo Novara">Prof. <span>Giacomo Novara</span></a>
+  <a class="nav-back" href="index.html#pazienti" aria-label="Torna alla pagina pazienti">← Per i pazienti</a>
+  <a href="index.html#contatti" class="nav-cta" aria-label="Vai ai contatti">Contatti</a>
 </nav>
 
 <div class="page-hero">
@@ -514,32 +524,32 @@
     <h2>Domande frequenti</h2>
 
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Da che età dovrei fare il PSA?</div>
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Da che età dovrei fare il PSA?</div>
       <div class="faq-a">In assenza di un programma di screening nazionale organizzato, le linee guida consigliano di discutere il dosaggio del PSA con il proprio medico a partire dai 45-50 anni, soprattutto in presenza di sintomi urinari o familiarità. Un dosaggio intorno ai 40 anni ha un valore predittivo importante per il rischio futuro: un valore basso (sotto 1 ng/mL) è molto rassicurante; un valore già elevato merita un follow-up più attento negli anni successivi.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Ho il PSA alto: ho sicuramente il tumore?</div>
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Ho il PSA alto: ho sicuramente il tumore?</div>
       <div class="faq-a">No. Il PSA elevato può essere causato da infezioni urinarie, prostatite, ipertrofia benigna, attività fisica intensa o manovre strumentali recenti. Anche con PSA sopra 4, solo circa il 25% dei pazienti ha effettivamente un tumore. Il percorso diagnostico prevede oggi la risonanza magnetica prima della biopsia, per selezionare i pazienti che davvero ne hanno bisogno e ridurre le biopsie inutili.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Cos'è la sorveglianza attiva? È rischioso non operarsi subito?</div>
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Cos'è la sorveglianza attiva? È rischioso non operarsi subito?</div>
       <div class="faq-a">Per i tumori a rischio molto basso e basso (Gleason 6, Grade group 1), la crescita è così lenta che il trattamento immediato può spesso essere differito. La sorveglianza attiva prevede controlli periodici con PSA, risonanza e biopsie, intervenendo solo se la malattia progredisce. Non è una rinuncia alla cura, ma una strategia per evitare gli effetti collaterali di interventi che statisticamente non sarebbero necessari per molti pazienti.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">La biopsia fa male?</div>
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">La biopsia fa male?</div>
       <div class="faq-a">La biopsia transperineale, oggi raccomandata da tutte le linee guida europee, è più impegnativa rispetto alla vecchia tecnica transrettale: dura circa mezz'ora e richiede maggiore anestesia. Il vantaggio principale è l'azzeramento del rischio di sepsi post-biopsia, senza bisogno di antibiotici. La maggior parte dei pazienti riferisce un fastidio gestibile nelle ore successive all'intervento.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Cosa significa che il tumore "compete" con altre cause di morte?</div>
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Cosa significa che il tumore "compete" con altre cause di morte?</div>
       <div class="faq-a">Il tumore della prostata colpisce prevalentemente uomini anziani e ha una storia naturale che si misura in decenni. Molti pazienti — soprattutto quelli più anziani o con altre malattie importanti — hanno una probabilità concreta di morire per altre cause prima che il tumore causi danni. Questo non significa che la malattia non debba essere trattata, ma che l'intensità del trattamento viene calibrata sull'aspettativa di vita e sulle condizioni generali di ogni singolo paziente.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Quanto dura il ricovero per la prostatectomia robotica?</div>
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Quanto dura il ricovero per la prostatectomia robotica?</div>
       <div class="faq-a">In genere 2-3 giorni. Il catetere vescicale viene rimosso entro 5-7 giorni dall'intervento. Il ritorno alle attività quotidiane leggere è possibile in 2-3 settimane. La continenza urinaria si recupera gradualmente nei mesi successivi, e il recupero è favorito dalla fisioterapia del pavimento pelvico iniziata precocemente.</div>
     </div>
   </div>
@@ -572,7 +582,7 @@
   <p style="margin-top:0.4rem"><a href="index.html">Home</a> · <a href="https://giacomonovara.com">giacomonovara.com</a> · <a href="index.html#contatti">Contatti</a></p>
   <p style="margin-top:0.8rem;font-size:0.72rem;opacity:0.6">Le informazioni contenute in questa pagina hanno scopo puramente divulgativo e non sostituiscono il parere del medico.</p>
 
-<p style="font-size:0.75rem;margin-top:1rem;opacity:0.7;"><a href="https://www.iubenda.com/privacy-policy/43888236" class="iubenda-white iubenda-noiframe iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> &nbsp;·&nbsp; <a href="https://www.iubenda.com/privacy-policy/43888236/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed" title="Cookie Policy">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script></p>
+<p style="font-size:0.75rem;margin-top:1rem;opacity:0.7;"><a href="https://www.iubenda.com/privacy-policy/43888236" class="iubenda-white iubenda-noiframe iubenda-embed" title="Privacy Policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> &nbsp;·&nbsp; <a href="https://www.iubenda.com/privacy-policy/43888236/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed" title="Cookie Policy" target="_blank" rel="noopener noreferrer">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script></p>
 </footer>
 
 <script>
@@ -583,12 +593,12 @@ function toggleFaq(el) {
 </script>
 
 <!-- FLOATING CTA -->
-<button onclick="document.getElementById('modal-prenota').style.display='flex'" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;background:#d4793b;color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:0.88rem;font-weight:700;padding:0.8rem 1.5rem;border-radius:30px;border:none;cursor:pointer;box-shadow:0 4px 18px rgba(212,121,59,0.35);display:flex;align-items:center;gap:0.5rem;transition:background 0.2s;" onmouseover="this.style.background='#c06830'" onmouseout="this.style.background='#d4793b'">📅 Prenota una visita</button>
+<button onclick="document.getElementById('modal-prenota').style.display='flex'" aria-label="Apri il modulo di prenotazione" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;background:#d4793b;color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:0.88rem;font-weight:700;padding:0.8rem 1.5rem;border-radius:30px;border:none;cursor:pointer;box-shadow:0 4px 18px rgba(212,121,59,0.35);display:flex;align-items:center;gap:0.5rem;transition:background 0.2s;" onmouseover="this.style.background='#c06830'" onmouseout="this.style.background='#d4793b'">📅 Prenota una visita</button>
 
 <!-- MODAL PRENOTAZIONI -->
 <div id="modal-prenota" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(15,40,64,0.7);align-items:center;justify-content:center;padding:1.5rem;" onclick="if(event.target===this)this.style.display='none'">
   <div style="background:#faf8f4;border-radius:16px;padding:2.5rem 2rem;max-width:520px;width:100%;position:relative;font-family:'Source Serif 4',Georgia,serif;">
-    <button onclick="document.getElementById('modal-prenota').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#6b6560;line-height:1;">✕</button>
+    <button onclick="document.getElementById('modal-prenota').style.display='none'" aria-label="Chiudi" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#6b6560;line-height:1;">✕</button>
     <div style="text-align:center;margin-bottom:1.8rem;">
       <div style="font-size:2.5rem;margin-bottom:0.5rem;">📅</div>
       <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;font-weight:700;color:#0f2840;margin:0 0 0.3rem;">Prenota una visita</h2>
@@ -620,5 +630,12 @@ function toggleFaq(el) {
     <p style="font-size:0.78rem;color:#6b6560;text-align:center;margin-top:1.5rem;">Libera professione intramuraria — Clinica Urologica, Via Giustiniani 2, Padova</p>
   </div>
 </div>
+<button id="btt-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Torna in cima alla pagina" title="Torna in cima alla pagina">↑</button>
+<script>
+  var bttBtn = document.getElementById('btt-btn');
+  window.addEventListener('scroll', function(){
+    bttBtn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+  });
+</script>
 </body>
 </html>

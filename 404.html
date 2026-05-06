@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Pagina non trovata — Prof. Giacomo Novara</title>
+  <link rel="canonical" href="https://giacomonovara.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0e1c38; --navy-mid: #162847; --gold: #b8975a; --gold-light: #d4b07a;
+      --white: #ffffff; --off-white: #f8f6f1;
+    }
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: var(--off-white);
+      color: var(--navy);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    .code {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 7rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+      opacity: 0.08;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      pointer-events: none;
+      user-select: none;
+    }
+    .container {
+      position: relative;
+      max-width: 540px;
+      width: 100%;
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
+    .logo span { color: var(--gold); }
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.5rem auto;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 0.95rem;
+      color: #5a5550;
+      margin-bottom: 0.3rem;
+    }
+    .redirect-note {
+      font-size: 0.82rem;
+      color: #8a8278;
+      margin-top: 0.8rem;
+    }
+    .redirect-note span {
+      font-weight: 600;
+      color: var(--gold);
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--navy);
+      color: var(--white);
+      padding: 0.85rem 2.5rem;
+      border-radius: 6px;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: var(--navy-mid); }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+      margin-left: 0.8rem;
+    }
+    .btn-gold:hover { background: var(--gold-light); }
+    .btns { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.78rem;
+      color: #aaa;
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem; }
+      .code { font-size: 5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="code">404</div>
+
+    <a href="/" class="logo" aria-label="Homepage Prof. Giacomo Novara">
+      Prof. <span>Giacomo Novara</span>
+    </a>
+
+    <div class="divider"></div>
+
+    <h1 id="msg-title">Pagina non trovata</h1>
+    <p class="subtitle" id="msg-sub">La pagina che stai cercando non esiste o è stata spostata.</p>
+    <p class="redirect-note" id="msg-redirect">Verrai reindirizzato alla homepage tra <span id="countdown">5</span> secondi.</p>
+
+    <div class="btns">
+      <a href="/" class="btn" id="btn-home" aria-label="Torna alla homepage">← Homepage</a>
+      <a href="/#contatti" class="btn btn-gold" id="btn-contact" aria-label="Vai ai contatti">Contatti</a>
+    </div>
+
+    <footer id="msg-footer">giacomonovara.com — Urologia, Università di Padova</footer>
+  </div>
+
+  <script>
+    // Language detection
+    var lang = (navigator.language || navigator.userLanguage || 'it').toLowerCase();
+    var isEN = !lang.startsWith('it');
+
+    if (isEN) {
+      document.documentElement.lang = 'en';
+      document.title = 'Page not found — Prof. Giacomo Novara';
+      document.getElementById('msg-title').textContent = 'Page not found';
+      document.getElementById('msg-sub').textContent = 'The page you are looking for does not exist or has been moved.';
+      document.getElementById('msg-redirect').innerHTML = 'You will be redirected to the homepage in <span id="countdown">5</span> seconds.';
+      document.getElementById('btn-home').textContent = '← Homepage';
+      document.getElementById('btn-home').setAttribute('aria-label', 'Back to homepage');
+      document.getElementById('btn-contact').textContent = 'Contacts';
+      document.getElementById('btn-contact').setAttribute('href', '/index-en.html#contacts');
+      document.getElementById('btn-contact').setAttribute('aria-label', 'Go to contacts');
+      document.getElementById('msg-footer').textContent = 'giacomonovara.com — Urology, University of Padova';
+    }
+
+    // Countdown + redirect
+    var n = 5;
+    var cd = document.getElementById('countdown');
+    var timer = setInterval(function() {
+      n--;
+      if (cd) cd.textContent = n;
+      if (n <= 0) {
+        clearInterval(timer);
+        window.location.href = isEN ? '/index-en.html' : '/';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
