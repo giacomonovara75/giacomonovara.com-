@@ -638,9 +638,11 @@
     if(!all){r.style.display='none';return;}
     var tot=[0,1,2,3,4,5][cA[0]]+[0,2,4,6][cA[1]]+cA[2];
     var cat,col,interp;
-    if(tot<=5){cat='Mild incontinence';col='#2a9d8f';interp='Score indicates mild urinary leakage. Conservative measures (pelvic floor training, fluid management) are the first step. Urological or urogynaecological assessment is still recommended.';}
-    else if(tot<=12){cat='Moderate incontinence';col='#d4793b';interp='Score indicates moderate urinary leakage. Specialist assessment is indicated to characterise the type of incontinence (urgency, stress, mixed) and plan treatment.';}
-    else{cat='Severe incontinence';col='#c0392b';interp='Score indicates severe urinary leakage with significant quality-of-life impact. Urgent urological or urogynaecological assessment is recommended.';}
+    if(tot===0){cat='Fully continent';col='#2a9d8f';interp='No urinary leakage detected (score = 0). Fully continent.';}
+    else if(tot<=5){cat='Slight incontinence';col='#5aaa8a';interp='Slight urinary leakage (score 1–5, Klovning 2009). Conservative measures (pelvic floor training, fluid management) are the first step. Urological or urogynaecological assessment still recommended.';}
+    else if(tot<=12){cat='Moderate incontinence';col='#d4793b';interp='Moderate urinary leakage (score 6–12, Klovning 2009). Specialist assessment indicated to characterise the type of incontinence (urgency, stress, mixed) and plan treatment.';}
+    else if(tot<=18){cat='Severe incontinence';col='#c0392b';interp='Severe urinary leakage (score 13–18, Klovning 2009). Urological or urogynaecological assessment recommended to define the diagnostic-therapeutic pathway.';}
+    else{cat='Very severe incontinence';col='#8b0000';interp='Very severe urinary leakage (score 19–21, Klovning 2009). Urgent urological or urogynaecological assessment indicated, including evaluation of surgical options.';}
     document.getElementById('iciq-snum').textContent=tot;
     var sc=document.getElementById('iciq-scat');sc.textContent=cat;sc.style.color=col;
     document.getElementById('iciq-bar').style.width=(tot/21*100)+'%';

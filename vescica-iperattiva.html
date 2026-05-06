@@ -575,9 +575,11 @@
     if(!all){r.style.display='none';return;}
     var tot=[0,1,2,3,4,5][cA[0]]+[0,2,4,6][cA[1]]+cA[2];
     var cat,col,interp;
-    if(tot<=5){cat='Incontinenza lieve';col='#2a9d8f';interp='Perdita urinaria lieve. Le misure conservative (training del pavimento pelvico, restrizione idrica serale) rappresentano il primo approccio. Una valutazione urologica/uroginecologica \u00e8 comunque raccomandata.';}
-    else if(tot<=12){cat='Incontinenza moderata';col='#d4793b';interp='Perdita urinaria moderata. \u00c8 indicata una valutazione specialistica per definire il tipo di incontinenza (da urgenza, da stress, mista) e pianificare il trattamento appropriato.';}
-    else{cat='Incontinenza grave';col='#c0392b';interp='Perdita urinaria grave con impatto significativo sulla qualit\u00e0 di vita. \u00c8 raccomandata una valutazione urologica/uroginecologica per definire il percorso diagnostico-terapeutico.';}
+    if(tot===0){cat='Continenza completa';col='#2a9d8f';interp='Nessuna perdita urinaria rilevata (score = 0). Continenza completa.';}
+    else if(tot<=5){cat='Incontinenza lieve';col='#5aaa8a';interp='Perdita urinaria di entità lieve (score 1–5, Klovning 2009). Le misure conservative (training del pavimento pelvico, restrizione idrica serale) rappresentano il primo approccio. Valutazione urologica/uroginecologica comunque raccomandata.';}
+    else if(tot<=12){cat='Incontinenza moderata';col='#d4793b';interp='Perdita urinaria di entità moderata (score 6–12, Klovning 2009). Indicata valutazione specialistica per definire il tipo di incontinenza (da urgenza, da stress, mista) e pianificare il trattamento.';}
+    else if(tot<=18){cat='Incontinenza grave';col='#c0392b';interp='Perdita urinaria di entità grave (score 13–18, Klovning 2009). Raccomandata valutazione urologica/uroginecologica per definire il percorso diagnostico-terapeutico.';}
+    else{cat='Incontinenza molto grave';col='#8b0000';interp='Perdita urinaria di entità molto grave (score 19–21, Klovning 2009). Indicata valutazione urologica/uroginecologica urgente, inclusa valutazione delle opzioni chirurgiche.';}
     document.getElementById('iciq-snum').textContent=tot;
     var sc=document.getElementById('iciq-scat');sc.textContent=cat;sc.style.color=col;
     document.getElementById('iciq-bar').style.width=(tot/21*100)+'%';
