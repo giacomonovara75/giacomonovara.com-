@@ -433,6 +433,7 @@
 <body>
 <script>
 (function(){
+  if (sessionStorage.getItem('lang') === 'it') return;
   var l = (navigator.language || navigator.userLanguage || 'it').toLowerCase();
   if (!l.startsWith('it')) {
     window.location.replace('index-en.html');
@@ -485,7 +486,7 @@
     <a href="#pubblicazioni" aria-label="Vai alla sezione Pubblicazioni">Pubblicazioni</a>
     <a href="per-i-colleghi.html" aria-label="Pagina Per i Colleghi">Per i Colleghi</a>
     <a href="#contatti" aria-label="Vai alla sezione Contatti">Contatti</a>
-    <a href="index-en.html" style="opacity:0.85;font-size:0.85rem;letter-spacing:0.02em;" aria-label="Switch to English version">🇬🇧 English</a>
+    <a href="index-en.html" onclick="sessionStorage.setItem('lang','en')" style="opacity:0.85;font-size:0.85rem;letter-spacing:0.02em;" aria-label="Switch to English version">🇬🇧 English</a>
   </div>
 </nav>
 
