@@ -15,7 +15,7 @@
 <link rel="canonical" href="https://giacomonovara.com/giunto-pieloureterale.html">
 <link rel="alternate" hreflang="it" href="https://giacomonovara.com/giunto-pieloureterale.html">
 <link rel="alternate" hreflang="en" href="https://giacomonovara.com/ureteropelvic-junction-obstruction.html">
-<link rel="alternate" hreflang="x-default" href="https://giacomonovara.com/giunto-pieloureterale.html">
+<link rel="alternate" hreflang="x-default" href="https://giacomonovara.com/">
 
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://giacomonovara.com/giunto-pieloureterale.html">
@@ -76,7 +76,7 @@
     "@type": "Physician",
     "@id": "https://giacomonovara.com/#novara",
     "name": "Prof. Giacomo Novara",
-    "url": "https://giacomonovara.com/index-it.html"
+    "url": "https://giacomonovara.com/"
   },
   "publisher": {
     "@type": "Person",
@@ -96,7 +96,7 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Prof. Giacomo Novara",
-        "item": "https://giacomonovara.com/index-it.html"
+        "item": "https://giacomonovara.com/"
       },
       {
         "@type": "ListItem",
@@ -183,13 +183,13 @@
   .case-box .case-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.13em; font-weight: 600; color: var(--amber); margin-bottom: 0.5rem; }
   .case-box p { font-size: 0.88rem; color: #3a3530; margin-bottom: 0.4rem; }
   .case-box p:last-child { margin-bottom: 0; }
-  .faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 0.6rem; background: #fff; }
-  .faq-q { width: 100%; background: none; border: none; padding: 1rem 1.2rem; text-align: left; font-family: var(--font-body); font-size: 0.97rem; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-  .faq-q:hover { background: var(--steel-light); }
-  .faq-q .arrow { font-size: 1.2rem; color: var(--steel); transition: transform 0.22s; flex-shrink: 0; }
-  .faq-q.open .arrow { transform: rotate(90deg); }
-  .faq-a { display: none; padding: 0 1.2rem 1.1rem; font-size: 0.94rem; color: #3a3530; line-height: 1.72; }
-  .faq-a.open { display: block; }
+  details.faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 0.6rem; background: #fff; }
+  details.faq-item summary { list-style: none; width: 100%; padding: 1rem 1.2rem; text-align: left; font-family: var(--font-body); font-size: 0.97rem; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary::after { content: '▸'; font-size: 1.2rem; color: var(--steel); transition: transform 0.22s; flex-shrink: 0; }
+  details.faq-item[open] summary::after { transform: rotate(90deg); }
+  details.faq-item summary:hover { background: var(--steel-light); }
+  .faq-a { padding: 0 1.2rem 1.1rem; font-size: 0.94rem; color: #3a3530; line-height: 1.72; }
   .topic-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0; }
   .topic-link { display: inline-block; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 1rem; font-size: 0.88rem; color: var(--steel); text-decoration: none; transition: background 0.15s, border-color 0.15s; }
   .topic-link:hover { background: var(--steel-light); border-color: var(--steel-mid); }
@@ -411,26 +411,26 @@
   <!-- FAQ -->
   <section>
     <h2>❓ Domande frequenti dei pazienti</h2>
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">Il mio rene è dilatato — devo per forza operarmi? <span class="arrow">▸</span></button>
+    <details class="faq-item">
+      <summary>Il mio rene è dilatato — devo per forza operarmi?</summary>
       <div class="faq-a">Non necessariamente. La dilatazione del rene (idronefrosi) non implica di per sé la necessità di un intervento. L'esame decisivo è la scintigrafia renale con test al furosemide: se il rene, pur dilatato, svuota regolarmente il tracciante dopo il diuretico, significa che non è funzionalmente ostruito e può essere monitorato nel tempo senza chirurgia. Se invece il rene non svuota, significa che l'ostruzione sta già causando un danno progressivo e l'intervento è indicato per preservare la funzione renale.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">Cos'è la pieloplastica robotica e quanto dura il ricovero? <span class="arrow">▸</span></button>
+    </details>
+    <details class="faq-item">
+      <summary>Cos'è la pieloplastica robotica e quanto dura il ricovero?</summary>
       <div class="faq-a">La pieloplastica è un intervento che rimuove il tratto di giunzione tra la pelvi renale e l'uretere che è ostruito o non funziona bene, e lo ricuce in modo da ripristinare un passaggio libero per le urine. Si esegue in laparoscopia robotica — con 3 o 4 piccole incisioni addominali — senza aprire la pancia. Il ricovero dura circa 2 giorni. Alla dimissione viene lasciato temporaneamente uno stentino interno (un tubicino flessibile che tiene aperto il tratto ricostruito), che viene rimosso in ambulatorio attraverso una piccola cistoscopia circa un mese dopo. Il successo dell'intervento viene verificato con una scintigrafia a 3 mesi.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">Ho anche un calcolo nel rene dilatato — come si gestisce? <span class="arrow">▸</span></button>
+    </details>
+    <details class="faq-item">
+      <summary>Ho anche un calcolo nel rene dilatato — come si gestisce?</summary>
       <div class="faq-a">Il calcolo viene rimosso durante lo stesso intervento di pieloplastica. Non ha senso trattare il calcolo in modo isolato lasciando invariata l'ostruzione giuntale: la stasi urinaria che persiste nel sistema collettore dilatato ricreerebbe il calcolo in breve tempo. L'approccio corretto è correggere contemporaneamente il difetto anatomico e rimuovere la calcolosi, così da eliminare sia il problema attuale sia il substrato che lo ha generato.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">La malattia del giunto pieloureterale può dare coliche renali? <span class="arrow">▸</span></button>
+    </details>
+    <details class="faq-item">
+      <summary>La malattia del giunto pieloureterale può dare coliche renali?</summary>
       <div class="faq-a">Sì. Il dolore al fianco, a volte con carattere colico, è la presentazione tipica nel giovane adulto. Il meccanismo è diverso da quello della calcolosi (non c'è un calcolo che ostruisce l'uretere), ma il risultato clinico è simile: l'accumulo di pressione nel sistema collettore genera dolore, spesso molto intenso. Il quadro diventa sospetto quando la TC non mostra calcoli ma evidenzia una idronefrosi: a quel punto si esegue la scintigrafia per capire se l'ostruzione è funzionalmente rilevante.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">Se aspetto a fare l'operazione, il rene si danneggia? <span class="arrow">▸</span></button>
+    </details>
+    <details class="faq-item">
+      <summary>Se aspetto a fare l'operazione, il rene si danneggia?</summary>
       <div class="faq-a">Dipende dall'entità dell'ostruzione e dal tempo. Un'ostruzione lieve può restare stabile per anni. Un'ostruzione severa danneggia il parenchima renale progressivamente e in modo irreversibile: il tessuto renale atrofizzato non si recupera. Per questo, quando la scintigrafia documenta un'ostruzione funzionale significativa, l'intervento non dovrebbe essere procrastinato a lungo. Il controllo periodico con scintigrafia è indispensabile: se la funzione del rene si deteriora, l'indicazione chirurgica diventa urgente.</div>
-    </div>
+    </details>
   </section>
 
   <!-- ARGOMENTI CORRELATI -->
@@ -454,12 +454,7 @@
 <p style="font-size:0.75rem;margin-top:1rem;opacity:0.7;"><a href="https://www.iubenda.com/privacy-policy/43888236" class="iubenda-white iubenda-noiframe iubenda-embed" title="Privacy Policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> &nbsp;·&nbsp; <a href="https://www.iubenda.com/privacy-policy/43888236/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed" title="Cookie Policy" target="_blank" rel="noopener noreferrer">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script></p>
 </footer>
 
-<script>
-function toggleFaq(btn) {
-  btn.classList.toggle('open');
-  btn.nextElementSibling.classList.toggle('open');
-}
-</script>
+<!-- FAQ toggle via native <details>/<summary> — no JS needed -->
 
 <!-- FLOATING CTA -->
 <button onclick="document.getElementById('modal-prenota').style.display='flex'" aria-label="Apri il modulo di prenotazione" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;background:#d4793b;color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:0.88rem;font-weight:700;padding:0.8rem 1.5rem;border-radius:30px;border:none;cursor:pointer;box-shadow:0 4px 18px rgba(212,121,59,0.35);display:flex;align-items:center;gap:0.5rem;transition:background 0.2s;" onmouseover="this.style.background='#c06830'" onmouseout="this.style.background='#d4793b'">📅 Prenota una visita</button>

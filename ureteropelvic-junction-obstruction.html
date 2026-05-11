@@ -15,7 +15,7 @@
 <link rel="canonical" href="https://giacomonovara.com/ureteropelvic-junction-obstruction.html">
 <link rel="alternate" hreflang="it" href="https://giacomonovara.com/giunto-pieloureterale.html">
 <link rel="alternate" hreflang="en" href="https://giacomonovara.com/ureteropelvic-junction-obstruction.html">
-<link rel="alternate" hreflang="x-default" href="https://giacomonovara.com/giunto-pieloureterale.html">
+<link rel="alternate" hreflang="x-default" href="https://giacomonovara.com/">
 
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://giacomonovara.com/ureteropelvic-junction-obstruction.html">
@@ -76,7 +76,7 @@
     "@type": "Physician",
     "@id": "https://giacomonovara.com/#novara",
     "name": "Prof. Giacomo Novara",
-    "url": "https://giacomonovara.com/index-en.html"
+    "url": "https://giacomonovara.com/"
   },
   "publisher": {
     "@type": "Person",
@@ -96,7 +96,7 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Prof. Giacomo Novara",
-        "item": "https://giacomonovara.com/index-en.html"
+        "item": "https://giacomonovara.com/"
       },
       {
         "@type": "ListItem",
@@ -183,13 +183,13 @@
   .case-box .case-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.13em; font-weight: 600; color: var(--amber); margin-bottom: 0.5rem; }
   .case-box p { font-size: 0.88rem; color: #3a3530; margin-bottom: 0.4rem; }
   .case-box p:last-child { margin-bottom: 0; }
-  .faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 0.6rem; background: #fff; }
-  .faq-q { width: 100%; background: none; border: none; padding: 1rem 1.2rem; text-align: left; font-family: var(--font-body); font-size: 0.97rem; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-  .faq-q:hover { background: var(--steel-light); }
-  .faq-q .arrow { font-size: 1.2rem; color: var(--steel); transition: transform 0.22s; flex-shrink: 0; }
-  .faq-q.open .arrow { transform: rotate(90deg); }
-  .faq-a { display: none; padding: 0 1.2rem 1.1rem; font-size: 0.94rem; color: #3a3530; line-height: 1.72; }
-  .faq-a.open { display: block; }
+  details.faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 0.6rem; background: #fff; }
+  details.faq-item summary { list-style: none; width: 100%; padding: 1rem 1.2rem; text-align: left; font-family: var(--font-body); font-size: 0.97rem; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary::after { content: '▸'; font-size: 1.2rem; color: var(--steel); transition: transform 0.22s; flex-shrink: 0; }
+  details.faq-item[open] summary::after { transform: rotate(90deg); }
+  details.faq-item summary:hover { background: var(--steel-light); }
+  .faq-a { padding: 0 1.2rem 1.1rem; font-size: 0.94rem; color: #3a3530; line-height: 1.72; }
   .topic-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0; }
   .topic-link { display: inline-block; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 1rem; font-size: 0.88rem; color: var(--steel); text-decoration: none; transition: background 0.15s, border-color 0.15s; }
   .topic-link:hover { background: var(--steel-light); border-color: var(--steel-mid); }
@@ -411,26 +411,26 @@
   <!-- FAQ -->
   <section>
     <h2>❓ Frequently asked questions</h2>
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">My kidney is dilated — do I necessarily need surgery? <span class="arrow">▸</span></button>
+    <details class="faq-item">
+      <summary>My kidney is dilated — do I necessarily need surgery?</summary>
       <div class="faq-a">Not necessarily. Renal dilatation (hydronephrosis) does not in itself imply the need for surgery. The decisive test is diuretic renography: if the kidney, despite being dilated, drains the tracer normally after furosemide, it means it is not functionally obstructed and can be monitored over time without surgery. If, however, the kidney fails to drain, it means the obstruction is already causing progressive damage and intervention is indicated to preserve renal function.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">What is robotic pyeloplasty and how long is the hospital stay? <span class="arrow">▸</span></button>
+    </details>
+    <details class="faq-item">
+      <summary>What is robotic pyeloplasty and how long is the hospital stay?</summary>
       <div class="faq-a">Pyeloplasty is a procedure that removes the obstructed or non-functioning segment of the ureteropelvic junction and reconstructs it to restore free urinary passage. It is performed using robotic laparoscopy — through 3 or 4 small abdominal incisions — without opening the abdomen. The hospital stay is approximately 2 days. At discharge, a temporary internal stent (a flexible tube keeping the reconstructed segment open) is left in place; it is removed as an outpatient procedure via a brief cystoscopy approximately one month later. The outcome of surgery is assessed by renography at 3 months.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">I also have a stone in the dilated kidney — how is this managed? <span class="arrow">▸</span></button>
+    </details>
+    <details class="faq-item">
+      <summary>I also have a stone in the dilated kidney — how is this managed?</summary>
       <div class="faq-a">The stone is removed during the same pyeloplasty procedure. There is no point treating the stone in isolation while leaving the UPJ obstruction intact: the urinary stasis persisting in the dilated collecting system would cause the stone to reform rapidly. The correct approach is to simultaneously correct the anatomical defect and remove the stones, thereby eliminating both the current problem and the substrate that generated it.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">Can UPJ obstruction cause renal colic? <span class="arrow">▸</span></button>
+    </details>
+    <details class="faq-item">
+      <summary>Can UPJ obstruction cause renal colic?</summary>
       <div class="faq-a">Yes. Flank pain, sometimes colicky in character, is the typical presentation in young adults. The mechanism differs from urolithiasis (there is no stone obstructing the ureter), but the clinical result is similar: pressure build-up within the collecting system generates pain, often very severe. The picture becomes suspicious when CT shows no calculi but reveals hydronephrosis: at that point renography is performed to determine whether the obstruction is functionally significant.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">If I delay surgery, will the kidney be damaged? <span class="arrow">▸</span></button>
+    </details>
+    <details class="faq-item">
+      <summary>If I delay surgery, will the kidney be damaged?</summary>
       <div class="faq-a">It depends on the severity of the obstruction and how long it has been present. A mild obstruction may remain stable for years. A severe obstruction progressively and irreversibly damages the renal parenchyma: atrophied renal tissue cannot recover. For this reason, when renography documents significant functional obstruction, surgery should not be deferred for a long period. Periodic renographic surveillance is essential: if renal function deteriorates, the surgical indication becomes urgent.</div>
-    </div>
+    </details>
   </section>
 
   <!-- RELATED TOPICS -->
@@ -454,12 +454,7 @@
 <p style="font-size:0.75rem;margin-top:1rem;opacity:0.7;"><a href="https://www.iubenda.com/privacy-policy/43888236" class="iubenda-white iubenda-noiframe iubenda-embed" title="Privacy Policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> &nbsp;·&nbsp; <a href="https://www.iubenda.com/privacy-policy/43888236/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed" title="Cookie Policy" target="_blank" rel="noopener noreferrer">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script></p>
 </footer>
 
-<script>
-function toggleFaq(btn) {
-  btn.classList.toggle('open');
-  btn.nextElementSibling.classList.toggle('open');
-}
-</script>
+<!-- FAQ toggle via native <details>/<summary> — no JS needed -->
 
 <!-- FLOATING CTA -->
 <button onclick="document.getElementById('modal-prenota').style.display='flex'" aria-label="Open booking form" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;background:#d4793b;color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:0.88rem;font-weight:700;padding:0.8rem 1.5rem;border-radius:30px;border:none;cursor:pointer;box-shadow:0 4px 18px rgba(212,121,59,0.35);display:flex;align-items:center;gap:0.5rem;transition:background 0.2s;" onmouseover="this.style.background='#c06830'" onmouseout="this.style.background='#d4793b'">📅 Book a consultation</button>
